@@ -1,4 +1,4 @@
- import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 import { cva, VariantProps } from "class-variance-authority";
 import { Loader2 } from "lucide-react";
 
@@ -13,6 +13,8 @@ export const buttonVariants = cva(
           "bg-blue text-white border-blue hover:bg-blue/90 hover:border-blue/90",
         danger:
           "bg-red text-white border-red hover:bg-red/90 hover:border-red/90",
+        ocean:
+          "bg-violet text-white border-violet hover:bg-violet/90 hover:border-violet/90 ",
         outline:
           "bg-transparent text-black border-black hover:bg-black hover:text-white",
       },

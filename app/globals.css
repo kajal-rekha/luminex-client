@@ -27,13 +27,16 @@ small {
   @apply container mx-auto px-5 lg:px-0;
 }
 
+.eq {
+  transition: 500ms cubic-bezier(0.25, 1, 0.5, 1);
+}
 /* LINK STYLES */
 .link-item {
   @apply relative;
 }
 
 .link-item::after {
-  @apply absolute bottom-0 left-1/2 h-px w-0 -translate-x-1/2 bg-black content-[""];
+  @apply eq absolute bottom-0 left-1/2 h-px w-0 -translate-x-1/2 bg-black content-[""];
 }
 
 .link-item:hover::after {

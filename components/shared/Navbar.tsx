@@ -14,12 +14,12 @@ const Navbar = () => {
 
         <ul className="flex items-center gap-5 text-lg">
           <li>
-            <Link href="/#home" className="link-item">
+            <Link href="/home" className="link-item">
               Home
             </Link>
           </li>
           <li>
-            <Link href="/#products" className="link-item">
+            <Link href="/products" className="link-item">
               Products
             </Link>
           </li>
@@ -42,7 +42,7 @@ const Navbar = () => {
           <li>
             <Link
               href="/sign-in"
-              className={buttonVariants({ variant: "secondary" })}
+              className={buttonVariants({ variant: "ocean" })}
             >
               Sign in
             </Link>

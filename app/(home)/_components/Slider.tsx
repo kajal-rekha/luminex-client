@@ -37,9 +37,9 @@ const Slider = () => {
               className="h-full w-full object-cover"
             />
             <Overlay />
-            <div className="sp wrapper absolute bottom-0 left-0 right-0 top-0 h-full w-full space-y-5 text-white">
+            <div className="sp wrapper absolute bottom-0 left-0 right-0 top-12 h-full w-full space-y-5 text-white">
               <h1>{slide.heading}</h1>
-              <p className="max-w-5xl">{slide.subHeading}</p>
+              <p className="max-w-4xl">{slide.subHeading}</p>
               <Link
                 href="/products"
                 className={cn(buttonVariants({ variant: "ocean" }))}

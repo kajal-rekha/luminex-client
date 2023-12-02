@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { buttonVariants } from "../ui/Button";
 
 const Navbar = () => {
   return (
@@ -39,7 +40,12 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/sign-in">Sign in</Link>
+            <Link
+              href="/sign-in"
+              className={buttonVariants({ variant: "secondary" })}
+            >
+              Sign in
+            </Link>
           </li>
         </ul>
       </nav>

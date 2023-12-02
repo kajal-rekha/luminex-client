@@ -41,7 +41,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              href="/sign-in"
+              href="/user/sign-in"
               className={buttonVariants({ variant: "ocean" })}
             >
               Sign in

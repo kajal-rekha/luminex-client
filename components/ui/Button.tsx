@@ -15,6 +15,10 @@ export const buttonVariants = cva(
           "bg-red text-white border-red hover:bg-red/90 hover:border-red/90",
         ocean:
           "bg-violet text-white border-violet hover:bg-violet/90 hover:border-violet/90 ",
+        orange:
+          "bg-orange text-white border-orange hover:bg-orange/90 hover:border-orange/90 ",
+        success:
+          "bg-green text-white border-green hover:bg-green/90 hover:border-green/90 ",
         outline:
           "bg-transparent text-black border-black hover:bg-black hover:text-white",
       },

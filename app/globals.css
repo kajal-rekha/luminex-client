@@ -33,7 +33,7 @@ small {
 }
 
 .sp {
-  @apply py-40;
+  @apply py-32;
 }
 
 .eq {

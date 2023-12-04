@@ -1,11 +1,13 @@
+import ProductPage from "../products/page";
 import Shop from "../shop/page";
 import Slider from "./_components/Slider";
 
 const HomePage = () => {
   return (
-    <main className="mt-20">
+    <main className="">
       <Slider />
       <Shop />
+      <ProductPage />
     </main>
   );
 };

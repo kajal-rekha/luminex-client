@@ -2,13 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* MAIN STYLE */
+
+main {
+  @apply mt-20;
+}
 /* TYPOGRAPHY STYLES */
 h1 {
   @apply text-8xl font-medium;
 }
 
 h2 {
-  @apply text-5xl;
+  @apply text-5xl font-medium;
 }
 
 h3 {
@@ -28,7 +33,7 @@ small {
 }
 
 .sp {
-  @apply py-32;
+  @apply py-40;
 }
 
 .eq {
@@ -40,7 +45,7 @@ small {
 }
 
 .link-item::after {
-  @apply eq absolute bottom-0 left-1/2 h-px w-0 -translate-x-1/2 bg-black content-[""];
+  @apply eq absolute bottom-0 left-1/2 h-px w-0 -translate-x-1/2 bg-orange content-[""];
 }
 
 .link-item:hover::after {
@@ -50,15 +55,19 @@ small {
 /* SWIPER STYLES */
 .swiper-button-next,
 .swiper-button-prev {
-  color: rgb(69, 50, 112) !important;
-  fill: rgb(69, 50, 112) !important;
-  stroke: rgb(69, 50, 112) !important;
+  color: rgb(192, 90, 59) !important;
+  fill: rgb(192, 90, 59) !important;
+  stroke: rgb(192, 90, 59) !important;
 }
 
 .swiper-pagination-bullet {
-  background-color: rgb(69, 50, 112)!important;
+  background-color: rgb(192, 90, 59) !important;
 }
 
 .swiper-pagination-bullet-active {
-  background-color: rgb(69, 50, 112) !important;
+  background-color: rgb(192, 90, 59) !important;
 }
+
+/* .shop-cont{
+  order: 1;
+} */

@@ -9,19 +9,17 @@ import { productType } from "@/types/productType";
 import Link from "next/link";
 
 import ProductItem from "./ProductItem";
+import { usePathname } from "next/navigation";
 
-interface ProductsProps {
-  native?: boolean;
-}
-const Products: React.FC<ProductsProps> = ({ native }) => {
+const Products = () => {
   const { data: products, error, isLoading } = useFetch("/api/products");
-  console.log(products);
-
+  const pathname = usePathname();
+  console.log(pathname);
   return (
     <section className="wrapper sp ">
       <SectionTitle title="Explore our products" />
 
-      {products && products.length > 0 && (
+      {products && (
         <>
           <HorizontalTab
             tabs={["Earrings", "Bracelet", "Ring", "Necklace", "Hairpin"]}
@@ -29,19 +27,19 @@ const Products: React.FC<ProductsProps> = ({ native }) => {
             {/* Earrings */}
 
             <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
-              {!native &&
+              {pathname === "/products" &&
                 products
                   .filter((item: productType) => item.category === "Earrings")
                   .sort((a: productType, b: productType) => a.price - b.price)
-                  .slice(0, 6)
                   .map((item: productType) => (
                     <ProductItem key={item._id} productItem={item} />
                   ))}
 
-              {native &&
+              {pathname === "/" &&
                 products
                   .filter((item: productType) => item.category === "Earrings")
                   .sort((a: productType, b: productType) => a.price - b.price)
+                  .slice(0, 6)
                   .map((item: productType) => (
                     <ProductItem key={item._id} productItem={item} />
                   ))}
@@ -50,19 +48,18 @@ const Products: React.FC<ProductsProps> = ({ native }) => {
             {/* Bracelet */}
 
             <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
-              {!native &&
+              {pathname === "/products" &&
                 products
                   .filter((item: productType) => item.category === "Bracelet")
                   .sort((a: productType, b: productType) => a.price - b.price)
-                  .slice(0, 8)
                   .map((item: productType) => (
                     <ProductItem key={item._id} productItem={item} />
                   ))}
-
-              {native &&
+              {pathname === "/" &&
                 products
                   .filter((item: productType) => item.category === "Bracelet")
                   .sort((a: productType, b: productType) => a.price - b.price)
+                  .slice(0, 6)
                   .map((item: productType) => (
                     <ProductItem key={item._id} productItem={item} />
                   ))}
@@ -71,19 +68,18 @@ const Products: React.FC<ProductsProps> = ({ native }) => {
             {/* Ring */}
 
             <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
-              {!native &&
+              {pathname === "/products" &&
                 products
                   .filter((item: productType) => item.category === "Ring")
                   .sort((a: productType, b: productType) => a.price - b.price)
-                  .slice(0, 8)
                   .map((item: productType) => (
                     <ProductItem key={item._id} productItem={item} />
                   ))}
-
-              {native &&
+              {pathname === "/" &&
                 products
                   .filter((item: productType) => item.category === "Ring")
                   .sort((a: productType, b: productType) => a.price - b.price)
+                  .slice(0, 6)
                   .map((item: productType) => (
                     <ProductItem key={item._id} productItem={item} />
                   ))}
@@ -92,19 +88,18 @@ const Products: React.FC<ProductsProps> = ({ native }) => {
             {/* Necklace */}
 
             <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
-              {!native &&
+              {pathname === "/products" &&
                 products
                   .filter((item: productType) => item.category === "Necklace")
                   .sort((a: productType, b: productType) => a.price - b.price)
-                  .slice(0, 8)
                   .map((item: productType) => (
                     <ProductItem key={item._id} productItem={item} />
                   ))}
-
-              {native &&
+              {pathname === "/" &&
                 products
                   .filter((item: productType) => item.category === "Necklace")
                   .sort((a: productType, b: productType) => a.price - b.price)
+                  .slice(0, 6)
                   .map((item: productType) => (
                     <ProductItem key={item._id} productItem={item} />
                   ))}
@@ -113,26 +108,25 @@ const Products: React.FC<ProductsProps> = ({ native }) => {
             {/* Hairpins */}
 
             <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
-              {!native &&
+              {pathname === "/products" &&
                 products
                   .filter((item: productType) => item.category === "Hairpin")
                   .sort((a: productType, b: productType) => a.price - b.price)
-                  .slice(0, 8)
                   .map((item: productType) => (
                     <ProductItem key={item._id} productItem={item} />
                   ))}
-
-              {native &&
+              {pathname === "/" &&
                 products
                   .filter((item: productType) => item.category === "Hairpin")
                   .sort((a: productType, b: productType) => a.price - b.price)
+                  .slice(0, 6)
                   .map((item: productType) => (
                     <ProductItem key={item._id} productItem={item} />
                   ))}
             </div>
           </HorizontalTab>
 
-          {!native && products && products.length > 0 && (
+          {pathname === "/" && products && (
             <div className="mt-20 flex justify-center">
               <Link
                 href="/products"
@@ -142,7 +136,6 @@ const Products: React.FC<ProductsProps> = ({ native }) => {
               </Link>
             </div>
           )}
-          {/* <Link href="/products">View all products</Link> */}
         </>
       )}
     </section>

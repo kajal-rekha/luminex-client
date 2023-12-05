@@ -1,11 +1,9 @@
 import Products from "./_components/Products";
 
-
-
 const ProductPage = () => {
   return (
     <main>
-     <Products native/>
+      <Products />
     </main>
   );
 };

@@ -1,10 +1,11 @@
-import Products from "@/components/products/Products";
+import Products from "./_components/Products";
+
 
 
 const ProductPage = () => {
   return (
     <main>
-      <Products fromProductPage />
+     <Products native/>
     </main>
   );
 };

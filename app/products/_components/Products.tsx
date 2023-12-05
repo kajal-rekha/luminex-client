@@ -1,18 +1,19 @@
 "use client";
 
+import { buttonVariants } from "@/components/ui/Button";
+import HorizontalTab from "@/components/ui/HorizontalTab";
+import SectionTitle from "@/components/ui/SectionTitle";
 import useFetch from "@/hooks/use-fetch";
 import { cn } from "@/lib/utils";
 import { productType } from "@/types/productType";
 import Link from "next/link";
-import { buttonVariants } from "../ui/Button";
-import HorizontalTab from "../ui/HorizontalTab";
-import SectionTitle from "../ui/SectionTitle";
+
 import ProductItem from "./ProductItem";
 
-interface ProductProps {
-  fromProductPage?: boolean;
+interface ProductsProps {
+  native?: boolean;
 }
-const Products: React.FC<ProductProps> = ({ fromProductPage }) => {
+const Products: React.FC<ProductsProps> = ({ native }) => {
   const { data: products, error, isLoading } = useFetch("/api/products");
   console.log(products);
 
@@ -28,16 +29,16 @@ const Products: React.FC<ProductProps> = ({ fromProductPage }) => {
             {/* Earrings */}
 
             <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
-              {!fromProductPage &&
+              {!native &&
                 products
                   .filter((item: productType) => item.category === "Earrings")
                   .sort((a: productType, b: productType) => a.price - b.price)
-                  .slice(0, 8)
+                  .slice(0, 6)
                   .map((item: productType) => (
                     <ProductItem key={item._id} productItem={item} />
                   ))}
 
-              {fromProductPage &&
+              {native &&
                 products
                   .filter((item: productType) => item.category === "Earrings")
                   .sort((a: productType, b: productType) => a.price - b.price)
@@ -49,7 +50,7 @@ const Products: React.FC<ProductProps> = ({ fromProductPage }) => {
             {/* Bracelet */}
 
             <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
-              {!fromProductPage &&
+              {!native &&
                 products
                   .filter((item: productType) => item.category === "Bracelet")
                   .sort((a: productType, b: productType) => a.price - b.price)
@@ -58,7 +59,7 @@ const Products: React.FC<ProductProps> = ({ fromProductPage }) => {
                     <ProductItem key={item._id} productItem={item} />
                   ))}
 
-              {fromProductPage &&
+              {native &&
                 products
                   .filter((item: productType) => item.category === "Bracelet")
                   .sort((a: productType, b: productType) => a.price - b.price)
@@ -70,7 +71,7 @@ const Products: React.FC<ProductProps> = ({ fromProductPage }) => {
             {/* Ring */}
 
             <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
-              {!fromProductPage &&
+              {!native &&
                 products
                   .filter((item: productType) => item.category === "Ring")
                   .sort((a: productType, b: productType) => a.price - b.price)
@@ -79,7 +80,7 @@ const Products: React.FC<ProductProps> = ({ fromProductPage }) => {
                     <ProductItem key={item._id} productItem={item} />
                   ))}
 
-              {fromProductPage &&
+              {native &&
                 products
                   .filter((item: productType) => item.category === "Ring")
                   .sort((a: productType, b: productType) => a.price - b.price)
@@ -91,7 +92,7 @@ const Products: React.FC<ProductProps> = ({ fromProductPage }) => {
             {/* Necklace */}
 
             <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
-              {!fromProductPage &&
+              {!native &&
                 products
                   .filter((item: productType) => item.category === "Necklace")
                   .sort((a: productType, b: productType) => a.price - b.price)
@@ -100,7 +101,7 @@ const Products: React.FC<ProductProps> = ({ fromProductPage }) => {
                     <ProductItem key={item._id} productItem={item} />
                   ))}
 
-              {fromProductPage &&
+              {native &&
                 products
                   .filter((item: productType) => item.category === "Necklace")
                   .sort((a: productType, b: productType) => a.price - b.price)
@@ -112,7 +113,7 @@ const Products: React.FC<ProductProps> = ({ fromProductPage }) => {
             {/* Hairpins */}
 
             <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
-              {!fromProductPage &&
+              {!native &&
                 products
                   .filter((item: productType) => item.category === "Hairpin")
                   .sort((a: productType, b: productType) => a.price - b.price)
@@ -121,7 +122,7 @@ const Products: React.FC<ProductProps> = ({ fromProductPage }) => {
                     <ProductItem key={item._id} productItem={item} />
                   ))}
 
-              {fromProductPage &&
+              {native &&
                 products
                   .filter((item: productType) => item.category === "Hairpin")
                   .sort((a: productType, b: productType) => a.price - b.price)
@@ -131,7 +132,7 @@ const Products: React.FC<ProductProps> = ({ fromProductPage }) => {
             </div>
           </HorizontalTab>
 
-          {!fromProductPage && products && products.length > 0 && (
+          {!native && products && products.length > 0 && (
             <div className="mt-20 flex justify-center">
               <Link
                 href="/products"

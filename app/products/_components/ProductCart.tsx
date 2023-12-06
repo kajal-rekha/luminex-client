@@ -1,5 +1,6 @@
 import { buttonVariants } from "@/components/ui/Button";
 import { productType } from "@/types/productType";
+import { formatCurrency } from "@/utils/formatCurrenct";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -30,7 +31,7 @@ const ProductItem: React.FC<ProductItemProps> = ({ productItem }) => {
         <p>{productItem.description.substring(0, 50)}...</p>
 
         <div className="flex items-center justify-between gap-2.5">
-          <p>${productItem.price}</p>
+          <p>{formatCurrency(productItem.price)}</p>
           <Link
             href={`/products/${productItem._id}`}
             className={buttonVariants({ variant: "orange" })}

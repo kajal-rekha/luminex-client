@@ -30,7 +30,7 @@ const Shop = () => {
 
       <div className="mt-40">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <div className="img w-full group overflow-hidden">
+          <div className="img w-full group overflow-hidden w-[650] h[800]">
             <Image
               src="https://res.cloudinary.com/dh0ado2ir/image/upload/v1701588826/lookbook-1_kfnk3o.jpg"
               alt=""

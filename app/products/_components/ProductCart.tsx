@@ -1,10 +1,7 @@
-
-
 import { buttonVariants } from "@/components/ui/Button";
 import { productType } from "@/types/productType";
 import Image from "next/image";
 import Link from "next/link";
-
 
 interface ProductItemProps {
   productItem: productType;
@@ -12,10 +9,10 @@ interface ProductItemProps {
 
 const ProductItem: React.FC<ProductItemProps> = ({ productItem }) => {
   return (
-    <div className="flex w-full flex-col gap-5">
+    <div className="w-full space-y-5 rounded-xl bg-white p-5 shadow-md shadow-gray">
       <Link
         href={`products/${productItem._id}`}
-        className="group h-[15rem] w-full overflow-hidden rounded-xl border border-gray"
+        className="group inline-block h-[20rem] w-full overflow-hidden rounded-xl shadow-md shadow-gray"
       >
         <Image
           src={productItem.images[0]}
@@ -25,11 +22,11 @@ const ProductItem: React.FC<ProductItemProps> = ({ productItem }) => {
           className=" eq h-full w-full object-cover group-hover:scale-125"
         />
       </Link>
-      <div className="eq flex w-full flex-col gap-2.5 rounded-xl border bg-gray/25 p-5 hover:bg-gray/50">
+      <div className="eq flex w-full flex-col gap-2.5 rounded-xl  bg-gray/25 p-5 hover:bg-gray/50">
         <span className="text-sm font-bold uppercase tracking-[0.375em] text-orange">
           {productItem.category}
         </span>
-        <h4 className="text-2xl">{productItem.title}</h4>
+        <h3 className="'truncate'">{productItem.title.substring(0, 20)}...</h3>
         <p>{productItem.description.substring(0, 50)}...</p>
 
         <div className="flex items-center justify-between gap-2.5">

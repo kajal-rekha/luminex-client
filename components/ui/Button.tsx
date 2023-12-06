@@ -28,7 +28,7 @@ export const buttonVariants = cva(
       },
     },
     defaultVariants: {
-      variant: "primary",
+      variant: "orange",
       size: "auto",
     },
   }

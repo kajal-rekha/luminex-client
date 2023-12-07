@@ -12,40 +12,10 @@ const ProductItem: React.FC<productItemProps> = ({ item }) => {
   return (
     <section className="product-item">
       <div className="shop-img relative">
-        <div className="">
-          <p className=" absolute text-white text-4xl left-[30%] bottom-[40%] max-w-xl">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex,
-            inventore.
-          </p>
-          <div className="top-[20%] right-[20%] absolute">
-            <Image
-              src="https://res.cloudinary.com/dh0ado2ir/image/upload/v1701944159/e1e71f09-0065-4beb-9558-62a7f7484365.1582cbf120b574b2a92ac78b185c1b65_syidlr.webp"
-              alt=""
-              width={100}
-              height={100}
-            />
-            <Image
-              src="https://res.cloudinary.com/dh0ado2ir/image/upload/v1701952953/rng-akt-23-ns-x_deeqex.webp"
-              alt=""
-              width={100}
-              height={100}
-            />
-          </div>
-          <div className="top-[20%] right-[10%] absolute">
-            <Image
-              src="https://res.cloudinary.com/dh0ado2ir/image/upload/v1701952925/clive-jewelry_wedding-ring-collection1574602224_1_alc2k3.png"
-              alt=""
-              width={100}
-              height={100}
-            />
-            <Image
-              src="https://res.cloudinary.com/dh0ado2ir/image/upload/v1701952913/266309_full_xl375c.png"
-              alt=""
-              width={100}
-              height={100}
-            />
-          </div>
-        </div>
+        <p className=" absolute text-white text-4xl left-[30%] bottom-[40%] max-w-3xl">
+          Lost in the enchanting world of Luminex!  Each piece is a
+          masterpiece, a testament to unparalleled craftsmanship.
+        </p>
       </div>
 
       <div className="wrapper sp grid grid-cols-1 md:grid-cols-2 gap-20 -mt-10">
@@ -74,7 +44,10 @@ const ProductItem: React.FC<productItemProps> = ({ item }) => {
           </p>
           <div className="flex gap-10">
             <p className="mt-2">Price: {formatCurrency(item.price)}</p>
-            <Link href="/products/cart" className={buttonVariants({ variant: "orange" })}>
+            <Link
+              href="/products/cart"
+              className={buttonVariants({ variant: "orange" })}
+            >
               Add to cart
             </Link>
           </div>

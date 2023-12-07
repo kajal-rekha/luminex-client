@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { buttonVariants } from "../ui/Button";
-
+import { FiShoppingCart } from "react-icons/fi";
 const Navbar = () => {
   return (
     <header className="fixed left-0 right-0 top-0 z-[100] flex h-20 w-full items-center border-b border-gray bg-gray/90 backdrop-blur-xl">
@@ -10,7 +10,7 @@ const Navbar = () => {
           luminex
         </Link>
 
-        {/* NAV RIGHT */}
+        {/* NAV MID */}
 
         <ul className="flex items-center gap-5 text-lg">
           <li>
@@ -44,6 +44,10 @@ const Navbar = () => {
               Contact
             </Link>
           </li>
+        </ul>
+
+        {/* NAV RIGHT */}
+        <ul className="flex gap-5 items-center justify-center">
           <li>
             <Link
               href="/user/sign-in"
@@ -52,6 +56,14 @@ const Navbar = () => {
               Sign in
             </Link>
           </li>
+          <Link href="/user/order">
+            <span className="text-2xl relative ">
+              <FiShoppingCart />
+              <span className="absolute text-orange text-sm font-semibold bottom-[40%] left-[70%] bg-black rounded-full py-[0.5] px-1">
+                10
+              </span>
+            </span>
+          </Link>
         </ul>
       </nav>
     </header>

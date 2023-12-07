@@ -68,6 +68,14 @@ small {
   background-color: rgb(192, 90, 59) !important;
 }
 
-/* .shop-cont{
-  order: 1;
-} */
+.shop-img {
+  max-width: 100vw;
+  height: 24rem;
+  position: relative;
+  top: 0rem;
+  background: url("https://res.cloudinary.com/dh0ado2ir/image/upload/v1701918530/h9-backgrp_elopya.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}

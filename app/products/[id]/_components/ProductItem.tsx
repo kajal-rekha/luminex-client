@@ -10,24 +10,25 @@ interface productItemProps {
 
 const ProductItem: React.FC<productItemProps> = ({ item }) => {
   return (
-    <section className="wrapper sp ">
-      <h2 className="text-center mb-20">{item.title}</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-        <div className="w-[600] h-[600] group overflow-hidden">
+    <section className="">
+      <div className="shop-img"></div>
+      <div className=" wrapper sp grid grid-cols-1 md:grid-cols-2 gap-14">
+        <div className="w-[600] h-[300] group overflow-hidden">
           <Image
             src={item.images[0]}
             alt={item.title}
             width={600}
-            height={600}
-            className=" eq h-full w-full object-cover group-hover:scale-125"
+            height={300}
+            className=" eq h-full w-full h-full object-cover group-hover:scale-125"
           />
         </div>
-        <div className="max-w-3xl mt-32">
-          <span className="text-sm font-bold uppercase tracking-[0.375em] text-orange">
-            Type : {item.category}
+        <div className="max-w-3xl mt-5 space-y-5">
+          <span className="text-sm font-bold uppercase tracking-[0.375em] text-orange ">
+            {item.category}
           </span>
+          <h2 className="text-4xl  tracking-widest">{item.title}</h2>
           <p>{item.description}</p>
-          <p>Price: {formatCurrency(item.price)}</p>
+          <p className="">Price: {formatCurrency(item.price)}</p>
           <Link href="/" className={buttonVariants({ variant: "orange" })}>
             Add to cart
           </Link>

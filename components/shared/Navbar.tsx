@@ -50,7 +50,7 @@ const Navbar = () => {
         <ul className="flex gap-5 items-center justify-center">
           <li>
             <Link
-              href="/user/sign-in"
+              href="/sign-in"
               className={buttonVariants({ variant: "orange" })}
             >
               Sign in

@@ -1,6 +1,7 @@
 "use client";
 
 import Button from "@/components/ui/Button";
+import { imageUrlChecker } from "@/helpers/imageUrlChecker";
 import { axiosPost } from "@/lib/axiosPost";
 
 import Link from "next/link";
@@ -27,21 +28,27 @@ const SignUpForm = () => {
     async (e: React.SyntheticEvent) => {
       e.preventDefault();
       setIsLoading(true);
+      const hasPermitted = imageUrlChecker(formData.image);
 
-      const data = await axiosPost("/api/users/auth/register", formData);
+      if (hasPermitted) {
+        const data = await axiosPost("/api/users/auth/register", formData);
 
-      if (data) {
-        setIsLoading(false);
-        setFormData({
-          name: "",
-          email: "",
-          password: "",
-          image: "",
-        });
+        if (data) {
+          setIsLoading(false);
+          setFormData({
+            name: "",
+            email: "",
+            password: "",
+            image: "",
+          });
 
-        toast.success("Register successfull!");
+          toast.success("Register successfull!");
+        } else {
+          setIsLoading(false);
+        }
       } else {
         setIsLoading(false);
+        toast.error("Please paste a image url from pexels/unsplash/cloudinary");
       }
     },
     [formData]

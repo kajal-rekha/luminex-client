@@ -3,10 +3,10 @@ import SignUpPicture from "./SignUpPicture";
 
 const SignUp = () => {
   return (
-    <div>
-      <SignUpForm />
+    <section className="sp wrapper grid grid-cols-2 items-center gap-20 mb-10">
       <SignUpPicture />
-    </div>
+      <SignUpForm />
+    </section>
   );
 };
 

@@ -23,7 +23,7 @@ const SignUpForm = () => {
     password: "",
     image: "",
     address: "",
-    occupation: ""
+    occupation: "",
   });
 
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -52,6 +52,7 @@ const SignUpForm = () => {
 
           toast.success("Register successfull!");
         } else {
+          toast.error("all fields must be filled");
           setIsLoading(false);
         }
       } else {
@@ -156,7 +157,7 @@ const SignUpForm = () => {
             className="eq w-full rounded-xl border border-gray bg-transparent px-3 py-5 outline-none focus:border-orange"
           />
         </div>
-        
+
         <Button variant="orange" type="submit" isLoading={isLoading}>
           Register
         </Button>

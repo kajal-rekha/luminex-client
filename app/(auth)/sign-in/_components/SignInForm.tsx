@@ -35,6 +35,7 @@ const SignInForm = () => {
 
         toast.success("Login successfull!");
       } else {
+        toast.error("email or password incorrect");
         setIsLoading(false);
       }
     },
@@ -42,7 +43,7 @@ const SignInForm = () => {
   );
 
   console.log(formData);
-  
+
   return (
     <div className="flex flex-col gap-10">
       <div className="flex flex-col gap-1.5">

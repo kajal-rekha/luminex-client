@@ -21,6 +21,7 @@ export const axiosPost = async (
       return res.data;
     }
   } catch (error: any) {
+      console.error("Error in axiosPost:", error);
     toast.error(error.response?.data?.message);
   }
 };

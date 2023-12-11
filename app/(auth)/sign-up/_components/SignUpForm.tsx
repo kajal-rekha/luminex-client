@@ -13,6 +13,8 @@ interface SignUpFormData {
   email: string;
   password: string;
   image: string;
+  address: string;
+  occupation: string;
 }
 const SignUpForm = () => {
   const [formData, setFormData] = useState<SignUpFormData>({
@@ -20,6 +22,8 @@ const SignUpForm = () => {
     email: "",
     password: "",
     image: "",
+    address: "",
+    occupation: ""
   });
 
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -33,6 +37,8 @@ const SignUpForm = () => {
       if (hasPermitted) {
         const data = await axiosPost("/api/users/auth/register", formData);
 
+        console.log(data);
+
         if (data) {
           setIsLoading(false);
           setFormData({
@@ -40,6 +46,8 @@ const SignUpForm = () => {
             email: "",
             password: "",
             image: "",
+            address: "",
+            occupation: "",
           });
 
           toast.success("Register successfull!");
@@ -48,11 +56,16 @@ const SignUpForm = () => {
         }
       } else {
         setIsLoading(false);
-        toast.error("Please paste a image url from pexels/unsplash/cloudinary");
+        toast.error(
+          "Please paste an image url from pexels/unsplash/cloudinary"
+        );
       }
     },
     [formData]
   );
+
+  console.log(formData);
+
   return (
     <div className="flex flex-col gap-10">
       <div className="flex flex-col gap-1.5">
@@ -82,7 +95,7 @@ const SignUpForm = () => {
             onChange={(e) =>
               setFormData({ ...formData, email: e.target.value })
             }
-            type="text"
+            type="email"
             id="email"
             placeholder="hello@example.com"
             className="eq w-full rounded-xl border border-gray bg-transparent px-3 py-5 outline-none focus:border-orange"
@@ -109,12 +122,41 @@ const SignUpForm = () => {
             onChange={(e) =>
               setFormData({ ...formData, image: e.target.value })
             }
-            type="text"
+            type="url"
             id="image"
             placeholder="Past your image url from pexels/unsplash/cloudinary"
             className="eq w-full rounded-xl border border-gray bg-transparent px-3 py-5 outline-none focus:border-orange"
           />
         </div>
+
+        <div className="flex flex-col items-start gap-1.5">
+          <label htmlFor="password">Address</label>
+          <input
+            value={formData.address}
+            onChange={(e) =>
+              setFormData({ ...formData, address: e.target.value })
+            }
+            type="text"
+            id="address"
+            placeholder="Past your image url from pexels/unsplash/cloudinary"
+            className="eq w-full rounded-xl border border-gray bg-transparent px-3 py-5 outline-none focus:border-orange"
+          />
+        </div>
+
+        <div className="flex flex-col items-start gap-1.5">
+          <label htmlFor="password">Occupation</label>
+          <input
+            value={formData.occupation}
+            onChange={(e) =>
+              setFormData({ ...formData, occupation: e.target.value })
+            }
+            type="text"
+            id="occupation"
+            placeholder="Past your image url from pexels/unsplash/cloudinary"
+            className="eq w-full rounded-xl border border-gray bg-transparent px-3 py-5 outline-none focus:border-orange"
+          />
+        </div>
+        
         <Button variant="orange" type="submit" isLoading={isLoading}>
           Register
         </Button>

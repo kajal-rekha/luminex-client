@@ -23,7 +23,7 @@ const SignInForm = () => {
     async (e: React.SyntheticEvent) => {
       e.preventDefault();
       setIsLoading(true);
-      
+
       const data = await axiosPost("/api/users/auth/login", formData);
 
       if (data) {
@@ -40,6 +40,9 @@ const SignInForm = () => {
     },
     [formData]
   );
+
+  console.log(formData);
+  
   return (
     <div className="flex flex-col gap-10">
       <div className="flex flex-col gap-1.5">
@@ -57,7 +60,7 @@ const SignInForm = () => {
             onChange={(e) =>
               setFormData({ ...formData, email: e.target.value })
             }
-            type="text"
+            type="email"
             id="email"
             placeholder="hello@example.com"
             className="eq w-full rounded-xl border border-gray bg-transparent px-3 py-5 outline-none focus:border-orange"

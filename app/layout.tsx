@@ -1,6 +1,7 @@
 import Footer from "@/components/shared/Footer";
 import Navbar from "@/components/shared/Navbar";
 import { cn } from "@/lib/utils";
+import ReduxProvider from "@/providers/ReduxProvider";
 import type { Metadata } from "next";
 
 import { Bai_Jamjuree } from "next/font/google";
@@ -27,10 +28,12 @@ export default function RootLayout({
       <body
         className={cn(baiJamjuree.className, "bg-light text-dark antialiased")}
       >
-        <Toaster/>
-        <Navbar />
-        {children}
-        <Footer />
+        <ReduxProvider>
+          <Toaster />
+          <Navbar />
+          {children}
+          <Footer />
+        </ReduxProvider>
       </body>
     </html>
   );

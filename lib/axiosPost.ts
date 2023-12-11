@@ -1,4 +1,3 @@
-
 import { userType } from "@/types/userType";
 import axios from "axios";
 import toast from "react-hot-toast";
@@ -21,7 +20,7 @@ export const axiosPost = async (
       return res.data;
     }
   } catch (error: any) {
-      console.error("Error in axiosPost:", error);
-    toast.error(error.response?.data?.message);
+    console.error("Error in axiosPost:", error);
+    toast.error(error.response?.data?.error);
   }
 };

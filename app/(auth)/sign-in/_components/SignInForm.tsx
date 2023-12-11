@@ -4,6 +4,7 @@ import Button from "@/components/ui/Button";
 import { axiosPost } from "@/lib/axiosPost";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React, { useCallback, useState } from "react";
 import toast from "react-hot-toast";
 
@@ -19,6 +20,7 @@ const SignInForm = () => {
 
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
+  const router = useRouter();
   const handleSubmit = useCallback(
     async (e: React.SyntheticEvent) => {
       e.preventDefault();
@@ -34,12 +36,12 @@ const SignInForm = () => {
         });
 
         toast.success("Login successfull!");
+        router.push("/");
       } else {
-        toast.error("email or password incorrect");
         setIsLoading(false);
       }
     },
-    [formData]
+    [formData, router]
   );
 
   console.log(formData);

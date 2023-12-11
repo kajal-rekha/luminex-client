@@ -5,6 +5,7 @@ import { imageUrlChecker } from "@/helpers/imageUrlChecker";
 import { axiosPost } from "@/lib/axiosPost";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React, { useCallback, useState } from "react";
 import toast from "react-hot-toast";
 
@@ -28,6 +29,7 @@ const SignUpForm = () => {
 
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
+  const router = useRouter();
   const handleSubmit = useCallback(
     async (e: React.SyntheticEvent) => {
       e.preventDefault();
@@ -36,8 +38,6 @@ const SignUpForm = () => {
 
       if (hasPermitted) {
         const data = await axiosPost("/api/users/auth/register", formData);
-
-        console.log(data);
 
         if (data) {
           setIsLoading(false);
@@ -51,8 +51,8 @@ const SignUpForm = () => {
           });
 
           toast.success("Register successfull!");
+          router.push("/");
         } else {
-          toast.error("all fields must be filled");
           setIsLoading(false);
         }
       } else {
@@ -62,7 +62,7 @@ const SignUpForm = () => {
         );
       }
     },
-    [formData]
+    [formData, router]
   );
 
   console.log(formData);

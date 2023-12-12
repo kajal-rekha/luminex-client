@@ -1,7 +1,16 @@
+"use client";
+
 import Link from "next/link";
-import { buttonVariants } from "../ui/Button";
+import Button, { buttonVariants } from "../ui/Button";
 import { FiShoppingCart } from "react-icons/fi";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "@/redux/store";
+import Image from "next/image";
+import { logout } from "@/redux/features/auth/authSlice";
+import toast from "react-hot-toast";
 const Navbar = () => {
+  const session = useSelector((state: RootState) => state.auth.userAndToken);
+  const dispatch = useDispatch();
   return (
     <header className="fixed left-0 right-0 top-0 z-[100] flex h-20 w-full items-center border-b border-gray bg-gray/90 backdrop-blur-xl">
       {/* NAV LEFT */}
@@ -47,15 +56,41 @@ const Navbar = () => {
         </ul>
 
         {/* NAV RIGHT */}
-        <ul className="flex gap-5 items-center justify-center">
-          <li>
+        <div className="flex gap-5 items-center justify-center">
+          {!session?.user ? (
             <Link
               href="/sign-in"
               className={buttonVariants({ variant: "orange" })}
             >
               Sign in
             </Link>
-          </li>
+          ) : (
+            <div className="flex items-center gap-5">
+              <div className="w-12 h-12 overflow-hidden rounded-full">
+                <Image
+                  src={session.user.image}
+                  alt={session.user.name}
+                  width={64}
+                  height={64}
+                  priority
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <Button
+                  onClick={() => {
+                    dispatch(logout());
+
+                    toast.success("Logout success!");
+                  }}
+                  variant="orange"
+                >
+                  Logout
+                </Button>
+              </div>
+            </div>
+          )}
+
           <Link href="/user/order">
             <span className="text-2xl relative ">
               <FiShoppingCart />
@@ -64,7 +99,7 @@ const Navbar = () => {
               </span>
             </span>
           </Link>
-        </ul>
+        </div>
       </nav>
     </header>
   );

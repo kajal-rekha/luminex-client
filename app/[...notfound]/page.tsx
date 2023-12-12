@@ -11,7 +11,7 @@ const NotFoundPage = () => {
         Uh-oh! The requested page seems to be missing.
       </p>
       <div className="mt-8">
-        <Link href="/" className={buttonVariants({ variant: "ocean" })}>
+        <Link href="/" className={buttonVariants({ variant: "orange" })}>
           Go to home
         </Link>
       </div>

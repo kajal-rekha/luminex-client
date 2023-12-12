@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-bg">
-        <div className=" wrapper sp grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 pb-20  gap-5 md:gap-6 lg:gap-4 ">
+        <div className="wrapper sp grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 lg:gap-4 mt-14">
           <div className="w-full">
             <Link href="/" className="text-3xl font-semibold text-orange/70">
               Luminex
@@ -139,7 +139,7 @@ const Footer = () => {
       </div>
       <div className="mb-10">
         <p className="text-center text-black text-lg mt-8 ">
-          &copy; {new Date().getFullYear()} <Link href="/" className="text-orange link-item">Luminex</Link> . All rights
+          &copy; {new Date().getFullYear()} <Link href="/" className="link-item">Luminex</Link> . All rights
           reserved.
         </p>
       </div>

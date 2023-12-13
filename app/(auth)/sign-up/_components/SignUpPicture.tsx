@@ -5,7 +5,7 @@ const SignUpPicture = () => {
   return (
     <div className="relative h-full w-full overflow-hidden">
       <Image
-        src="https://res.cloudinary.com/dh0ado2ir/image/upload/v1701588977/0_lookbook-2_wpowmi.jpg"
+        src="https://res.cloudinary.com/dh0ado2ir/image/upload/v1702441596/newsletter-image_abegwu.jpg"
         alt="sign in picture"
         width={720}
         height={1280}

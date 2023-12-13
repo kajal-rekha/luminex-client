@@ -1,5 +1,7 @@
 "use client";
 
+import { buttonVariants } from "@/components/ui/Button";
+import { cn } from "@/lib/utils";
 import { formatCurrency } from "@/utils/formatCurrenct";
 import Image from "next/image";
 import Link from "next/link";
@@ -88,26 +90,20 @@ const CartItem = () => {
         </div>
       </div>
 
-      <div className="cart-lower flex flex-col-reverse items-center gap-10 md:flex-row md:justify-between md:items-start md:gap-0 py-10 px-5 md:px-0 w-full">
+      <div className="cart-lower flex flex-col-reverse items-center gap-5 md:flex-row md:justify-between md:items-start md:gap-0 py-10 px-5 md:px-0 w-full">
         <div className="mt-0 md:mt-14">
           <button className="clear-btn uppercase border border-dark/90 py-3 px-8 hover:bg-orange hover:text-gray/90 text-sm md:text-md hover:border-orange eq">
             Clear cart
           </button>
         </div>
         <div className="flex flex-col items-start gap-2">
-          <div className="top flex justify-between w-full md:text-2xl text-xl font-medium">
+          <div className="top flex justify-between w-full md:text-2xl text-xl font-medium gap-10">
             <span className="text-orange">Subtotal</span>
             <span className="text-orange">$20000</span>
           </div>
-          <p
-            className="text-dark
-           text-sm md:text-lg text-justify"
-          >
-            Taxes and shipping costs are calculated at the checkout
-          </p>
           <Link
             href="/cart/order"
-            className="checkout bg-orange w-full py-3 uppercase font-medium text-gray tracking-widest hover:bg-orange/90 duration-300 text-center text-sm md-text-lg"
+            className={cn(buttonVariants({ variant: "orange", size: "full" }))}
           >
             Chechout
           </Link>

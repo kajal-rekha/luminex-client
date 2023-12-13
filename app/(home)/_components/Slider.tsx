@@ -38,8 +38,8 @@ const Slider = () => {
             />
             <Overlay />
             <div className="sp wrapper absolute bottom-0 left-0 right-0 top-0 h-full w-full space-y-5  z-[5] text-gray/95 mt-10">
-              <h1 className="">{slide.heading}</h1>
-              <p className="mt-5 max-w-4xl">{slide.subHeading}</p>
+              <h1 className="max-w-6xl">{slide.heading}</h1>
+              <p className="mt-5 max-w-3xl">{slide.subHeading}</p>
               <div className="btn mt-5">
                 <Link
                   href="/products"

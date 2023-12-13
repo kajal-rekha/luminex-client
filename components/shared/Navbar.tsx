@@ -91,7 +91,7 @@ const Navbar = () => {
             </div>
           )}
 
-          <Link href="/user/order">
+          <Link href="/cart">
             <span className="text-2xl relative ">
               <FiShoppingCart />
               <span className="absolute text-orange text-sm font-semibold bottom-[40%] left-[70%] bg-black rounded-full py-[0.5] px-1">

@@ -7,11 +7,10 @@ import useFetch from "@/hooks/use-fetch";
 import { cn } from "@/lib/utils";
 import { productType } from "@/types/productType";
 import Link from "next/link";
-
-import ProductItem from "./ProductCart";
 import { usePathname } from "next/navigation";
 import Loading from "@/components/ui/Loading";
 import Error from "@/components/ui/Error";
+import ProductCard from "./ProductCard";
 
 const Products = () => {
   const { data: products, error, isLoading } = useFetch("/api/products");
@@ -38,7 +37,7 @@ const Products = () => {
                   .filter((item: productType) => item.category === "Bracelet")
                   .sort((a: productType, b: productType) => b.price - a.price)
                   .map((item: productType) => (
-                    <ProductItem key={item._id} productItem={item} />
+                    <ProductCard key={item._id} productItem={item} />
                   ))}
               {pathname === "/" &&
                 products
@@ -46,7 +45,7 @@ const Products = () => {
                   .sort((a: productType, b: productType) => b.price - a.price)
                   .slice(0, 6)
                   .map((item: productType) => (
-                    <ProductItem key={item._id} productItem={item} />
+                    <ProductCard key={item._id} productItem={item} />
                   ))}
             </div>
 
@@ -58,7 +57,7 @@ const Products = () => {
                   .filter((item: productType) => item.category === "Earrings")
                   .sort((a: productType, b: productType) => b.price - a.price)
                   .map((item: productType) => (
-                    <ProductItem key={item._id} productItem={item} />
+                    <ProductCard key={item._id} productItem={item} />
                   ))}
 
               {pathname === "/" &&
@@ -67,7 +66,7 @@ const Products = () => {
                   .sort((a: productType, b: productType) => b.price - a.price)
                   .slice(0, 6)
                   .map((item: productType) => (
-                    <ProductItem key={item._id} productItem={item} />
+                    <ProductCard key={item._id} productItem={item} />
                   ))}
             </div>
 
@@ -79,7 +78,7 @@ const Products = () => {
                   .filter((item: productType) => item.category === "Ring")
                   .sort((a: productType, b: productType) => b.price - a.price)
                   .map((item: productType) => (
-                    <ProductItem key={item._id} productItem={item} />
+                    <ProductCard key={item._id} productItem={item} />
                   ))}
               {pathname === "/" &&
                 products
@@ -87,7 +86,7 @@ const Products = () => {
                   .sort((a: productType, b: productType) => b.price - a.price)
                   .slice(0, 6)
                   .map((item: productType) => (
-                    <ProductItem key={item._id} productItem={item} />
+                    <ProductCard key={item._id} productItem={item} />
                   ))}
             </div>
 
@@ -99,7 +98,7 @@ const Products = () => {
                   .filter((item: productType) => item.category === "Necklace")
                   .sort((a: productType, b: productType) => b.price - a.price)
                   .map((item: productType) => (
-                    <ProductItem key={item._id} productItem={item} />
+                    <ProductCard key={item._id} productItem={item} />
                   ))}
               {pathname === "/" &&
                 products
@@ -107,7 +106,7 @@ const Products = () => {
                   .sort((a: productType, b: productType) => b.price - a.price)
                   .slice(0, 6)
                   .map((item: productType) => (
-                    <ProductItem key={item._id} productItem={item} />
+                    <ProductCard key={item._id} productItem={item} />
                   ))}
             </div>
 
@@ -119,7 +118,7 @@ const Products = () => {
                   .filter((item: productType) => item.category === "Hairpin")
                   .sort((a: productType, b: productType) => b.price - a.price)
                   .map((item: productType) => (
-                    <ProductItem key={item._id} productItem={item} />
+                    <ProductCard key={item._id} productItem={item} />
                   ))}
               {pathname === "/" &&
                 products
@@ -127,7 +126,7 @@ const Products = () => {
                   .sort((a: productType, b: productType) => b.price - a.price)
                   .slice(0, 6)
                   .map((item: productType) => (
-                    <ProductItem key={item._id} productItem={item} />
+                    <ProductCard key={item._id} productItem={item} />
                   ))}
             </div>
           </HorizontalTab>

@@ -4,11 +4,11 @@ import { formatCurrency } from "@/utils/formatCurrenct";
 import Image from "next/image";
 import Link from "next/link";
 
-interface ProductItemProps {
+interface ProductCardProps {
   productItem: productType;
 }
 
-const ProductItem: React.FC<ProductItemProps> = ({ productItem }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ productItem }) => {
   return (
     <div className="w-full space-y-5 rounded-xl bg-white p-5 shadow-md shadow-gray">
       <Link
@@ -44,4 +44,4 @@ const ProductItem: React.FC<ProductItemProps> = ({ productItem }) => {
   );
 };
 
-export default ProductItem;
+export default ProductCard;

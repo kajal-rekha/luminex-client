@@ -1,4 +1,4 @@
-import Button, { buttonVariants } from "@/components/ui/Button";
+import { buttonVariants } from "@/components/ui/Button";
 import { productType } from "@/types/productType";
 import { formatCurrency } from "@/utils/formatCurrenct";
 import Image from "next/image";
@@ -12,13 +12,23 @@ const ProductItem: React.FC<productItemProps> = ({ item }) => {
   return (
     <section className="product-item">
       <div className="shop-img relative">
-        <p className=" absolute text-white text-4xl left-[30%] bottom-[40%] max-w-3xl">
-          Lost in the enchanting world of Luminex!  Each piece is a
-          masterpiece, a testament to unparalleled craftsmanship.
-        </p>
+        <div className="absolute  left-[2%] bottom-[20%] ">
+          <p className="text-3xl text-white  max-w-2xl mb-10">
+            Lost in the enchanting world of Luminex! Each piece is a
+            masterpiece, a testament to unparalleled craftsmanship.
+          </p>
+          <div className="ml-32">
+            <Link
+              href="/products"
+              className={buttonVariants({ variant: "orange" })}
+            >
+              Shop Now
+            </Link>
+          </div>
+        </div>
       </div>
 
-      <div className="wrapper sp grid grid-cols-1 md:grid-cols-2 gap-20 -mt-10">
+      <div className="wrapper sp grid grid-cols-1 md:grid-cols-2 gap-20 mt-10">
         <div className="w-[40rem] h-[38rem] group overflow-hidden">
           <Image
             src={item.images[0]}
@@ -45,7 +55,7 @@ const ProductItem: React.FC<productItemProps> = ({ item }) => {
           <div className="flex gap-10">
             <p className="mt-2">Price: {formatCurrency(item.price)}</p>
             <Link
-              href="/products/cart"
+              href="/cart"
               className={buttonVariants({ variant: "orange" })}
             >
               Add to cart

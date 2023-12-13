@@ -137,10 +137,13 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="mb-10">
+      <div className="bg-gray/90 p-10">
         <p className="text-center text-black text-lg mt-8 ">
-          &copy; {new Date().getFullYear()} <Link href="/" className="link-item">Luminex</Link> . All rights
-          reserved.
+          &copy; {new Date().getFullYear()}{" "}
+          <Link href="/" className="link-item">
+            Luminex
+          </Link>{" "}
+          . All rights reserved.
         </p>
       </div>
     </footer>

@@ -78,7 +78,7 @@ const Shop = () => {
           <div className='img w-full group overflow-hidden'>
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1701588986/banner-3_rmntld.jpg'
-              alt=''
+              alt='shop-image'
               width={650}
               height={500}
               className='eq w-full group-hover:scale-125'

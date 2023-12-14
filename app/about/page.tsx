@@ -33,7 +33,7 @@ const AboutPage = () => {
         </p>
 
         <div className='images grid grid-cols md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 mt-20'>
-          <div className='w-full h-[25rem] group  duration-700 rounded-xl overflow-hidden'>
+          <div className='w-full h-[25rem] group rounded-xl overflow-hidden'>
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1702582336/rings-2-1_vgthi2.jpg'
               alt='about-image'
@@ -42,7 +42,7 @@ const AboutPage = () => {
               className='w-full h-full object-cover group-hover:scale-125 eq'
             />
           </div>
-          <div className='w-full h-[25rem] group duration-700 rounded-xl overflow-hidden'>
+          <div className='w-full h-[25rem] group rounded-xl overflow-hidden'>
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1702582330/bracelets_kk7n3b.jpg'
               alt='about-image'
@@ -51,7 +51,7 @@ const AboutPage = () => {
               className='w-full h-full object-cover group-hover:scale-125 eq'
             />
           </div>
-          <div className='w-full h-[25rem] group duration-700 rounded-xl overflow-hidden'>
+          <div className='w-full h-[25rem] group rounded-xl overflow-hidden'>
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1702582321/product_grid_tpwigt.webp'
               alt='about-image'
@@ -60,7 +60,7 @@ const AboutPage = () => {
               className='w-full h-full object-cover group-hover:scale-125 eq'
             />
           </div>
-          <div className='w-full h-[25rem] group duration-700 rounded-xl overflow-hidden'>
+          <div className='w-full h-[25rem] group rounded-xl overflow-hidden'>
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1702582313/insta-4_nd7pym.webp'
               alt='about-image'

@@ -9,7 +9,7 @@ export const data = [
   {
     image:
       "https://res.cloudinary.com/dh0ado2ir/image/upload/v1701508187/slider-1_zlo3wj.jpg",
-    heading: "Vibrant Gemstone Earrings",
+    heading: " Gemstone Earrings",
     subHeading:
       "Discover a burst of color and sophistication with our gemstone earrings collection. Elevate your style with vibrant hues, creating a statement of individuality and grace.",
   },
@@ -17,7 +17,7 @@ export const data = [
   {
     image:
       "https://res.cloudinary.com/dh0ado2ir/image/upload/v1702578402/brunette-woman-wi_jywau3.jpg",
-    heading: "Luxurious Dimond Necklaces",
+    heading: " Dimond Necklaces",
     subHeading:
       "Adorn yourself in opulence with our collection of gold necklaces. Immerse in the charm of timeless beauty, crafted to perfection for those who appreciate luxury. Each piece is a testament to the artistry ",
   },

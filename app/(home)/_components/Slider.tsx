@@ -13,7 +13,7 @@ import { buttonVariants } from "@/components/ui/Button";
 
 const Slider = () => {
   return (
-    <section className="mt-20 h-[calc(100vh-5rem)] w-full">
+    <section className='mt-20 h-[calc(100vh-5rem)] w-full'>
       <Swiper
         pagination={{ clickable: true }}
         navigation={true}
@@ -25,24 +25,28 @@ const Slider = () => {
         grabCursor={true}
         speed={500}
         modules={[Navigation, Pagination, Autoplay]}
-        className="mySwiper h-full w-full"
+        className='mySwiper h-full w-full'
       >
         {data.map((slide) => (
-          <SwiperSlide key={slide.heading} className="relative h-full w-full">
+          <SwiperSlide key={slide.heading} className='relative h-full w-full'>
             <Image
               src={slide.image}
               alt={slide.heading}
               width={1125}
               height={750}
-              className="h-full w-full object-cover"
+              className='h-full w-full object-cover'
             />
             <Overlay />
-            <div className="sp wrapper absolute bottom-0 left-0 right-0 top-0 h-full w-full space-y-5  z-[5] text-gray/95 mt-10">
-              <h1 className="max-w-6xl">{slide.heading}</h1>
-              <p className="mt-5 max-w-3xl">{slide.subHeading}</p>
-              <div className="btn mt-5">
+            <div className='sp wrapper absolute bottom-0 left-0 right-0 top-0 h-full w-full space-y-5  z-[5] text-gray/95 mt-10'>
+              <h1 className=' absolute top-[10%] left-[22%] text-gray font-bold text-5xl md:text-7xl max-w-4xl '>
+                {slide.heading}
+              </h1>
+              <p className='absolute top-[25%] left-[22%] text-gray font-medium text-2xl md:text-3xl max-w-3xl '>
+                {slide.subHeading}
+              </p>
+              <div className='btn mt-5 absolute top-[58%] left-[22%]'>
                 <Link
-                  href="/products"
+                  href='/products'
                   className={cn(buttonVariants({ variant: "orange" }))}
                 >
                   Browse Jewllery Products

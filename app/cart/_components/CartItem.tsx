@@ -49,7 +49,7 @@ const CartItem = () => {
 
         <div className="products flex flex-col">
           {data.map((product) => (
-            <div className="product grid grid-cols-5 gap-10 mt-10 border-b border-gray/80 pb-5">
+            <div key={product.name} className="product grid grid-cols-5 gap-10 mt-10 border-b border-gray/80 pb-5">
               <div className="left flex gap-5 col-span-2">
                 <div className="w-20 h-20 overflow-hidden ">
                   {" "}

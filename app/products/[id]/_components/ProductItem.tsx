@@ -35,7 +35,7 @@ const ProductItem: React.FC<productItemProps> = ({ item }) => {
             alt={item.title}
             width={600}
             height={300}
-            className=" eq h-full w-full h-full object-cover group-hover:scale-125"
+            className=" eq w-full h-full object-cover group-hover:scale-125"
           />
         </div>
         <div className="max-w-2xl mt-5 space-y-5 ml-10">

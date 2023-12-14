@@ -16,8 +16,8 @@ export const data = [
 
   {
     image:
-      "https://res.cloudinary.com/dh0ado2ir/image/upload/v1702352490/slide11_egt7aq.png",
-    heading: "Luxurious Gold Necklaces",
+      "https://res.cloudinary.com/dh0ado2ir/image/upload/v1702578402/brunette-woman-wi_jywau3.jpg",
+    heading: "Luxurious Dimond Necklaces",
     subHeading:
       "Adorn yourself in opulence with our collection of gold necklaces. Immerse in the charm of timeless beauty, crafted to perfection for those who appreciate luxury. Each piece is a testament to the artistry ",
   },

@@ -1,6 +1,7 @@
 "use client";
 
 import SectionTitle from "@/components/ui/SectionTitle";
+import { data } from "@/data/testimonialContents";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -15,7 +16,7 @@ const Testimonial = () => {
 
       <div className='testimonial-bg'>
         <div className='wrapper sp absolute'>
-          <div>
+          <div className='text-center mx-auto'>
             <h3 className='text-gray text-4xl uppercase font-medium'>
               What clients say
             </h3>
@@ -42,32 +43,28 @@ const Testimonial = () => {
               modules={[Pagination, Autoplay]}
               className='mySwiper h-full '
             >
-              <SwiperSlide>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Doloribus suscipit iste amet consectetur ab saepe. Facilis
-                  minus quisquam ipsum aliquam minima repellat cupiditate
-                  repellendus laudantium dicta qui, vero doloribus debitis
-                  corporis odit, delectus blanditiis quo error aspernatur
-                  molestias corrupti. Libero aspernatur, veniam architecto enim
-                  non explicabo ratione voluptates corporis deleniti. Lorem
-                  ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-                  suscipit iste amet consectetur ab saepe. Facilis minus
-                  quisquam ipsum aliquam minima repellat cupiditate repellendus
-                  laudantium dicta qui, vero doloribus debitis corporis odit,
-                  delectus blanditiis quo error aspernatur molestias corrupti.
-                  Libero aspernatur, veniam architecto enim non explicabo
-                  ratione voluptates corporis deleniti.
-                </p>
-              </SwiperSlide>
-              <SwiperSlide>Slide 2</SwiperSlide>
-              <SwiperSlide>Slide 3</SwiperSlide>
-              <SwiperSlide>Slide 4</SwiperSlide>
-              <SwiperSlide>Slide 5</SwiperSlide>
-              <SwiperSlide>Slide 6</SwiperSlide>
-              <SwiperSlide>Slide 7</SwiperSlide>
-              <SwiperSlide>Slide 8</SwiperSlide>
-              <SwiperSlide>Slide 9</SwiperSlide>
+              {data.map((testimonial: any) => (
+                <SwiperSlide key={testimonial.name} className='relative'>
+                  <div className='mb-32'>
+                    <div className='w-24 h-24'>
+                      <Image
+                        src={testimonial.image}
+                        alt={testimonial.name}
+                        width={300}
+                        height={300}
+                        className='object-cover w-full h-full rounded-full'
+                      />
+                    </div>
+                    <div className='contents'>
+                      <p className='text-gray max-w-5xl'>
+                        {testimonial.description}
+                      </p>
+                      <p className='text-gray'>{testimonial.name}</p>
+                      <p className='text-gray'>{testimonial.designation}</p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
             </Swiper>
           </>
         </div>

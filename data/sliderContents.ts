@@ -1,5 +1,3 @@
-
-
 export const data = [
   {
     image:
@@ -35,7 +33,7 @@ export const data = [
   },
   {
     image:
-      "https://res.cloudinary.com/dh0ado2ir/image/upload/v1701516551/hero11_op9qqa.jpg",
+      "https://res.cloudinary.com/dh0ado2ir/image/upload/v1702660357/pexels-photo-12427696_jvjtqh.jpg",
     heading: "Exquisite Diamond Rings",
     subHeading:
       "Indulge in the everlasting allure of our diamond rings. Each piece is meticulously crafted to perfection, radiating elegance and sophistication. Make a statement of everlasting love or celebrate a milestone with our exquisite diamond rings. Explore the world of timeless beauty and find the perfect diamond ring for every occasion.",

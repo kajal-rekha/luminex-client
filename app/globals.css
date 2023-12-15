@@ -91,6 +91,19 @@ small {
   background-size: cover;
   overflow: hidden;
 }
+.testimonial-bg {
+  max-width: 100vw;
+  height: 87vh;
+  position: relative;
+  top: 0rem;
+  background: url("https://res.cloudinary.com/dh0ado2ir/image/upload/v1702628437/14say_gjxq2g.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+
 .footer-bg {
   max-width: 100vw;
   height: 35rem;

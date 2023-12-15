@@ -16,7 +16,6 @@ const Slider = () => {
     <section className='mt-20 h-[calc(100vh-5rem)] w-full'>
       <Swiper
         pagination={{ clickable: true }}
-        navigation={true}
         autoplay={{
           delay: 5000,
           disableOnInteraction: false,
@@ -38,18 +37,18 @@ const Slider = () => {
             />
             <Overlay />
             <div className='sp wrapper absolute bottom-0 left-0 right-0 top-0 h-full w-full space-y-5  z-[5] text-gray/95 mt-10'>
-              <h1 className=' absolute top-[10%] left-[22%] text-gray font-bold text-5xl md:text-7xl max-w-4xl '>
+              <h1>
                 {slide.heading}
               </h1>
-              <p className='absolute top-[25%] left-[22%] text-gray font-medium text-2xl md:text-3xl max-w-3xl '>
+              <p className='max-w-5xl text-xl md:text-2xl'>
                 {slide.subHeading}
               </p>
-              <div className='btn mt-5 absolute top-[58%] left-[22%]'>
+              <div className='btn mt-5 '>
                 <Link
                   href='/products'
                   className={cn(buttonVariants({ variant: "orange" }))}
                 >
-                  Browse Jewllery Products
+                  {slide.cta}
                 </Link>
               </div>
             </div>

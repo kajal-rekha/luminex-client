@@ -11,14 +11,14 @@ import Image from "next/image";
 
 const Testimonial = () => {
   return (
-    <section className='mt-28'>
+    <section className='mt-28 mb-20'>
       <SectionTitle title='Testimonial' />
 
       <div className='testimonial-bg'>
         <div className='wrapper sp absolute'>
           <div className='text-center mx-auto'>
             <h3 className='text-gray text-4xl uppercase font-medium'>
-              What clients say
+           Journey to Success
             </h3>
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1701586392/14-icon_tardgm.png'
@@ -46,7 +46,7 @@ const Testimonial = () => {
               {data.map((testimonial: any) => (
                 <SwiperSlide key={testimonial.name} className='relative'>
                   <div className='mb-12'>
-                    <div className='w-24 h-24 mx-auto mt-14'>
+                    <div className='w-24 h-24 mx-auto mt-12'>
                       <Image
                         src={testimonial.image}
                         alt={testimonial.name}
@@ -56,10 +56,12 @@ const Testimonial = () => {
                       />
                     </div>
                     <div className='contents mx-auto text-center'>
-                      <p className='text-gray/80 max-w-5xl ml-[10%] mt-14 '>
+                      <p className='text-gray/80 max-w-5xl ml-[11%] mt-12 '>
                         {testimonial.description}
                       </p>
-                      <p className='text-gray mt-8 text-orange'>{testimonial.name}</p>
+                      <p className='text-gray mt-7 text-orange'>
+                        {testimonial.name}
+                      </p>
                       <p className='text-gray'>{testimonial.designation}</p>
                     </div>
                   </div>

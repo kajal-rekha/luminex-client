@@ -8,5 +8,5 @@ export type productType = {
   createdAt: string;
   updatedAt: string;
   __v: number;
-  cartQuantity?: number | undefined;
+  cartQuantity: number ;
 };

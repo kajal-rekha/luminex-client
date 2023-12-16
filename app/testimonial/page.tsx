@@ -11,7 +11,7 @@ import Image from "next/image";
 
 const Testimonial = () => {
   return (
-    <section className='mt-40'>
+    <section className='mt-28'>
       <SectionTitle title='Testimonial' />
 
       <div className='testimonial-bg'>
@@ -45,8 +45,8 @@ const Testimonial = () => {
             >
               {data.map((testimonial: any) => (
                 <SwiperSlide key={testimonial.name} className='relative'>
-                  <div className='mb-32'>
-                    <div className='w-24 h-24'>
+                  <div className='mb-12'>
+                    <div className='w-24 h-24 mx-auto mt-14'>
                       <Image
                         src={testimonial.image}
                         alt={testimonial.name}
@@ -55,11 +55,11 @@ const Testimonial = () => {
                         className='object-cover w-full h-full rounded-full'
                       />
                     </div>
-                    <div className='contents'>
-                      <p className='text-gray max-w-5xl'>
+                    <div className='contents mx-auto text-center'>
+                      <p className='text-gray/80 max-w-5xl ml-[10%] mt-14 '>
                         {testimonial.description}
                       </p>
-                      <p className='text-gray'>{testimonial.name}</p>
+                      <p className='text-gray mt-8 text-orange'>{testimonial.name}</p>
                       <p className='text-gray'>{testimonial.designation}</p>
                     </div>
                   </div>

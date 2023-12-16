@@ -3,7 +3,7 @@ export const data = [
     image:
       "https://res.cloudinary.com/dh0ado2ir/image/upload/v1702662691/32_eu7zvx.jpg",
     description:
-      "The jewelry is an embodiment of exquisite artistry. I'm captivated by the unique stories each piece tells. The attention to detail is impeccable, creating a deep connection to the craftsmanship. I'm extremely satisfied with the quality, making every purchase a delightful experience.",
+      " I'm captivated by the unique stories each piece tells. The attention to detail is impeccable, creating a deep connection to the craftsmanship. I'm extremely satisfied with the quality, making every purchase a delightful experience.",
     name: "Alice Thompson",
     designation: "Fashion Blogger",
   },
@@ -11,7 +11,7 @@ export const data = [
     image:
       "https://res.cloudinary.com/dh0ado2ir/image/upload/v1702662685/67_mgo1eo.jpg",
     description:
-      "The gemstone earrings exceeded my expectations with vibrant colors and intricate designs. They stand out in my collection, earning compliments every time I wear them. The craftsmanship and attention to detail make these earrings a perfect addition to my style.",
+      "The gemstone earrings exceeded my expectations with vibrant colors and intricate designs. They stand out in my collection, every time I wear them. The craftsmanship and attention to detail make these earrings a perfect addition to my style.",
     name: "John Davis",
     designation: "Jewelry Enthusiast",
   },

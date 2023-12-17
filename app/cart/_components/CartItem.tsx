@@ -1,7 +1,8 @@
 "use client";
 
-import { buttonVariants } from "@/components/ui/Button";
+import Button, { buttonVariants } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
+import authSlice from "@/redux/features/auth/authSlice";
 import {
   clearCart,
   decreaseCart,
@@ -13,9 +14,12 @@ import { productType } from "@/types/productType";
 import { formatCurrency } from "@/utils/formatCurrenct";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
 
 const CartItem = () => {
+  const router = useRouter();
+
   const dispatch = useDispatch();
   const { cartItems } = useSelector((state: RootState) => state.cart);
   console.log(cartItems);
@@ -49,6 +53,10 @@ const CartItem = () => {
   };
   const subTotal = calculateSubtotal(cartItems);
 
+  const handleCheckout = () => {
+    router.push("/checkout");
+  };
+
   return (
     <section className='cart-section wrapper sp'>
       <h2 className='section-title uppercase text-3xl font-bold space-font text-center mb-5'>
@@ -60,7 +68,10 @@ const CartItem = () => {
       </h2>
       <div className='text-center mb-5'>
         {cartItems.length === 0 && (
-          <Link href='/products' className='text-center text-orange font-medium text-lg block'>
+          <Link
+            href='/products'
+            className='text-center text-orange font-medium text-lg block'
+          >
             ⬅ Start shopping now
           </Link>
         )}
@@ -145,12 +156,12 @@ const CartItem = () => {
             <span className='text-orange'>${subTotal}</span>
           </div>
           <p>Taxes and shipping costs will be calculated during checkout.</p>
-          <Link
-            href='/cart/order'
+          <button
+            onClick={handleCheckout}
             className={cn(buttonVariants({ variant: "orange", size: "full" }))}
           >
             Chechout
-          </Link>
+          </button>
           <Link
             href='/products'
             className='continue uppercase text-dark/90 font-medium '

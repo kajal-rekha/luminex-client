@@ -11,6 +11,13 @@ import toast from "react-hot-toast";
 
 const Navbar = () => {
   const session = useSelector((state: RootState) => state.auth.userAndToken);
+   const { cartItems } = useSelector((state: RootState) => state.cart);
+
+   const totalQuantity = cartItems.reduce(
+     (acc, item) => acc + item.cartQuantity,
+     0
+   );
+
   const dispatch = useDispatch();
   return (
     <header className='fixed left-0 right-0 top-0 z-[100] flex h-20 w-full items-center border-b border-gray bg-gray/90 backdrop-blur-xl'>
@@ -100,9 +107,11 @@ const Navbar = () => {
           <Link href='/cart'>
             <span className='text-2xl relative '>
               <FiShoppingCart />
-              <span className='absolute text-orange text-sm font-semibold bottom-[40%] left-[70%] bg-black rounded-full py-[0.5] px-1'>
-                10
-              </span>
+              {totalQuantity > 0 && (
+                <span className='absolute text-orange text-sm font-semibold bottom-[40%] left-[70%] bg-black rounded-full py-[0.5] px-1'>
+                  {totalQuantity}
+                </span>
+              )}
             </span>
           </Link>
         </div>

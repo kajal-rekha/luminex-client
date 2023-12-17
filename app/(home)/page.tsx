@@ -3,6 +3,7 @@ import ProductPage from "../products/page";
 import Shop from "../shop/page";
 import Slider from "./_components/Slider";
 import Testimonial from "../testimonial/page";
+import IconBox from "@/components/IconBox";
 
 const HomePage = () => {
   return (
@@ -10,8 +11,9 @@ const HomePage = () => {
       <Slider />
       <Shop />
       <ProductPage />
+      <IconBox />
       <About />
-      <Testimonial/>
+      <Testimonial />
     </main>
   );
 };

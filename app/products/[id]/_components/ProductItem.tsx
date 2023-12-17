@@ -4,6 +4,8 @@ import { productType } from "@/types/productType";
 import { formatCurrency } from "@/utils/formatCurrenct";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+
 import { useDispatch } from "react-redux";
 
 interface productItemProps {
@@ -11,9 +13,11 @@ interface productItemProps {
 }
 
 const ProductItem: React.FC<productItemProps> = ({ item }) => {
+  const dispatch = useDispatch();
+  const router = useRouter();
   const handleAddToCart = () => {
-    const dispatch = useDispatch();
-    dispatch(addToCart({ item, cartQuantity: 1 }));
+    dispatch(addToCart({ ...item, cartQuantity: 1 }));
+    router.push("/cart");
   };
   return (
     <section className='product-item'>
@@ -34,7 +38,7 @@ const ProductItem: React.FC<productItemProps> = ({ item }) => {
         </div>
       </div>
 
-      <div className='wrapper sp grid grid-cols-1 md:grid-cols-2 gap-20 mt-10'>
+      <div className='wrapper sp grid grid-cols-1 lg:grid-cols-2 gap-20 mt-10'>
         <div className='w-[40rem] h-[38rem] group overflow-hidden'>
           <Image
             src={item.images[0]}
@@ -62,7 +66,7 @@ const ProductItem: React.FC<productItemProps> = ({ item }) => {
             <p className='mt-2'>Price: {formatCurrency(item.price)}</p>
 
             <button
-              onClick={()=>handleAddToCart()}
+              onClick={handleAddToCart}
               className={buttonVariants({ variant: "orange" })}
             >
               Add to Cart

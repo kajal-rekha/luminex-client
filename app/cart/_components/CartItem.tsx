@@ -5,23 +5,28 @@ import { cn } from "@/lib/utils";
 import {
   clearCart,
   decreaseCart,
+  increaseCart,
   removeFromCart,
 } from "@/redux/features/cart/cartSlice";
 import { RootState } from "@/redux/store";
 import { productType } from "@/types/productType";
-//import { formatCurrency } from "@/utils/formatCurrenct";
+import { formatCurrency } from "@/utils/formatCurrenct";
 import Image from "next/image";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 
 const CartItem = () => {
   const dispatch = useDispatch();
-  const cartItems = useSelector((state: RootState) => state.cart.cartItems);
+  const { cartItems } = useSelector((state: RootState) => state.cart);
+  console.log(cartItems);
 
   const handleRemove = (productId: string) => {
     dispatch(removeFromCart(productId));
   };
 
+  const handleIncreaseQuantity = (productId: string) => {
+    dispatch(increaseCart(productId));
+  };
   const handleDecreaseQuantity = (productId: string) => {
     dispatch(decreaseCart(productId));
   };
@@ -46,7 +51,20 @@ const CartItem = () => {
 
   return (
     <section className='cart-section wrapper sp'>
-      <h2 className='text-center mb-10'>Your Cart </h2>
+      <h2 className='section-title uppercase text-3xl font-bold space-font text-center mb-5'>
+        {cartItems.length > 0
+          ? `You've added ${cartItems.length} item${
+              cartItems.length > 1 ? "s" : ""
+            }`
+          : "Your cart is empty"}
+      </h2>
+      <div className='text-center mb-5'>
+        {cartItems.length === 0 && (
+          <Link href='/products' className='text-center text-orange font-medium text-lg block'>
+            ⬅ Start shopping now
+          </Link>
+        )}
+      </div>
       <div className='cart-wrapper'>
         <div className='product-headline grid grid-cols-5 gap-10 pb-5 border-b border-gray/80 uppercase font-medium'>
           <div className='product col-span-2'>Product</div>
@@ -65,7 +83,7 @@ const CartItem = () => {
                 <div className='w-20 h-20 overflow-hidden '>
                   {" "}
                   <Image
-                    src={cartItem.images[0]}
+                    src={cartItem.images && cartItem.images[0]}
                     alt={cartItem.title}
                     width={100}
                     height={100}
@@ -84,7 +102,7 @@ const CartItem = () => {
                 </div>
               </div>
               <div className='unit-price'>
-                <p>{cartItem.price}</p>
+                <p>{formatCurrency(cartItem.price)}</p>
               </div>
               <div className='counter flex'>
                 <button
@@ -98,7 +116,7 @@ const CartItem = () => {
                 </span>
 
                 <button
-                  onClick={() => handleRemove(cartItem._id)}
+                  onClick={() => handleIncreaseQuantity(cartItem._id)}
                   className='h-8 md:h-10 w-8 md:w-10 bg-gray/20 border border-dark/90 active:bg-orange/90'
                 >
                   +
@@ -113,10 +131,10 @@ const CartItem = () => {
       </div>
 
       <div className='cart-lower flex flex-col-reverse items-center gap-5 md:flex-row md:justify-between md:items-start md:gap-0 py-10 px-5 md:px-0 w-full'>
-        <div className='mt-0 md:mt-14'>
+        <div className='mt-0 md:mt-20'>
           <button
             onClick={handleClearCart}
-            className='clear-btn uppercase border border-dark/90 py-3 px-8 hover:bg-orange hover:text-gray/90 text-sm md:text-md hover:border-orange eq'
+            className='clear-btn whitespace-nowrap rounded-xl border px-10 py-3 text-center text-lg bg-orange hover:bg-orange/90 text-white eq'
           >
             Clear cart
           </button>
@@ -126,6 +144,7 @@ const CartItem = () => {
             <span className='text-orange'>Subtotal</span>
             <span className='text-orange'>${subTotal}</span>
           </div>
+          <p>Taxes and shipping costs will be calculated during checkout.</p>
           <Link
             href='/cart/order'
             className={cn(buttonVariants({ variant: "orange", size: "full" }))}

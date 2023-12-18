@@ -102,17 +102,44 @@ small {
   background-size: cover;
   overflow: hidden;
 }
-/* .checkout-bg {
-  max-width: 100vw;
-  height: 100vh;
-  position: relative;
-  top: 0rem;
-  background: url("https://res.cloudinary.com/dh0ado2ir/image/upload/v1701944124/bg_amyjq6.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
-} */
+
+/* Grid style */
+.gallery-grid-parent {
+  display: grid;
+  grid-template-areas:
+    'a a b d e e e'
+    'a a b d f g g'
+    'c c c d f h i';
+}
+
+.grid-child-1 {
+  grid-area: a;
+}
+.grid-child-2 {
+  grid-area: b;
+}
+.grid-child-3 {
+  grid-area: c;
+}
+.grid-child-4 {
+  grid-area: d;
+}
+.grid-child-5 {
+  grid-area: e;
+}
+.grid-child-6 {
+  grid-area: f;
+}
+.grid-child-7 {
+  grid-area: g;
+}
+.grid-child-8 {
+  grid-area: h;
+}
+.grid-child-9 {
+  grid-area: i;
+}
+
 
 .footer-bg {
   max-width: 100vw;

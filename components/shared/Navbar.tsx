@@ -52,6 +52,11 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
+            <Link href='/gallery' className='link-item'>
+              gallery
+            </Link>
+          </li>
+          <li>
             <Link href='/testimonial' className='link-item'>
               Testimonial
             </Link>

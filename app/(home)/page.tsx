@@ -5,6 +5,7 @@ import Slider from "./_components/Slider";
 import Testimonial from "../testimonial/page";
 import Contact from "../contact/page";
 import Gallery from "../gallery/page";
+import Blog from "../blog/page";
 
 const HomePage = () => {
   return (
@@ -12,9 +13,10 @@ const HomePage = () => {
       <Slider />
       <Shop />
       <ProductPage />
-      <About />
       <Gallery />
+      <About />
       <Testimonial />
+      <Blog/>
       <Contact />
     </main>
   );

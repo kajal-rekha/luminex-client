@@ -1,6 +1,5 @@
 "use client";
 
-import { buttonVariants } from "@/components/ui/Button";
 import SectionTitle from "@/components/ui/SectionTitle";
 import { cn } from "@/lib/utils";
 import { useRef, useState } from "react";
@@ -21,7 +20,6 @@ const Contact = () => {
     e.preventDefault();
 
     //emailjs integration
-
     emailjs
       .sendForm(
         process.env.NEXT_PUBLIC_SERVICE_ID as string,
@@ -46,7 +44,7 @@ const Contact = () => {
   };
 
   return (
-    <main className='wrapper sp mt-20'>
+    <main className='wrapper sp'>
       <SectionTitle title='Contact' />
 
       <div className='grid grid-cols md: grid-cols-2 gap-20 mt-20'>
@@ -55,7 +53,7 @@ const Contact = () => {
           <p className='text-xl'>
             We look forward to hearing from you regarding any data-related
             inquiries or concerns. Contact us for prompt assistance.Feel free to
-            reach out to us for any data-related issues. We're here to help!
+            reach out to us for any data-related issues. We are here to help!
           </p>
           <div className='mt-16'>
             <div className='flex flex-row gap-5'>
@@ -150,5 +148,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
-// className='eq w-full rounded-xl border border-gray px-3 py-5 outline-none focus:border-light bg-light'

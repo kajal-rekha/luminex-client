@@ -62,7 +62,7 @@ small {
 }
 
 ::-webkit-scrollbar-thumb {
-  height: 5%;
+  height: 10%;
   background-color: #ff7d5b;
   border-radius: 50px;
 }

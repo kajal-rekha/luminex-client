@@ -11,12 +11,12 @@ import toast from "react-hot-toast";
 
 const Navbar = () => {
   const session = useSelector((state: RootState) => state.auth.userAndToken);
-   const { cartItems } = useSelector((state: RootState) => state.cart);
+  const { cartItems } = useSelector((state: RootState) => state.cart);
 
-   const totalQuantity = cartItems.reduce(
-     (acc, item) => acc + item.cartQuantity,
-     0
-   );
+  const totalQuantity = cartItems.reduce(
+    (acc, item) => acc + item.cartQuantity,
+    0
+  );
 
   const dispatch = useDispatch();
   return (
@@ -45,17 +45,18 @@ const Navbar = () => {
               Products
             </Link>
           </li>
+          <li>
+            <Link href='/gallery' className='link-item'>
+              gallery
+            </Link>
+          </li>
 
           <li>
             <Link href='/about' className='link-item'>
               About
             </Link>
           </li>
-          <li>
-            <Link href='/gallery' className='link-item'>
-              gallery
-            </Link>
-          </li>
+
           <li>
             <Link href='/testimonial' className='link-item'>
               Testimonial

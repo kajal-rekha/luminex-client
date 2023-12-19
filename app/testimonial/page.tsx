@@ -5,13 +5,13 @@ import { data } from "@/data/testimonialContents";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Navigation, Autoplay } from "swiper/modules";
+import {  Autoplay } from "swiper/modules";
 import { Pagination } from "swiper/modules";
 import Image from "next/image";
 
 const Testimonial = () => {
   return (
-    <section className='mt-28 mb-20'>
+    <section className=' mb-20'>
       <SectionTitle title='Testimonial' />
 
       <div className='testimonial-bg'>

@@ -17,8 +17,8 @@ const Products = () => {
   const pathname = usePathname();
   console.log(pathname);
   return (
-    <section className="wrapper sp products">
-      <SectionTitle title="Explore our products" />
+    <section className='wrapper sp products'>
+      <SectionTitle title='Explore our products' />
 
       {isLoading && <Loading isLoading={isLoading} />}
 
@@ -31,7 +31,7 @@ const Products = () => {
           >
             {/* Bracelet */}
 
-            <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+            <div className='grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
               {pathname === "/products" &&
                 products
                   .filter((item: productType) => item.category === "Bracelet")
@@ -51,7 +51,7 @@ const Products = () => {
 
             {/* Earrings */}
 
-            <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+            <div className='grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
               {pathname === "/products" &&
                 products
                   .filter((item: productType) => item.category === "Earrings")
@@ -72,7 +72,7 @@ const Products = () => {
 
             {/* Ring */}
 
-            <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+            <div className='grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
               {pathname === "/products" &&
                 products
                   .filter((item: productType) => item.category === "Ring")
@@ -92,7 +92,7 @@ const Products = () => {
 
             {/* Necklace */}
 
-            <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+            <div className='grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
               {pathname === "/products" &&
                 products
                   .filter((item: productType) => item.category === "Necklace")
@@ -112,7 +112,7 @@ const Products = () => {
 
             {/* Hairpins */}
 
-            <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+            <div className='grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
               {pathname === "/products" &&
                 products
                   .filter((item: productType) => item.category === "Hairpin")
@@ -132,9 +132,9 @@ const Products = () => {
           </HorizontalTab>
 
           {pathname === "/" && products && (
-            <div className="mt-20 flex justify-center">
+            <div className='mt-20 flex justify-center'>
               <Link
-                href="/products"
+                href='/products'
                 className={cn(buttonVariants({ variant: "orange" }))}
               >
                 View all products

@@ -10,27 +10,27 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ productItem }) => {
   return (
-    <div className="w-full space-y-5 rounded-xl bg-white p-5 shadow-md shadow-gray">
+    <div className='flex w-full flex-col gap-5'>
       <Link
         href={`products/${productItem._id}`}
-        className="group inline-block h-[20rem] w-full overflow-hidden rounded-xl shadow-md shadow-gray"
+        className='group h-[17rem] w-full overflow-hidden rounded-xl border border-gray'
       >
         <Image
           src={productItem.images[0]}
           alt={productItem.title}
           width={640}
           height={640}
-          className=" eq h-full w-full object-cover group-hover:scale-125"
+          className='brigtness-90 group-hover:brigtness-100 eq h-full w-full object-cover group-hover:scale-125'
         />
       </Link>
-      <div className="eq flex w-full flex-col gap-2.5 rounded-xl  bg-gray/25 p-5 hover:bg-gray/50">
-        <span className="text-sm font-bold uppercase tracking-[0.375em] text-orange">
+      <div className='eq flex w-full flex-col gap-2.5 rounded-xl border bg-gray/25 p-5 hover:bg-gray/50 mt-5'>
+        <span className='text-sm font-bold uppercase tracking-[0.375em] text-orange'>
           {productItem.category}
         </span>
         <h3 className="'truncate'">{productItem.title.substring(0, 20)}...</h3>
         <p>{productItem.description.substring(0, 50)}...</p>
 
-        <div className="flex items-center justify-between gap-2.5">
+        <div className='flex items-center justify-between gap-2.5'>
           <p>{formatCurrency(productItem.price)}</p>
           <Link
             href={`/products/${productItem._id}`}

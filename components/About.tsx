@@ -16,6 +16,7 @@ const About = () => {
               alt=''
               width={500}
               height={800}
+              priority
               className=' eq w-full h-full group-hover:scale-125'
             />
           </div>
@@ -25,6 +26,7 @@ const About = () => {
               alt=''
               width={400}
               height={400}
+              priority
               className=' eq w-full h-full group-hover:scale-125'
             />
           </div>

@@ -45,6 +45,7 @@ const ProductItem: React.FC<productItemProps> = ({ item }) => {
             alt={item.title}
             width={600}
             height={300}
+            priority
             className=' eq w-full h-full object-cover group-hover:scale-125'
           />
         </div>

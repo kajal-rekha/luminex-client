@@ -39,6 +39,7 @@ const AboutPage = () => {
               alt='about-image'
               width={300}
               height={500}
+              priority
               className='w-full h-full object-cover group-hover:scale-125 eq'
             />
           </div>
@@ -48,6 +49,7 @@ const AboutPage = () => {
               alt='about-image'
               width={300}
               height={500}
+              priority
               className='w-full h-full object-cover group-hover:scale-125 eq'
             />
           </div>
@@ -57,6 +59,7 @@ const AboutPage = () => {
               alt='about-image'
               width={300}
               height={500}
+              priority
               className='w-full h-full object-cover group-hover:scale-125 eq'
             />
           </div>
@@ -66,6 +69,7 @@ const AboutPage = () => {
               alt='about-image'
               width={300}
               height={500}
+              priority
               className='w-full h-full object-cover group-hover:scale-125 eq'
             />
           </div>
@@ -75,6 +79,7 @@ const AboutPage = () => {
               alt='about-image'
               width={300}
               height={500}
+              priority
               className='w-full h-full object-cover group-hover:scale-125 eq'
             />
           </div>
@@ -85,6 +90,7 @@ const AboutPage = () => {
               alt='about-image'
               width={300}
               height={500}
+              priority
               className='eq w-full h-full group-hover:scale-125'
             />
           </div>
@@ -94,6 +100,7 @@ const AboutPage = () => {
               alt='about-image'
               width={300}
               height={500}
+              priority
               className='eq w-full  h-full group-hover:scale-125'
             />
           </div>
@@ -103,6 +110,7 @@ const AboutPage = () => {
               alt='about-image'
               width={300}
               height={500}
+              priority
               className='eq w-full h-full group-hover:scale-125'
             />
           </div>

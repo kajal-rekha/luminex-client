@@ -3,13 +3,14 @@ import SectionTitle from "@/components/ui/SectionTitle";
 import { data } from "@/data/blogeContent";
 import Image from "next/image";
 import Link from "next/link";
+
 const Blog = () => {
   return (
     <main className='wrapper sp'>
       <SectionTitle title='blog' />
       <div className='grid grid-cols md:grid-cols-2 xl:grid-cols-3 gap-10 shadow-md shadow-gray'>
-        {data.map((blog) => (
-          <div key={blog.tittle}>
+        {data.map((blog,i) => (
+          <div key={i}>
             <div className='group inline-block h-[20rem] w-full overflow-hidden rounded-sm shadow-md shadow-gray relative '>
               <Image
                 src={blog.image}

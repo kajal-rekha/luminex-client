@@ -5,8 +5,7 @@ import { data } from "@/data/testimonialContents";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import {  Autoplay } from "swiper/modules";
-import { Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import Image from "next/image";
 
 const Testimonial = () => {
@@ -18,13 +17,14 @@ const Testimonial = () => {
         <div className='wrapper sp absolute'>
           <div className='text-center mx-auto'>
             <h3 className='text-gray text-4xl uppercase font-medium'>
-           Journey to Success
+              Journey to Success
             </h3>
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1701586392/14-icon_tardgm.png'
               alt='icon'
               width={150}
               height={30}
+              priority
               className='inline-block'
             />
           </div>
@@ -43,8 +43,8 @@ const Testimonial = () => {
               modules={[Pagination, Autoplay]}
               className='mySwiper h-full '
             >
-              {data.map((testimonial: any) => (
-                <SwiperSlide key={testimonial.name} className='relative'>
+              {data.map((testimonial: any, i) => (
+                <SwiperSlide key={i} className='relative'>
                   <div className='mb-12'>
                     <div className='w-24 h-24 mx-auto mt-12'>
                       <Image
@@ -52,6 +52,7 @@ const Testimonial = () => {
                         alt={testimonial.name}
                         width={300}
                         height={300}
+                        priority
                         className='object-cover w-full h-full rounded-full'
                       />
                     </div>

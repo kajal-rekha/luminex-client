@@ -33,13 +33,12 @@ const Slider = () => {
               alt={slide.heading}
               width={1125}
               height={750}
+              priority
               className='h-full w-full object-cover'
             />
             <Overlay />
             <div className='sp wrapper absolute bottom-0 left-0 right-0 top-0 h-full w-full space-y-5  z-[5] text-gray/95 mt-10'>
-              <h1>
-                {slide.heading}
-              </h1>
+              <h1>{slide.heading}</h1>
               <p className='max-w-5xl text-xl md:text-2xl'>
                 {slide.subHeading}
               </p>

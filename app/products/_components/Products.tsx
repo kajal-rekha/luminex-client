@@ -43,7 +43,7 @@ const Products = () => {
                 products
                   .filter((item: productType) => item.category === "Necklace")
                   .sort((a: productType, b: productType) => b.price - a.price)
-                  .slice(0, 6)
+                  .slice(0, 9)
                   .map((item: productType) => (
                     <ProductCard key={item._id} productItem={item} />
                   ))}
@@ -63,7 +63,7 @@ const Products = () => {
                 products
                   .filter((item: productType) => item.category === "Bracelet")
                   .sort((a: productType, b: productType) => b.price - a.price)
-                  .slice(0, 6)
+                  .slice(0, 9)
                   .map((item: productType) => (
                     <ProductCard key={item._id} productItem={item} />
                   ))}
@@ -84,7 +84,7 @@ const Products = () => {
                 products
                   .filter((item: productType) => item.category === "Earrings")
                   .sort((a: productType, b: productType) => b.price - a.price)
-                  .slice(0, 6)
+                  .slice(0, 9)
                   .map((item: productType) => (
                     <ProductCard key={item._id} productItem={item} />
                   ))}
@@ -104,7 +104,7 @@ const Products = () => {
                 products
                   .filter((item: productType) => item.category === "Ring")
                   .sort((a: productType, b: productType) => b.price - a.price)
-                  .slice(0, 6)
+                  .slice(0, 9)
                   .map((item: productType) => (
                     <ProductCard key={item._id} productItem={item} />
                   ))}
@@ -124,7 +124,7 @@ const Products = () => {
                 products
                   .filter((item: productType) => item.category === "Hairpin")
                   .sort((a: productType, b: productType) => b.price - a.price)
-                  .slice(0, 6)
+                  .slice(0, 9)
                   .map((item: productType) => (
                     <ProductCard key={item._id} productItem={item} />
                   ))}

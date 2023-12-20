@@ -23,8 +23,8 @@ const Gallery = () => {
               <Image
                 src={item.src}
                 alt={item.alt}
-                height={item.height}
-                width={item.width}
+                height={500}
+                width={500}
                 priority
                 className='eq h-full w-full object-cover brightness-100 brightness-75 group-hover:brightness-100 grayscale  group-hover:grayscale-0 group-hover:scale-125'
               />

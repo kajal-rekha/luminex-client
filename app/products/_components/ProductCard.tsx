@@ -20,6 +20,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ productItem }) => {
           alt={productItem.title}
           width={640}
           height={640}
+          priority
           className='brigtness-90 group-hover:brigtness-100 eq h-full w-full object-cover group-hover:scale-125'
         />
       </Link>

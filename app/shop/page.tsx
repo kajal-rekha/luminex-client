@@ -33,9 +33,10 @@ const Shop = () => {
           <div className='img  group overflow-hidden w-[650] h-[800]'>
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1701588826/lookbook-1_kfnk3o.jpg'
-              alt=''
+              alt='shop-image'
               width={650}
               height={500}
+              priority
               className=' eq w-full group-hover:scale-125'
             />
           </div>
@@ -81,6 +82,7 @@ const Shop = () => {
               alt='shop-image'
               width={650}
               height={500}
+              priority
               className='eq w-full group-hover:scale-125'
             />
           </div>

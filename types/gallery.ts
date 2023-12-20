@@ -3,6 +3,4 @@ export type gallery = {
   class: string;
   src: string;
   alt: string;
-  height: number;
-  width: number;
 };

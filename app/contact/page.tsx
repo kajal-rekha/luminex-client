@@ -47,7 +47,7 @@ const Contact = () => {
     <main className='wrapper sp'>
       <SectionTitle title='Contact' />
 
-      <div className='grid grid-cols md: grid-cols-2 gap-20 mt-20'>
+      <div className='grid grid-cols md:grid-cols-2 gap-20 mt-20'>
         <div>
           <h2 className='mb-10'>Get In Touch With Us</h2>
           <p className='text-xl'>

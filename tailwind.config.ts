@@ -15,7 +15,7 @@ const config: Config = {
         red: "#C3315D",
         pink: "#ED7DC0",
         orange: "#FF7D5B",
-        green: "#00B79F",
+        green: "#2C614C",
         blue: "#32B8CB",
         violet: "#7A60B3",
       },

@@ -27,8 +27,28 @@ const Products = () => {
       {products && (
         <>
           <HorizontalTab
-            tabs={["Bracelet", "Earrings", "Ring", "Necklace", "Hairpin"]}
+            tabs={["Necklace", "Bracelet", "Earrings", "Ring", "Hairpin"]}
           >
+            {/* Necklace */}
+
+            <div className='grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
+              {pathname === "/products" &&
+                products
+                  .filter((item: productType) => item.category === "Necklace")
+                  .sort((a: productType, b: productType) => b.price - a.price)
+                  .map((item: productType) => (
+                    <ProductCard key={item._id} productItem={item} />
+                  ))}
+              {pathname === "/" &&
+                products
+                  .filter((item: productType) => item.category === "Necklace")
+                  .sort((a: productType, b: productType) => b.price - a.price)
+                  .slice(0, 6)
+                  .map((item: productType) => (
+                    <ProductCard key={item._id} productItem={item} />
+                  ))}
+            </div>
+
             {/* Bracelet */}
 
             <div className='grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
@@ -83,26 +103,6 @@ const Products = () => {
               {pathname === "/" &&
                 products
                   .filter((item: productType) => item.category === "Ring")
-                  .sort((a: productType, b: productType) => b.price - a.price)
-                  .slice(0, 6)
-                  .map((item: productType) => (
-                    <ProductCard key={item._id} productItem={item} />
-                  ))}
-            </div>
-
-            {/* Necklace */}
-
-            <div className='grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
-              {pathname === "/products" &&
-                products
-                  .filter((item: productType) => item.category === "Necklace")
-                  .sort((a: productType, b: productType) => b.price - a.price)
-                  .map((item: productType) => (
-                    <ProductCard key={item._id} productItem={item} />
-                  ))}
-              {pathname === "/" &&
-                products
-                  .filter((item: productType) => item.category === "Necklace")
                   .sort((a: productType, b: productType) => b.price - a.price)
                   .slice(0, 6)
                   .map((item: productType) => (

@@ -11,6 +11,7 @@
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "@reduxjs/toolkit": "^2.0.1",
+    "@stripe/stripe-js": "^2.2.2",
     "axios": "^1.6.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
@@ -25,6 +26,7 @@
     "react-spinners": "^0.13.8",
     "redux-persist": "^6.0.0",
     "redux-thunk": "^3.1.0",
+    "stripe": "^14.9.0",
     "swiper": "^11.0.5",
     "swr": "^2.2.4",
     "tailwind-merge": "^2.0.0"

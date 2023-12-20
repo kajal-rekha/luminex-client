@@ -10,7 +10,7 @@ import Image from "next/image";
 
 const Testimonial = () => {
   return (
-    <section className=' mb-20'>
+    <main className=' mb-20'>
       <SectionTitle title='Testimonial' />
 
       <div className='testimonial-bg'>
@@ -72,7 +72,7 @@ const Testimonial = () => {
           </>
         </div>
       </div>
-    </section>
+    </main>
   );
 };
 

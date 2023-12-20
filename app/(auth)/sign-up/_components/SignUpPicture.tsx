@@ -16,9 +16,9 @@ const SignUpPicture = () => {
       <Overlay />
       <div className='absolute bottom-0 left-0 right-0 top-0 z-[2] flex h-full w-full items-end p-20 text-center text-white'>
         <h3>
-          "Wearing jewelry is like carrying a little piece of art with you. It
-          won't change the world, but it might just brighten your corner of it."
-          - Nikki
+          &ldquo;Wearing jewelry is like carrying a little piece of art with
+          you. It won't change the world, but it might just brighten your corner
+          of it.&rdquo; - Nikki
         </h3>
       </div>
     </div>

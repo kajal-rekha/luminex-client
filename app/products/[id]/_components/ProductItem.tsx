@@ -58,7 +58,7 @@ const ProductItem: React.FC<productItemProps> = ({ item }) => {
           <p>
             Jewelry has long been cherished as a symbol of beauty, elegance, and
             personal expression. Each piece of jewelry tells a unique story,
-            carrying with it a sense of history and sentiment. Whether it's the
+            carrying with it a sense of history and sentiment. Whether it is the
             delicate sparkle of a diamond pendant or the vibrant hues of
             gemstones adorning a bracelet, jewelry has the power to elevate any
             outfit and accentuate individual style. 

@@ -8,8 +8,19 @@ import { RootState } from "@/redux/store";
 import Image from "next/image";
 import { logout } from "@/redux/features/auth/authSlice";
 import toast from "react-hot-toast";
+import { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
+  const [toggle, setToggle] = useState(false);
+
+  const handleToggle = () => {
+    setToggle((prev) => !prev);
+  };
+  const handleOpen = () => {
+    setToggle(false);
+  };
+
   const session = useSelector((state: RootState) => state.auth.userAndToken);
   const { cartItems } = useSelector((state: RootState) => state.cart);
 
@@ -22,14 +33,14 @@ const Navbar = () => {
   return (
     <header className='fixed left-0 right-0 top-0 z-[100] flex h-20 w-full items-center border-b border-gray bg-gray/90 backdrop-blur-xl'>
       {/* NAV LEFT */}
-      <nav className='wrapper flex items-center justify-between gap-5'>
+      <nav className='wrapper flex w-full h-full items-center justify-between gap-5'>
         <Link href='/' className='text-2xl font-semibold'>
           luminex
         </Link>
 
         {/* NAV MID */}
 
-        <ul className='flex items-center gap-5 text-lg'>
+        <ul className='md:flex hidden items-center gap-5 text-lg md:block'>
           <li>
             <Link href='/' className='link-item'>
               Home
@@ -121,7 +132,77 @@ const Navbar = () => {
             </span>
           </Link>
         </div>
+
+        {/*toggle button */}
+        <div className='md:hidden flex '>
+          <button
+            type='button'
+            onClick={handleToggle}
+            className='inline-flex items-center justify-center focus:outline-none text-xl text-dark/90 z-[99]'
+          >
+            {toggle === true ? <FaTimes /> : <FaBars />}
+          </button>
+        </div>
       </nav>
+
+      {/* mobile menu */}
+      {toggle ? (
+        <div className='md:hidden'>
+          <div
+            onClick={handleOpen}
+            className={`w-screen h-screen fixed z-[98] bg-dark top-20 left-0 right-0 bottom-0 flex text-light/80 text-lg justify-center items-center ${
+              toggle ? `` : "hidden"
+            }`}
+          >
+            <div>
+              <ul className='flex flex-col gap-2 items-center -mt-24'>
+                <li>
+                  <Link href='/' className='link-item'>
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link href='/shop' className='link-item'>
+                    Shop
+                  </Link>
+                </li>
+                <li>
+                  <Link href='/products' className='link-item'>
+                    Products
+                  </Link>
+                </li>
+                <li>
+                  <Link href='/gallery' className='link-item'>
+                    gallery
+                  </Link>
+                </li>
+
+                <li>
+                  <Link href='/about' className='link-item'>
+                    About
+                  </Link>
+                </li>
+
+                <li>
+                  <Link href='/testimonial' className='link-item'>
+                    Testimonial
+                  </Link>
+                </li>
+                <li>
+                  <Link href='/blog' className='link-item'>
+                    Blog
+                  </Link>
+                </li>
+                <li>
+                  <Link href='/contact' className='link-item'>
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      ) : null}
     </header>
   );
 };

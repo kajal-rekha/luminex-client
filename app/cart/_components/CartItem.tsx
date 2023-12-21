@@ -15,6 +15,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
+// import { loadStripe } from "@stripe/stripe-js";
+// import axios from "axios";
+// import session from "redux-persist/lib/storage/session";
+// import toast from "react-hot-toast";
+
+// // STRIPE PROMISE
+// const stripePromise = loadStripe(
+//   process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY || ""
+// );
 
 const CartItem = () => {
   const router = useRouter();
@@ -55,6 +64,32 @@ const CartItem = () => {
   const handleCheckout = () => {
     router.push("/checkout");
   };
+
+  // /* CHECKOUT SESSION */
+  // const createCheckoutSession = async () => {
+  //   // If there is no session, user will redirect into login
+  //   if (!session) {
+  //     router.push("/user/login?destination=/cart");
+  //     return;
+  //   }
+
+  //   const stripe = await stripePromise;
+
+  //   // Call the backend to create a checkout session
+  //   const checkoutSession = await axios.post("/api/create-checkout-session", {
+  //     items: cartItems,
+  //     email: session?.user.email,
+  //   });
+
+  //   // Redirect user to stripe checkout
+  //   const result = await stripe.redirectToCheckout({
+  //     sessionId: checkoutSession.data.id,
+  //   });
+
+  //   if (result.error) {
+  //     toast.error("");
+  //   }
+  // };
 
   return (
     <section className='cart-section wrapper sp'>

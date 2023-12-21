@@ -17,7 +17,7 @@ const Gallery = () => {
               key={item.id}
               className={cn(
                 item.class,
-                "eq group h-full w-full overflow-hidden border-[10px] border-dark/90 shadow-2xl hover:border-dark/80 group"
+                "eq group h-full w-full overflow-hidden rounded-xl shadow-2xl hover:border-dark/80 group"
               )}
             >
               <Image
@@ -26,7 +26,7 @@ const Gallery = () => {
                 height={500}
                 width={500}
                 priority
-                className='eq h-full w-full object-cover brightness-100 brightness-75 group-hover:brightness-100 grayscale  group-hover:grayscale-0 group-hover:scale-125'
+                className='eq h-full w-full object-cover brightness-75 group-hover:brightness-100  group-hover:scale-125'
               />
             </div>
           ))}

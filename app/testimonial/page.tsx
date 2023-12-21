@@ -10,8 +10,10 @@ import Image from "next/image";
 
 const Testimonial = () => {
   return (
-    <main className=' mb-20'>
-      <SectionTitle title='Testimonial' />
+    <main className='mb-20'>
+      <div className="ml-7">
+        <SectionTitle title='Testimonial' />
+      </div>
 
       <div className='testimonial-bg'>
         <div className='wrapper sp absolute'>

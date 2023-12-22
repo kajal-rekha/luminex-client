@@ -46,11 +46,11 @@ const Navbar = () => {
               Home
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link href='/shop' className='link-item'>
               Shop
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link href='/products' className='link-item'>
               Products
@@ -161,11 +161,11 @@ const Navbar = () => {
                     Home
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link href='/shop' className='link-item'>
                     Shop
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link href='/products' className='link-item'>
                     Products

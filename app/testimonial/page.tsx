@@ -11,25 +11,16 @@ import Image from "next/image";
 const Testimonial = () => {
   return (
     <main className='mb-20'>
-      <div className="ml-7">
+      <div className='ml-7'>
         <SectionTitle title='Testimonial' />
       </div>
 
       <div className='testimonial-bg'>
-        <div className='wrapper sp absolute'>
-          <div className='text-center mx-auto'>
-            <h3 className='text-gray text-4xl uppercase font-medium'>
-              Journey to Success
-            </h3>
-            <Image
-              src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1701586392/14-icon_tardgm.png'
-              alt='icon'
-              width={150}
-              height={30}
-              priority
-              className='inline-block'
-            />
-          </div>
+        <div className='wrapper sp absolute left-[2%]'>
+          <h3 className='text-gray text-center text-4xl uppercase font-medium'>
+            Voices of Satisfaction
+          </h3>
+
           <>
             <Swiper
               autoplay={{

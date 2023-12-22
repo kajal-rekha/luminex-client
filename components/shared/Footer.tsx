@@ -92,14 +92,14 @@ const Footer = () => {
                   Home
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   href='/shop'
                   className='link-item text-gray/80 hover:text-orange/80 eq'
                 >
                   Shop
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   href='/products'

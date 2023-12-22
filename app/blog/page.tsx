@@ -10,7 +10,7 @@ const Blog = () => {
       <SectionTitle title='blog' />
       <div>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
-          <div className='group overflow-hidden w-full h-[20rem]'>
+          <div className='group overflow-hidden w-full h-[20rem] relative'>
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1702983977/B6_roqldn.webp'
               alt='blog-image'
@@ -20,6 +20,9 @@ const Blog = () => {
               className=' eq w-full group-hover:scale-125'
             />
           </div>
+          <p className='absolute bg-orange text-light  py-3 px-5'>
+            20 Decmber 2023
+          </p>
           <div>
             <h3 className='text-orange text-4xl font-medium text-center'>
               Enchanting Vintage Charm,Timeless Elegance Reimagined
@@ -65,7 +68,7 @@ const Blog = () => {
               </Link>
             </div>
           </div>
-          <div className='group overflow-hidden w-full h-[20rem]'>
+          <div className='group overflow-hidden w-full h-[20rem] relative'>
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1703225874/blog1_y6c3tw.jpg'
               alt='shop-image'
@@ -75,10 +78,13 @@ const Blog = () => {
               className='eq w-full group-hover:scale-125'
             />
           </div>
+          <p className='absolute bg-orange text-light ml-[80.9%] py-3 px-5'>
+            10 November 2023
+          </p>
         </div>
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-10 mt-20'>
-          <div className='group overflow-hidden w-full h-[20rem]'>
+          <div className='group overflow-hidden w-full h-[20rem] relative'>
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1703225912/beautiful-girl-set-jewelry-woman-600nw-1482513518_phykfq.webp'
               alt='blog-image'
@@ -88,6 +94,9 @@ const Blog = () => {
               className=' eq w-full group-hover:scale-125'
             />
           </div>
+          <p className='absolute bg-orange text-light  py-3 px-5'>
+            08 October 2023
+          </p>
           <div>
             <h3 className='text-orange text-4xl font-medium text-center'>
               Modern Minimalist Elegance, Sleek Contemporary Sophistication
@@ -97,8 +106,8 @@ const Blog = () => {
               jewelry collection. Clean lines, sleek designs, and understated
               beauty define this curated selection. Perfect for those who
               appreciate the essence of less-is-more, our modern pieces
-              effortlessly complement any style. Whether it is a sleek pendant or
-              a minimalist ring, each item reflects a contemporary.
+              effortlessly complement any style. Whether it is a sleek pendant
+              or a minimalist ring, each item reflects a contemporary.
             </p>
             <div className='mt-6 text-center'>
               <Link
@@ -115,7 +124,7 @@ const Blog = () => {
             href='/products'
             className={buttonVariants({ variant: "orange" })}
           >
-          View all blogs
+            View all blogs
           </Link>
         </div>
       </div>

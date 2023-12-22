@@ -4,6 +4,9 @@
 
 /* MAIN STYLE */
 
+body {
+  overflow-x: hidden;
+}
 main {
   @apply mt-20;
 }
@@ -67,7 +70,6 @@ small {
   border-radius: 50px;
 }
 
-
 ::-webkit-scrollbar-track {
   background-color: #fff1f2;
 }
@@ -126,7 +128,7 @@ small {
 /* Grid style */
 .gallery-grid-parent {
   display: grid;
-  
+
   grid-template-areas:
     "a a b b g e e"
     "a a d f g h h"

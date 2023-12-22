@@ -53,7 +53,7 @@ const Blog = () => {
               wedding bands. Each ring is a symbol of commitment, crafted with
               precision and adorned with timeless elegance. From classic gold
               bands to contemporary designs, our wedding collection caters to
-              every couple's unique style. Whether you prefer a traditional,
+              every couple unique style. Whether you prefer a traditional,
               diamond-studded band or a modern, engraved ring.
             </p>
             <div className='mt-6 text-center'>
@@ -97,7 +97,7 @@ const Blog = () => {
               jewelry collection. Clean lines, sleek designs, and understated
               beauty define this curated selection. Perfect for those who
               appreciate the essence of less-is-more, our modern pieces
-              effortlessly complement any style. Whether it's a sleek pendant or
+              effortlessly complement any style. Whether it is a sleek pendant or
               a minimalist ring, each item reflects a contemporary.
             </p>
             <div className='mt-6 text-center'>

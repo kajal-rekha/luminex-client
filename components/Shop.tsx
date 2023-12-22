@@ -14,8 +14,8 @@ const Shop = () => {
           </p>
         </div>
       </div>
-      <div className='grid grid-cols md:grid-cols-2 mt-20 gap-5'>
-        <div className='group relative overflow-hidden w-full h-[800]'>
+      <div className='grid grid-cols md:grid-cols-2 mt-20 gap-6'>
+        <div className='group relative overflow-hidden w-full h-[59.5rem]'>
           <Image
             src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1702900510/New-Project-3-1_hhazx6.jpg'
             alt='shop-image'
@@ -30,7 +30,7 @@ const Shop = () => {
             </p>
           </div>
         </div>
-        <div>
+        <div className="flex flex-col gap-6">
           <div className='group relative overflow-hidden w-full h-[29rem]'>
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1703247846/article_page_stenzhorn-butterly-lovers_suht8i.jpg'
@@ -47,7 +47,7 @@ const Shop = () => {
             </div>
           </div>
 
-          <div className='group relative overflow-hidden w-full h-[29rem] mt-5'>
+          <div className='group relative overflow-hidden w-full h-[29rem]'>
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1701508196/slider-3_f8jnpd.jpg'
               alt='shop-image'

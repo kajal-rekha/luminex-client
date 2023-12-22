@@ -10,24 +10,24 @@ const About = () => {
       <SectionTitle title='About' />
       <div className='grid grid-cols-1 md:grid-cols-2 gap-20'>
         <div className='relative'>
-          <div className='group overflow-hidden h-[1000] '>
+          <div className='group overflow-hidden h-[800] '>
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1702572913/1-1_bd7kb0.jpg'
-              alt=''
+              alt='about-image'
               width={500}
               height={800}
               priority
               className=' eq w-full h-full group-hover:scale-125'
             />
           </div>
-          <div className='group overflow-hidden absolute top-[30%] -right-[10%] hidden md:block'>
+          <div className='group overflow-hidden absolute top-[30%] -right-[10%] hidden md:block w-[18rem] h-[20rem]'>
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1702572906/shape-1-1-1_dgpsgw.jpg'
               alt=''
               width={400}
               height={400}
               priority
-              className=' eq w-full h-full group-hover:scale-125'
+              className=' eq object-cover w-full h-full group-hover:scale-125'
             />
           </div>
         </div>

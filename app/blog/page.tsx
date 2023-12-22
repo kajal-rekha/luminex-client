@@ -78,7 +78,7 @@ const Blog = () => {
               className='eq w-full group-hover:scale-125'
             />
           </div>
-          <p className='absolute bg-orange text-light ml-[80.9%] py-3 px-5'>
+          <p className='absolute bg-orange text-light ml-[50rem] py-3 px-5'>
             10 November 2023
           </p>
         </div>
@@ -94,7 +94,7 @@ const Blog = () => {
               className=' eq w-full group-hover:scale-125'
             />
           </div>
-          <p className='absolute bg-orange text-light  py-3 px-5'>
+          <p className='absolute bg-orange text-light py-3 px-5'>
             08 October 2023
           </p>
           <div>

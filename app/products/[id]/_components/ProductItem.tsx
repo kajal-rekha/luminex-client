@@ -1,12 +1,13 @@
 import { buttonVariants } from "@/components/ui/Button";
 import { addToCart } from "@/redux/features/cart/cartSlice";
+import { RootState } from "@/redux/store";
 import { productType } from "@/types/productType";
 import { formatCurrency } from "@/utils/formatCurrenct";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 interface productItemProps {
   item: productType;
@@ -14,10 +15,16 @@ interface productItemProps {
 
 const ProductItem: React.FC<productItemProps> = ({ item }) => {
   const dispatch = useDispatch();
+  const { userAndToken } = useSelector((state: RootState) => state.auth);
   const router = useRouter();
+
   const handleAddToCart = () => {
-    dispatch(addToCart({ ...item, cartQuantity: 1 }));
-    router.push("/cart");
+    if (userAndToken) {
+      dispatch(addToCart({ ...item, cartQuantity: 1 }));
+      router.push("/cart");
+    } else {
+      router.push("/sign-in");
+    }
   };
   return (
     <section className='product-item'>
@@ -61,7 +68,7 @@ const ProductItem: React.FC<productItemProps> = ({ item }) => {
             carrying with it a sense of history and sentiment. Whether it is the
             delicate sparkle of a diamond pendant or the vibrant hues of
             gemstones adorning a bracelet, jewelry has the power to elevate any
-            outfit and accentuate individual style. 
+            outfit and accentuate individual style.
           </p>
           <div className='flex gap-10'>
             <p className='mt-2'>Price: {formatCurrency(item.price)}</p>

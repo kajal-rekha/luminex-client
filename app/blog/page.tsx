@@ -8,36 +8,116 @@ const Blog = () => {
   return (
     <main className='wrapper sp'>
       <SectionTitle title='blog' />
-      <div className='grid grid-cols md:grid-cols-2 xl:grid-cols-3 gap-10 shadow-md shadow-gray'>
-        {data.map((blog,i) => (
-          <div key={i}>
-            <div className='group inline-block h-[20rem] w-full overflow-hidden rounded-sm shadow-md shadow-gray relative '>
-              <Image
-                src={blog.image}
-                alt={blog.tittle}
-                width={500}
-                height={500}
-                priority
-                className='eq h-full w-full object-cover group-hover:scale-125 '
-              />
-            </div>
-            <div className=' absolute -mt-40 ml-24 bg-orange '>
-              <p className='py-2 px-5 text-light'>{blog.date}</p>
-            </div>
-            <div className='eq flex w-full flex-col gap-2.5 rounded-xl  bg-gray/25 p-5 hover:bg-gray/50'>
-              <h3 className='text-orange'>{blog.tittle}</h3>
-              <p className='text-dark/75'>
-                {blog.description.substring(0, 100)}...
-              </p>
+      <div>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
+          <div className='group overflow-hidden w-full h-[20rem]'>
+            <Image
+              src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1702983977/B6_roqldn.webp'
+              alt='blog-image'
+              width={650}
+              height={500}
+              priority
+              className=' eq w-full group-hover:scale-125'
+            />
+          </div>
+          <div>
+            <h3 className='text-orange text-4xl font-medium text-center'>
+              Enchanting Vintage Charm,Timeless Elegance Reimagined
+            </h3>
+            <p className='mt-4 text-justify'>
+              Indulge in the allure of our vintage-inspired jewelry collection.
+              Each piece tells a story of timeless elegance and romantic
+              craftsmanship. Discover intricate details and exquisite designs
+              that transport you to a bygone era. From delicate pearls to ornate
+              filigree, our vintage collection captures the essence of classic
+              beauty.Elevate your style with a touch of nostalgia.
+            </p>
+            <div className='mt-6 text-center'>
               <Link
-                href={blog.link}
+                href='/products'
                 className={buttonVariants({ variant: "orange" })}
               >
-                Read More
+                Read more
               </Link>
             </div>
           </div>
-        ))}
+        </div>
+
+        <div className='content-2 grid grid-cols-1 md:grid-cols-2 gap-10 mt-20'>
+          <div className=''>
+            <h3 className='text-orange text-4xl font-medium text-center'>
+              Bands Commitment Eternal Love - Wedding Different
+            </h3>
+            <p className='mt-4 text-justify'>
+              Celebrate everlasting love with our exquisite collection of
+              wedding bands. Each ring is a symbol of commitment, crafted with
+              precision and adorned with timeless elegance. From classic gold
+              bands to contemporary designs, our wedding collection caters to
+              every couple's unique style. Whether you prefer a traditional,
+              diamond-studded band or a modern, engraved ring.
+            </p>
+            <div className='mt-6 text-center'>
+              <Link
+                href='/products'
+                className={buttonVariants({ variant: "orange" })}
+              >
+                Read more
+              </Link>
+            </div>
+          </div>
+          <div className='group overflow-hidden w-full h-[20rem]'>
+            <Image
+              src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1703225874/blog1_y6c3tw.jpg'
+              alt='shop-image'
+              width={650}
+              height={500}
+              priority
+              className='eq w-full group-hover:scale-125'
+            />
+          </div>
+        </div>
+
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-10 mt-20'>
+          <div className='group overflow-hidden w-full h-[20rem]'>
+            <Image
+              src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1703225912/beautiful-girl-set-jewelry-woman-600nw-1482513518_phykfq.webp'
+              alt='blog-image'
+              width={650}
+              height={500}
+              priority
+              className=' eq w-full group-hover:scale-125'
+            />
+          </div>
+          <div>
+            <h3 className='text-orange text-4xl font-medium text-center'>
+              Modern Minimalist Elegance, Sleek Contemporary Sophistication
+            </h3>
+            <p className='mt-4 text-justify'>
+              Embrace the simplicity of modern elegance with our minimalist
+              jewelry collection. Clean lines, sleek designs, and understated
+              beauty define this curated selection. Perfect for those who
+              appreciate the essence of less-is-more, our modern pieces
+              effortlessly complement any style. Whether it's a sleek pendant or
+              a minimalist ring, each item reflects a contemporary.
+            </p>
+            <div className='mt-6 text-center'>
+              <Link
+                href='/products'
+                className={buttonVariants({ variant: "orange" })}
+              >
+                Read more
+              </Link>
+            </div>
+          </div>
+        </div>
+        <div className='mt-20 text-center'>
+          <Link
+            href='/products'
+            className={buttonVariants({ variant: "orange" })}
+          >
+          View all blogs
+          </Link>
+        </div>
       </div>
     </main>
   );

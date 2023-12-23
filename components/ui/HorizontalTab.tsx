@@ -32,7 +32,7 @@ const HorizontalTab: React.FC<HorizontalTabProps> = ({
             onClick={() => handleClick(index)}
             key={index}
             className={cn(
-              "eq border-gray flex h-[4rem] lg:h-[5rem] w-[12rem] lg:w-[15rem] items-center justify-center whitespace-nowrap border px-6 py-3 text-center text-lg font-semibold uppercase tracking-widest rounded-tl-2xl rounded-tr-2xl",
+              "eq border-gray flex h-[4rem] lg:h-[5rem] w-[12rem] lg:w-[15rem] items-center justify-center whitespace-nowrap border px-4 py-2 lg:px-6 lg:py-3 text-center md:text-lg font-semibold uppercase tracking-widest rounded-tl-2xl rounded-tr-2xl",
 
               shouldOpenTab === index && "border-orange bg-orange text-light"
             )}

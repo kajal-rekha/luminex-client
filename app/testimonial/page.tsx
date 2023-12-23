@@ -18,7 +18,7 @@ const Testimonial = () => {
       <div className=''>
         <>
           <Swiper
-            slidesPerView={2}
+            slidesPerView={1}
             spaceBetween={30}
             pagination={{
               clickable: true,
@@ -39,7 +39,7 @@ const Testimonial = () => {
                 className='mb-14 grid grid-cols md:grid-cols-2'
               >
                 <div className='flex w-full flex-col gap-5 bg-orange/90 text-dark/90 py-10 px-5 rounded-lg'>
-                  <div className='mx-auto text-center max-w-xl'>
+                  <div className='mx-auto text-center max-w-4xl'>
                     <span className='mt-10'>
                       <FaQuoteLeft />
                     </span>

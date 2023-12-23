@@ -24,15 +24,15 @@ const HorizontalTab: React.FC<HorizontalTabProps> = ({
     [onClick]
   );
   return (
-    <div className="flex flex-col gap-20 mt-24">
+    <div className='flex flex-col gap-20 mt-24'>
       {/* TABS */}
-      <div className="flex gap-5 items-center self-center border-b border-orange">
+      <div className='grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-5 items-center self-center border-b border-orange'>
         {tabs?.map((tab: string, index: number) => (
           <button
             onClick={() => handleClick(index)}
             key={index}
             className={cn(
-              "eq border-gray flex h-[5rem] w-[15rem] items-center justify-center whitespace-nowrap border px-6 py-3 text-center text-lg font-semibold uppercase tracking-widest rounded-tl-2xl rounded-tr-2xl",
+              "eq border-gray flex h-[4rem] lg:h-[5rem] w-[12rem] lg:w-[15rem] items-center justify-center whitespace-nowrap border px-6 py-3 text-center text-lg font-semibold uppercase tracking-widest rounded-tl-2xl rounded-tr-2xl",
 
               shouldOpenTab === index && "border-orange bg-orange text-light"
             )}

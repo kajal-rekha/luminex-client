@@ -5,65 +5,71 @@ import { data } from "@/data/testimonialContents";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Autoplay, Pagination } from "swiper/modules";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import Image from "next/image";
+import { FaQuoteLeft } from "react-icons/fa";
+import { FaQuoteRight } from "react-icons/fa";
 
 const Testimonial = () => {
   return (
-    <main className='mb-20'>
-      <div className='ml-7'>
-        <SectionTitle title='Testimonial' />
-      </div>
+    <main className='sp wrapper mt-10 max-h-screen'>
+      <SectionTitle title='Testimonial' />
 
-      <div className='testimonial-bg'>
-        <div className='wrapper sp absolute left-[2%]'>
-          <h3 className='text-gray text-center text-4xl uppercase font-medium'>
-            Voices of Satisfaction
-          </h3>
+      <div className=''>
+        <>
+          <Swiper
+            slidesPerView={2}
+            spaceBetween={30}
+            pagination={{
+              clickable: true,
+            }}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
+            loop={true}
+            grabCursor={true}
+            speed={500}
+            modules={[Pagination, Autoplay, Navigation]}
+            className='mySwiper '
+          >
+            {data.map((testimonial, i) => (
+              <SwiperSlide
+                key={i}
+                className='mb-14 grid grid-cols md:grid-cols-2'
+              >
+                <div className='flex w-full flex-col gap-5 bg-orange/90 text-dark/90 py-10 px-5 rounded-lg'>
+                  <div className='mx-auto text-center max-w-xl'>
+                    <span className='mt-10'>
+                      <FaQuoteLeft />
+                    </span>
+                    <p className='mt-10 text-lg'>{testimonial.description}</p>
+                  </div>
 
-          <>
-            <Swiper
-              autoplay={{
-                delay: 5000,
-                disableOnInteraction: false,
-              }}
-              pagination={{
-                clickable: true,
-              }}
-              loop={true}
-              grabCursor={true}
-              speed={500}
-              modules={[Pagination, Autoplay]}
-              className='mySwiper h-full '
-            >
-              {data.map((testimonial: any, i) => (
-                <SwiperSlide key={i} className='relative'>
-                  <div className='mb-12'>
-                    <div className='w-24 h-24 mx-auto mt-12'>
+                  <div className='mx-auto mt-5'>
+                    <div className='w-20 h-20'>
                       <Image
                         src={testimonial.image}
                         alt={testimonial.name}
-                        width={300}
-                        height={300}
+                        width={200}
+                        height={200}
                         priority
-                        className='object-cover w-full h-full rounded-full'
+                        className='rounded-full'
                       />
                     </div>
-                    <div className='contents mx-auto text-center'>
-                      <p className='text-gray/80 max-w-5xl ml-[11%] mt-12 '>
-                        {testimonial.description}
+
+                    <div className='-ml-7'>
+                      <h4 className='font-bold text-xl '>{testimonial.name}</h4>
+                      <p className='font-semibold text-lg '>
+                        {testimonial.designation}
                       </p>
-                      <p className='text-gray mt-7 text-orange'>
-                        {testimonial.name}
-                      </p>
-                      <p className='text-gray'>{testimonial.designation}</p>
                     </div>
                   </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </>
-        </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </>
       </div>
     </main>
   );

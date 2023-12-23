@@ -37,7 +37,7 @@ const Blog = () => {
             </p>
             <div className='mt-6 text-center'>
               <Link
-                href='/products'
+                href='/blogs'
                 className={buttonVariants({ variant: "orange" })}
               >
                 Read more
@@ -61,7 +61,7 @@ const Blog = () => {
             </p>
             <div className='mt-6 text-center'>
               <Link
-                href='/products'
+                href='/blogs'
                 className={buttonVariants({ variant: "orange" })}
               >
                 Read more
@@ -78,9 +78,9 @@ const Blog = () => {
               className='eq w-full group-hover:scale-125'
             />
           </div>
-          <p className='absolute bg-orange text-light ml-[50rem] py-3 px-5'>
+          {/* <p className='absolute bg-orange text-light py-3 px-5 mt-[25.8rem]'>
             10 November 2023
-          </p>
+          </p> */}
         </div>
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-10 mt-20'>
@@ -111,7 +111,7 @@ const Blog = () => {
             </p>
             <div className='mt-6 text-center'>
               <Link
-                href='/products'
+                href='/blogs'
                 className={buttonVariants({ variant: "orange" })}
               >
                 Read more
@@ -121,7 +121,7 @@ const Blog = () => {
         </div>
         <div className='mt-20 text-center'>
           <Link
-            href='/products'
+            href='/blogs'
             className={buttonVariants({ variant: "orange" })}
           >
             View all blogs

@@ -31,7 +31,7 @@ const Navbar = () => {
 
   const dispatch = useDispatch();
   return (
-    <header className='fixed left-0 right-0 top-0 z-[100] flex h-20 w-full items-center border-b border-gray bg-gray/90 backdrop-blur-xl'>
+    <header className='fixed left-0 right-0 top-0 z-[100] flex h-20  items-center border-b border-gray bg-gray/90 backdrop-blur-xl'>
       {/* NAV LEFT */}
       <nav className='wrapper flex w-full h-full items-center justify-between gap-5'>
         <Link href='/' className='text-2xl font-semibold'>

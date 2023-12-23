@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import SectionTitle from "./ui/SectionTitle";
 
 const Shop = () => {
@@ -24,13 +25,21 @@ const Shop = () => {
             priority
             className='w-full object-cover group-hover:scale-125 h-full transition-transform eq'
           />
-          <div className='absolute inset-0 bg-dark bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity eq flex justify-center items-center'>
+          <div className='absolute inset-0 bg-dark bg-opacity-60 opacity-0 flex flex-col group-hover:opacity-100 transition-opacity eq flex justify-center items-center'>
             <p className='text-gray text-2xl font-bold tracking-widest uppercase'>
               Weading Collection
             </p>
+            <div className='mt-8'>
+              <Link
+                href='/products'
+                className='text-gray font-bold tracking-widest uppercase border border-gray py-3 px-5 rounded-lg'
+              >
+                Explore Now
+              </Link>
+            </div>
           </div>
         </div>
-        <div className="flex flex-col gap-6">
+        <div className='flex flex-col gap-6'>
           <div className='group relative overflow-hidden w-full h-[29rem]'>
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1703247846/article_page_stenzhorn-butterly-lovers_suht8i.jpg'
@@ -40,10 +49,18 @@ const Shop = () => {
               priority
               className='w-full object-cover group-hover:scale-125 h-full transition-transform eq'
             />
-            <div className='absolute inset-0 bg-dark bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity eq flex justify-center items-center'>
+            <div className='absolute inset-0 bg-dark bg-opacity-50 opacity-0 flex flex-col group-hover:opacity-100 transition-opacity eq flex justify-center items-center'>
               <p className='text-gray text-2xl font-bold tracking-widest uppercase'>
                 Winter Collection
               </p>
+              <div className='mt-8'>
+                <Link
+                  href='/products'
+                  className='text-gray font-bold tracking-widest uppercase border border-gray py-3 px-5 rounded-lg'
+                >
+                  Explore Now
+                </Link>
+              </div>
             </div>
           </div>
 
@@ -56,10 +73,18 @@ const Shop = () => {
               priority
               className='w-full object-cover group-hover:scale-125 h-full transition-transform eq'
             />
-            <div className='absolute inset-0 bg-dark bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity eq flex justify-center items-center'>
+            <div className='absolute inset-0 bg-dark bg-opacity-50 opacity-0 flex flex-col group-hover:opacity-100 transition-opacity eq flex justify-center items-center'>
               <p className='text-gray text-2xl font-bold tracking-widest uppercase'>
                 Summer Collection
               </p>
+              <div className='mt-8'>
+                <Link
+                  href='/products'
+                  className='text-gray font-bold tracking-widest uppercase border border-gray py-3 px-5 rounded-lg'
+                >
+                  Explore Now
+                </Link>
+              </div>
             </div>
           </div>
         </div>

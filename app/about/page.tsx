@@ -6,24 +6,25 @@ const AboutPage = () => {
     <main className='about-page'>
       <div className='about-bg'></div>
       <Overlay />
-      <h2 className='absolute top-[45%] left-[34%] text-gray font-bold text-7xl'>
+      <h2 className='absolute top-[38%] left-[31%] xl:left-[34%] 2xl:left-[38%] text-gray font-bold text-4xl xl:text-7xl 2xl:text-8xl'>
         About Luminex
       </h2>
-      <p className='absolute top-[58%] left-[24%] text-gray font-medium text-3xl max-w-4xl '>
+      <p className='absolute top-[49%] xl:top-[55%] left-[15%] xl:left-[22%] 2xl:top-[60%] 2xl:left-[34%] text-gray font-medium text-2xl lg:text-3xl max-w-4xl '>
         Luminex Jewelry dazzles with timeless elegance, offering radiant gems,
         expert craftsmanship, and personalized adornments—transforming moments
         into cherished memories with enduring beauty and style.
       </p>
+
       <div className='wrapper sp'>
-        <h3 className='text-5xl max-w-xl text-center mx-auto text-orange'>
+        <h3 className='text-2xl lg:text-4xl xl:text-5xl max-w-xl text-center mx-auto text-orange'>
           Timeless Elegance and Radiant Gems
         </h3>
-        <h5 className='text-3xl max-w-4xl text-center mx-auto mt-5'>
+        <h5 className='text-xl lg:text-3xl max-w-4xl text-center mx-auto mt-5'>
           Discover the Artistry of Craftsmanship and Personalized Adornments,
           Elevating Every Moment into a Cherished Expression of Individual
           Style.
         </h5>
-        <p className='text-2xl mt-5'>
+        <p className='text-lg lg:text-2xl mt-5'>
           Step into the enchanting world of Luminex Jewelry, where brilliance
           meets sophistication. Our collection transcends ordinary adornments,
           offering a symphony of radiant gems meticulously crafted to tell your
@@ -117,7 +118,7 @@ const AboutPage = () => {
         </div>
 
         <div>
-          <p className='text-2xl mt-20'>
+          <p className='text-xl lg:text-2xl mt-20'>
             Embark on a transformative journey with Luminex Jewelry, where every
             piece is a testament to sophistication and refined artistry. Our
             curated collection, adorned with radiant gems, transcends mere

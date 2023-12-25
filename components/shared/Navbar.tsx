@@ -10,6 +10,8 @@ import { logout } from "@/redux/features/auth/authSlice";
 import toast from "react-hot-toast";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { motion } from "framer-motion";
+
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -29,14 +31,26 @@ const Navbar = () => {
     0
   );
 
+  const variants = {
+    visible: { opacity: 1 },
+    hidden: { opacity: 0 },
+  };
+
   const dispatch = useDispatch();
   return (
     <header className='fixed left-0 right-0 top-0 z-[100] flex h-20  items-center border-b border-gray bg-gray/90 backdrop-blur-xl'>
       {/* NAV LEFT */}
-      <nav className='wrapper flex w-full h-full items-center justify-between gap-5'>
-        <Link href='/' className='text-2xl font-semibold'>
-          luminex
-        </Link>
+      <motion.nav
+        initial={{ y: "-100%" }}
+        whileInView={{ y: 0 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        className='wrapper flex w-full h-full items-center justify-between gap-5'
+      >
+        <div>
+          <Link href='/' className='text-2xl font-semibold'>
+            luminex
+          </Link>
+        </div>
 
         {/* NAV MID */}
 
@@ -46,11 +60,7 @@ const Navbar = () => {
               Home
             </Link>
           </li>
-          {/* <li>
-            <Link href='/shop' className='link-item'>
-              Shop
-            </Link>
-          </li> */}
+
           <li>
             <Link href='/products' className='link-item'>
               Products
@@ -143,12 +153,15 @@ const Navbar = () => {
             {toggle === true ? <FaTimes /> : <FaBars />}
           </button>
         </div>
-      </nav>
+      </motion.nav>
 
       {/* mobile menu */}
       {toggle ? (
         <div className='md:hidden'>
-          <div
+          <motion.div
+            initial='hidden'
+            animate='visible'
+            variants={variants}
             onClick={handleOpen}
             className={`w-screen h-screen fixed z-[98] bg-dark top-20 left-0 right-0 bottom-0 flex text-light/80 text-lg justify-center items-center ${
               toggle ? `` : "hidden"
@@ -161,11 +174,7 @@ const Navbar = () => {
                     Home
                   </Link>
                 </li>
-                {/* <li>
-                  <Link href='/shop' className='link-item'>
-                    Shop
-                  </Link>
-                </li> */}
+
                 <li>
                   <Link href='/products' className='link-item'>
                     Products
@@ -200,7 +209,7 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
-          </div>
+          </motion.div>
         </div>
       ) : null}
     </header>

@@ -10,6 +10,7 @@ import Overlay from "@/components/ui/Overlay";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/Button";
+import { motion } from "framer-motion";
 
 const Slider = () => {
   return (
@@ -38,18 +39,35 @@ const Slider = () => {
             />
             <Overlay />
             <div className='sp wrapper absolute bottom-0 left-0 right-0 top-0 h-full w-full space-y-5  z-[5] text-gray/95 mt-20 lg:mt-14'>
-              <h1 className="text-5xl md:text-6xl xl:text-8xl">{slide.heading}</h1>
-              <p className='max-w-5xl text-xl md:text-2xl'>
+              <motion.h1
+                initial={{ y: "-200%" }}
+                whileInView={{ y: 0 }}
+                transition={{ duration: 1, ease: "easeInOut" }}
+                className='text-5xl md:text-6xl xl:text-8xl'
+              >
+                {slide.heading}
+              </motion.h1>
+              <motion.p
+                initial={{ y: "200%" }}
+                whileInView={{ y: 0 }}
+                transition={{ duration: 1, ease: "easeInOut" }}
+                className='max-w-5xl text-xl md:text-2xl'
+              >
                 {slide.subHeading}
-              </p>
-              <div className='btn mt-5 '>
+              </motion.p>
+              <motion.div
+                initial={{ y: "200%" }}
+                whileInView={{ y: 0 }}
+                transition={{ duration: 1, ease: "easeInOut" }}
+                className='btn mt-5 '
+              >
                 <Link
                   href='/products'
                   className={cn(buttonVariants({ variant: "orange" }))}
                 >
                   {slide.cta}
                 </Link>
-              </div>
+              </motion.div>
             </div>
           </SwiperSlide>
         ))}

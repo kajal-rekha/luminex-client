@@ -12,6 +12,8 @@
     "@emailjs/browser": "^3.11.0",
     "@reduxjs/toolkit": "^2.0.1",
     "@stripe/stripe-js": "^2.2.2",
+    "@studio-freight/lenis": "^1.0.29",
+    "aos": "^2.3.4",
     "axios": "^1.6.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",

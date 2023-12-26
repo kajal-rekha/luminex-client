@@ -39,14 +39,16 @@ const Slider = () => {
             />
             <Overlay />
             <div className='sp wrapper absolute bottom-0 left-0 right-0 top-0 h-full w-full space-y-5  z-[5] text-gray/95 mt-20 lg:mt-14'>
-              <motion.h1
-                initial={{ y: "-200%" }}
-                whileInView={{ y: 0 }}
-                transition={{ duration: 1, ease: "easeInOut" }}
-                className='text-5xl md:text-6xl xl:text-8xl'
-              >
-                {slide.heading}
-              </motion.h1>
+              <div>
+                <motion.h1
+                  initial={{ y: "200%" }}
+                  whileInView={{ y: 0 }}
+                  transition={{ duration: 1, ease: "easeInOut" }}
+                  className='text-5xl md:text-6xl xl:text-8xl'
+                >
+                  {slide.heading}
+                </motion.h1>
+              </div>
               <motion.p
                 initial={{ y: "200%" }}
                 whileInView={{ y: 0 }}

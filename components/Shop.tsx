@@ -1,12 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
-import SectionTitle from "./ui/SectionTitle";
+
+
 
 const Shop = () => {
   return (
     <section className='wrapper sp'>
       <div className='text-center'>
-        <SectionTitle title='Welcome to Luminex Shop' />
+        <h2
+          
+          className='mb-7'
+        >
+          Welcome to Luminex Shop
+        </h2>
+        {/* <SectionTitle title='Welcome to Luminex Shop' /> */}
         <div className='max-w-4xl mx-auto -mt-5'>
           <p className='text-2xl '>
             Discover timeless elegance at our jewelry shop, where exquisite

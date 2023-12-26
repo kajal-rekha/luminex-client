@@ -10,8 +10,6 @@ import { logout } from "@/redux/features/auth/authSlice";
 import toast from "react-hot-toast";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { motion } from "framer-motion";
-
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -31,22 +29,12 @@ const Navbar = () => {
     0
   );
 
-  const variants = {
-    visible: { opacity: 1 },
-    hidden: { opacity: 0 },
-  };
-
   const dispatch = useDispatch();
   return (
     <header className='fixed left-0 right-0 top-0 z-[100] flex h-20  items-center border-b border-gray bg-gray/90 backdrop-blur-xl'>
       {/* NAV LEFT */}
-      <motion.nav
-        initial={{ y: "-100%" }}
-        whileInView={{ y: 0 }}
-        transition={{ duration: 1, ease: "easeInOut" }}
-        className='wrapper flex w-full h-full items-center justify-between gap-5'
-      >
-        <div>
+      <nav className='wrapper flex w-full h-full items-center justify-between gap-5'>
+        <div data-aos='fade-right' data-aos-duration='1000'>
           <Link href='/' className='text-2xl font-semibold'>
             luminex
           </Link>
@@ -54,7 +42,11 @@ const Navbar = () => {
 
         {/* NAV MID */}
 
-        <ul className='md:flex hidden items-center gap-5 text-lg md:block'>
+        <ul
+          data-aos='fade-down'
+          data-aos-duration='1000'
+          className='md:flex hidden items-center gap-5 text-lg md:block'
+        >
           <li>
             <Link href='/' className='link-item'>
               Home
@@ -96,7 +88,11 @@ const Navbar = () => {
         </ul>
 
         {/* NAV RIGHT */}
-        <div className='flex gap-5 items-center justify-center'>
+        <div
+          data-aos='fade-left'
+          data-aos-duration='1000'
+          className='flex gap-5 items-center justify-center'
+        >
           {!session?.user ? (
             <Link
               href='/sign-in'
@@ -153,15 +149,12 @@ const Navbar = () => {
             {toggle === true ? <FaTimes /> : <FaBars />}
           </button>
         </div>
-      </motion.nav>
+      </nav>
 
       {/* mobile menu */}
       {toggle ? (
         <div className='md:hidden'>
-          <motion.div
-            initial='hidden'
-            animate='visible'
-            variants={variants}
+          <div
             onClick={handleOpen}
             className={`w-screen h-screen fixed z-[98] bg-dark top-20 left-0 right-0 bottom-0 flex text-light/80 text-lg justify-center items-center ${
               toggle ? `` : "hidden"
@@ -209,7 +202,7 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
-          </motion.div>
+          </div>
         </div>
       ) : null}
     </header>

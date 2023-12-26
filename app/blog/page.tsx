@@ -10,7 +10,11 @@ const Blog = () => {
       <SectionTitle title='blog' />
       <div>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
-          <div className='group overflow-hidden w-full h-[20rem] relative'>
+          <div
+            data-aos='fade-right'
+            data-aos-duration='3000'
+            className='group overflow-hidden w-full h-[20rem] relative'
+          >
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1702983977/B6_roqldn.webp'
               alt='blog-image'
@@ -23,7 +27,7 @@ const Blog = () => {
           <p className='absolute bg-orange text-light  py-3 px-5'>
             20 Decmber 2023
           </p>
-          <div>
+          <div data-aos='fade-left' data-aos-duration='3000'>
             <h3 className='text-orange text-4xl font-medium text-center'>
               Enchanting Vintage Charm,Timeless Elegance Reimagined
             </h3>
@@ -47,7 +51,7 @@ const Blog = () => {
         </div>
 
         <div className='content-2 grid grid-cols-1 md:grid-cols-2 gap-10 mt-20'>
-          <div className=''>
+          <div data-aos='fade-right' data-aos-duration='3000'>
             <h3 className='text-orange text-4xl font-medium text-center'>
               Bands Commitment Eternal Love - Wedding Different
             </h3>
@@ -68,7 +72,11 @@ const Blog = () => {
               </Link>
             </div>
           </div>
-          <div className='group overflow-hidden w-full h-[20rem] relative'>
+          <div
+            data-aos='fade-left'
+            data-aos-duration='3000'
+            className='group overflow-hidden w-full h-[20rem] relative'
+          >
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1703225874/blog1_y6c3tw.jpg'
               alt='shop-image'
@@ -84,7 +92,11 @@ const Blog = () => {
         </div>
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-10 mt-20'>
-          <div className='group overflow-hidden w-full h-[20rem] relative'>
+          <div
+            data-aos='fade-right'
+            data-aos-duration='3000'
+            className='group overflow-hidden w-full h-[20rem] relative'
+          >
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1703225912/beautiful-girl-set-jewelry-woman-600nw-1482513518_phykfq.webp'
               alt='blog-image'
@@ -97,7 +109,7 @@ const Blog = () => {
           <p className='absolute bg-orange text-light py-3 px-5'>
             08 October 2023
           </p>
-          <div>
+          <div data-aos='fade-left' data-aos-duration='3000'>
             <h3 className='text-orange text-4xl font-medium text-center'>
               Modern Minimalist Elegance, Sleek Contemporary Sophistication
             </h3>
@@ -120,10 +132,7 @@ const Blog = () => {
           </div>
         </div>
         <div className='mt-20 text-center'>
-          <Link
-            href='/blogs'
-            className={buttonVariants({ variant: "orange" })}
-          >
+          <Link href='/blogs' className={buttonVariants({ variant: "orange" })}>
             View all blogs
           </Link>
         </div>

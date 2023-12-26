@@ -38,7 +38,11 @@ const Testimonial = () => {
                 key={i}
                 className='mb-14 grid grid-cols md:grid-cols-2'
               >
-                <div className='flex w-full flex-col gap-5 bg-orange/90 text-dark/90 py-10 px-5 rounded-lg'>
+                <div
+                  data-aos='fade-down'
+                  data-aos-duration='3000'
+                  className='flex w-full flex-col gap-5 bg-orange/90 text-dark/90 py-10 px-5 rounded-lg'
+                >
                   <div className='mx-auto text-center max-w-4xl'>
                     <span className='mt-10'>
                       <FaQuoteLeft />

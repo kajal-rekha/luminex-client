@@ -48,7 +48,7 @@ const Contact = () => {
       <SectionTitle title='Contact' />
 
       <div className='grid grid-cols md:grid-cols-2 gap-20 mt-20'>
-        <div>
+        <div data-aos='fade-right' data-aos-duration='3000'>
           <h2 className='mb-10'>Get In Touch With Us</h2>
           <p className='text-xl'>
             We look forward to hearing from you regarding any data-related
@@ -56,7 +56,11 @@ const Contact = () => {
             reach out to us for any data-related issues. We are here to help!
           </p>
           <div className='mt-16'>
-            <div className='flex flex-row gap-5'>
+            <div
+              data-aos='fade-right'
+              data-aos-duration='3000'
+              className='flex flex-row gap-5'
+            >
               <span className='bg-orange  px-3 flex items-center text-2xl rounded-xl h-12 text-gray/80'>
                 <MdHome />
               </span>
@@ -65,7 +69,11 @@ const Contact = () => {
                 <p className='text-dark/70 -mt-5'>99 St. Jambo Park</p>
               </div>
             </div>
-            <div className='flex flex-row gap-5 mt-16'>
+            <div
+              data-aos='fade-right'
+              data-aos-duration='3000'
+              className='flex flex-row gap-5 mt-16'
+            >
               <span className='bg-orange  px-3 flex items-center text-2xl rounded-xl h-12 text-gray/80'>
                 <MdContactPhone />
               </span>
@@ -74,7 +82,11 @@ const Contact = () => {
                 <p className='text-dark/70 -mt-5'>+8801236659874</p>
               </div>
             </div>
-            <div className='flex flex-row gap-5 mt-16'>
+            <div
+              data-aos='fade-right'
+              data-aos-duration='3000'
+              className='flex flex-row gap-5 mt-16'
+            >
               <span className='bg-orange px-3 flex items-center text-2xl rounded-xl h-12 text-gray/80'>
                 <MdOutlineMailOutline />
               </span>
@@ -86,7 +98,11 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className='w-full bg-orange rounded-lg py-7 px-14'>
+        <div
+          data-aos='fade-left'
+          data-aos-duration='3000'
+          className='w-full bg-orange rounded-lg py-7 px-14'
+        >
           <form
             ref={formRef}
             onSubmit={handleSubmit}

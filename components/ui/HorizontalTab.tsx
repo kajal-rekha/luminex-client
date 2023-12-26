@@ -26,7 +26,11 @@ const HorizontalTab: React.FC<HorizontalTabProps> = ({
   return (
     <div className='flex flex-col gap-20 mt-24'>
       {/* TABS */}
-      <div className='grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-5 items-center self-center border-b border-orange'>
+      <div
+        data-aos='fade-down'
+        data-aos-duration='1000'
+        className='grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-5 items-center self-center border-b border-orange'
+      >
         {tabs?.map((tab: string, index: number) => (
           <button
             onClick={() => handleClick(index)}

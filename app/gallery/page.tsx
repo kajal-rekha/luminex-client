@@ -14,6 +14,8 @@ const Gallery = () => {
         <div className='gallery-grid-parent h-screen w-full gap-10 mt-20'>
           {data.map((item: gallery) => (
             <div
+              data-aos='zoom-in-up'
+              data-aos-duration='3000'
               key={item.id}
               className={cn(
                 item.class,

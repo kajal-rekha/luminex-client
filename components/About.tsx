@@ -10,7 +10,11 @@ const About = () => {
       <SectionTitle title='About' />
       <div className='grid grid-cols-1 md:grid-cols-2 gap-20'>
         <div className='relative'>
-          <div className='group overflow-hidden h-[800] '>
+          <div
+            data-aos='fade-right'
+            data-aos-duration='3000'
+            className='group overflow-hidden h-[800] '
+          >
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1702572913/1-1_bd7kb0.jpg'
               alt='about-image'
@@ -20,7 +24,11 @@ const About = () => {
               className=' eq w-full h-full group-hover:scale-125'
             />
           </div>
-          <div className='group overflow-hidden absolute top-[30%] -right-[10%] hidden md:block w-[18rem] h-[20rem]'>
+          <div
+            data-aos='fade-up'
+            data-aos-duration='3000'
+            className='group overflow-hidden absolute top-[30%] -right-[10%] hidden md:block w-[18rem] h-[20rem]'
+          >
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1702572906/shape-1-1-1_dgpsgw.jpg'
               alt=''
@@ -31,7 +39,11 @@ const About = () => {
             />
           </div>
         </div>
-        <div className=' mx-auto mt-[10%] text-start md:ml-10'>
+        <div
+          data-aos='fade-left'
+          data-aos-duration='3000'
+          className=' mx-auto mt-[10%] text-start md:ml-10'
+        >
           <h3 className='text-orange font-medium mb-3'>
             Radiance Redefined, Luminex Elegance
           </h3>

@@ -10,7 +10,11 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ productItem }) => {
   return (
-    <div className='flex w-full flex-col gap-5'>
+    <div
+      data-aos='fade-up'
+      data-aos-duration='3000'
+      className='flex w-full flex-col gap-5'
+    >
       <Link
         href={`products/${productItem._id}`}
         className='group h-[17rem] w-full overflow-hidden rounded-xl border border-gray'
@@ -24,7 +28,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ productItem }) => {
           className='brigtness-90 group-hover:brigtness-100 eq h-full w-full object-cover group-hover:scale-125'
         />
       </Link>
-      <div className='eq flex w-full flex-col gap-2.5 rounded-xl border bg-gray/25 p-5 hover:bg-gray/50 mt-5'>
+      <div
+        data-aos='fade-up'
+        data-aos-duration='1000'
+        className='eq flex w-full flex-col gap-2.5 rounded-xl border bg-gray/25 p-5 hover:bg-gray/50 mt-5'
+      >
         <span className='text-sm font-bold uppercase tracking-[0.375em] text-orange'>
           {productItem.category}
         </span>

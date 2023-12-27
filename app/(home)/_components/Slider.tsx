@@ -41,9 +41,9 @@ const Slider = () => {
             <div className='sp wrapper absolute bottom-0 left-0 right-0 top-0 h-full w-full space-y-5  z-[5] text-gray/95 mt-20 lg:mt-14'>
               <div>
                 <motion.h1
-                  initial={{ y: "200%" }}
+                  initial={{ y: "-200%" }}
                   whileInView={{ y: 0 }}
-                  transition={{ duration: 1, ease: "easeInOut" }}
+                  transition={{ duration: 1.5, ease: "easeInOut" }}
                   className='text-5xl md:text-6xl xl:text-8xl'
                 >
                   {slide.heading}
@@ -52,7 +52,7 @@ const Slider = () => {
               <motion.p
                 initial={{ y: "200%" }}
                 whileInView={{ y: 0 }}
-                transition={{ duration: 1, ease: "easeInOut" }}
+                transition={{ duration: 1.5, ease: "easeInOut" }}
                 className='max-w-5xl text-xl md:text-2xl'
               >
                 {slide.subHeading}
@@ -60,7 +60,7 @@ const Slider = () => {
               <motion.div
                 initial={{ y: "200%" }}
                 whileInView={{ y: 0 }}
-                transition={{ duration: 1, ease: "easeInOut" }}
+                transition={{ duration: 1.5, ease: "easeInOut" }}
                 className='btn mt-5 '
               >
                 <Link

@@ -15,7 +15,7 @@ const Gallery = () => {
           {data.map((item: gallery) => (
             <div
               data-aos='zoom-in-up'
-              data-aos-duration='3000'
+              data-aos-duration='2000'
               key={item.id}
               className={cn(
                 item.class,

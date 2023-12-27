@@ -6,14 +6,19 @@ import { formatCurrency } from "@/utils/formatCurrenct";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-
 import { useDispatch, useSelector } from "react-redux";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 interface productItemProps {
   item: productType;
 }
 
 const ProductItem: React.FC<productItemProps> = ({ item }) => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const dispatch = useDispatch();
   const { userAndToken } = useSelector((state: RootState) => state.auth);
   const router = useRouter();
@@ -30,11 +35,15 @@ const ProductItem: React.FC<productItemProps> = ({ item }) => {
     <section className='product-item'>
       <div className='shop-img relative'>
         <div className='absolute  left-[2%] bottom-[20%] '>
-          <p className='text-xl lg:text-3xl text-white  max-w-2xl mb-10'>
+          <p
+            data-aos='fade-down'
+            data-aos-duration='2000'
+            className='text-xl lg:text-3xl text-white  max-w-2xl mb-10'
+          >
             Lost in the enchanting world of Luminex! Each piece is a
             masterpiece, a testament to unparalleled craftsmanship.
           </p>
-          <div className='ml-32'>
+          <div data-aos='fade-up' data-aos-duration='2000' className='ml-32'>
             <Link
               href='/products'
               className={buttonVariants({ variant: "orange" })}
@@ -46,17 +55,21 @@ const ProductItem: React.FC<productItemProps> = ({ item }) => {
       </div>
 
       <div className='wrapper sp grid grid-cols-1 lg:grid-cols-2 gap-20 mt-10'>
-        <div className='w-full h-full group overflow-hidden'>
+        <div
+          data-aos='fade-right'
+          data-aos-duration='2000'
+          className='w-full h-[32rem] group overflow-hidden'
+        >
           <Image
             src={item.images[0]}
             alt={item.title}
             width={600}
             height={300}
             priority
-            className=' eq w-full h-full object-cover group-hover:scale-125'
+            className='eq w-full h-full object-cover group-hover:scale-125'
           />
         </div>
-        <div className='mt-5'>
+        <div data-aos='fade-left' data-aos-duration='2000' className='mt-5'>
           <span className='text-sm font-bold uppercase tracking-[0.375em] text-orange '>
             {item.category}
           </span>

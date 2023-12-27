@@ -1,30 +1,58 @@
+"use client";
+
 import Overlay from "@/components/ui/Overlay";
 import Image from "next/image";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const AboutPage = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <main className='about-page'>
       <div className='about-bg'></div>
       <Overlay />
-      <h2 className='absolute top-[38%] left-[31%] xl:left-[34%] 2xl:left-[38%] text-gray font-bold text-4xl xl:text-7xl 2xl:text-8xl'>
+      <h2
+        data-aos='fade-down'
+        data-aos-duration='2000'
+        className='absolute top-[38%] left-[31%] lg:left-[35%] xl:left-[32%] 2xl:left-[34%] text-gray font-bold text-4xl xl:text-7xl 2xl:text-8xl'
+      >
         About Luminex
       </h2>
-      <p className='absolute top-[49%] xl:top-[55%] left-[15%] xl:left-[22%] 2xl:top-[60%] 2xl:left-[34%] text-gray font-medium text-2xl lg:text-3xl max-w-4xl '>
+      <p
+        data-aos='fade-up'
+        data-aos-duration='2000'
+        className='absolute top-[49%] xl:top-[53%] left-[5%] lg:left-[8%] xl:left-[17%] 2xl:top-[60%] 2xl:left-[29%] text-gray font-medium text-2xl lg:text-3xl max-w-4xl text-center'
+      >
         Luminex Jewelry dazzles with timeless elegance, offering radiant gems,
         expert craftsmanship, and personalized adornments—transforming moments
         into cherished memories with enduring beauty and style.
       </p>
 
       <div className='wrapper sp'>
-        <h3 className='text-2xl lg:text-4xl xl:text-5xl max-w-xl text-center mx-auto text-orange'>
+        <h3
+          data-aos='fade-down'
+          data-aos-duration='2000'
+          className='text-2xl lg:text-4xl xl:text-5xl max-w-xl text-center mx-auto text-orange'
+        >
           Timeless Elegance and Radiant Gems
         </h3>
-        <h5 className='text-xl lg:text-3xl max-w-4xl text-center mx-auto mt-5'>
+        <h5
+          data-aos='fade-up'
+          data-aos-duration='2000'
+          className='text-xl lg:text-3xl max-w-4xl text-center mx-auto mt-5'
+        >
           Discover the Artistry of Craftsmanship and Personalized Adornments,
           Elevating Every Moment into a Cherished Expression of Individual
           Style.
         </h5>
-        <p className='text-lg lg:text-2xl mt-5'>
+        <p
+          data-aos='fade-up'
+          data-aos-duration='2000'
+          className='text-lg lg:text-2xl mt-5'
+        >
           Step into the enchanting world of Luminex Jewelry, where brilliance
           meets sophistication. Our collection transcends ordinary adornments,
           offering a symphony of radiant gems meticulously crafted to tell your
@@ -34,7 +62,11 @@ const AboutPage = () => {
         </p>
 
         <div className='images grid grid-cols md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 mt-20'>
-          <div className='w-full h-[25rem] group rounded-xl overflow-hidden'>
+          <div
+            data-aos='fade-up'
+            data-aos-duration='3000'
+            className='w-full h-[25rem] group rounded-xl overflow-hidden'
+          >
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1702582336/rings-2-1_vgthi2.jpg'
               alt='about-image'
@@ -44,7 +76,11 @@ const AboutPage = () => {
               className='w-full h-full object-cover group-hover:scale-125 eq'
             />
           </div>
-          <div className='w-full h-[25rem] group rounded-xl overflow-hidden'>
+          <div
+            data-aos='fade-up'
+            data-aos-duration='3000'
+            className='w-full h-[25rem] group rounded-xl overflow-hidden'
+          >
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1702582330/bracelets_kk7n3b.jpg'
               alt='about-image'
@@ -54,7 +90,11 @@ const AboutPage = () => {
               className='w-full h-full object-cover group-hover:scale-125 eq'
             />
           </div>
-          <div className='w-full h-[25rem] group rounded-xl overflow-hidden'>
+          <div
+            data-aos='fade-up'
+            data-aos-duration='3000'
+            className='w-full h-[25rem] group rounded-xl overflow-hidden'
+          >
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1702582321/product_grid_tpwigt.webp'
               alt='about-image'
@@ -64,7 +104,11 @@ const AboutPage = () => {
               className='w-full h-full object-cover group-hover:scale-125 eq'
             />
           </div>
-          <div className='w-full h-[25rem] group rounded-xl overflow-hidden'>
+          <div
+            data-aos='fade-up'
+            data-aos-duration='3000'
+            className='w-full h-[25rem] group rounded-xl overflow-hidden'
+          >
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1702582313/insta-4_nd7pym.webp'
               alt='about-image'
@@ -74,7 +118,11 @@ const AboutPage = () => {
               className='w-full h-full object-cover group-hover:scale-125 eq'
             />
           </div>
-          <div className='w-full h-[25rem] group rounded-xl overflow-hidden'>
+          <div
+            data-aos='fade-up'
+            data-aos-duration='3000'
+            className='w-full h-[25rem] group rounded-xl overflow-hidden'
+          >
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1702584678/Rectangle-4899-1-q1ktbntzlvvi6o6528ln6d1jc6yl7o8wvedzjlzogo_emnnrr.jpg'
               alt='about-image'
@@ -85,7 +133,11 @@ const AboutPage = () => {
             />
           </div>
 
-          <div className=' w-full h-[25rem] group overflow-hidden'>
+          <div
+            data-aos='fade-up'
+            data-aos-duration='3000'
+            className=' w-full h-[25rem] group overflow-hidden'
+          >
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1702584672/img3-middle_gmpynf.webp'
               alt='about-image'
@@ -95,7 +147,11 @@ const AboutPage = () => {
               className='eq w-full h-full group-hover:scale-125'
             />
           </div>
-          <div className=' w-full h-[25rem] group overflow-hidden'>
+          <div
+            data-aos='fade-up'
+            data-aos-duration='3000'
+            className=' w-full h-[25rem] group overflow-hidden'
+          >
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1702584651/insta-4_lqepvw.jpg'
               alt='about-image'
@@ -105,7 +161,11 @@ const AboutPage = () => {
               className='eq w-full  h-full group-hover:scale-125'
             />
           </div>
-          <div className=' w-full h-[25rem] group overflow-hidden'>
+          <div
+            data-aos='fade-up'
+            data-aos-duration='3000'
+            className=' w-full h-[25rem] group overflow-hidden'
+          >
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1702584656/chain-lg_dzayib.jpg'
               alt='about-image'
@@ -118,7 +178,11 @@ const AboutPage = () => {
         </div>
 
         <div>
-          <p className='text-xl lg:text-2xl mt-20'>
+          <p
+            data-aos='fade-up'
+            data-aos-duration='2000'
+            className='text-xl lg:text-2xl mt-20'
+          >
             Embark on a transformative journey with Luminex Jewelry, where every
             piece is a testament to sophistication and refined artistry. Our
             curated collection, adorned with radiant gems, transcends mere

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Button, { buttonVariants } from "../ui/Button";
-import { FiShoppingCart } from "react-icons/fi";
+import { BsBag } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
 import Image from "next/image";
@@ -129,9 +129,9 @@ const Navbar = () => {
 
           <Link href='/cart'>
             <span className='text-2xl relative '>
-              <FiShoppingCart />
+              <BsBag />
               {totalQuantity > 0 && (
-                <span className='absolute text-orange text-sm font-semibold bottom-[40%] left-[70%] bg-black rounded-full py-[0.5] px-1'>
+                <span className='absolute text-orange text-sm font-semibold bottom-[2%] left-[50%] bg-black rounded-full py-[0.7] px-1.5'>
                   {totalQuantity}
                 </span>
               )}

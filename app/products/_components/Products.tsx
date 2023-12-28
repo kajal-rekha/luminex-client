@@ -17,7 +17,7 @@ const Products = () => {
   const pathname = usePathname();
   console.log(pathname);
   return (
-    <section className='wrapper sp products'>
+    <section className='wrapper sp products -mb-20 lg:-mb-10'>
       <SectionTitle title='Explore our products' />
 
       {isLoading && <Loading isLoading={isLoading} />}

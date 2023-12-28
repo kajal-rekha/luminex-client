@@ -17,14 +17,14 @@ const AboutPage = () => {
       <h2
         data-aos='fade-down'
         data-aos-duration='2000'
-        className='absolute top-[38%] left-[31%] lg:left-[35%] xl:left-[32%] 2xl:left-[34%] text-gray font-bold text-4xl xl:text-7xl 2xl:text-8xl'
+        className='absolute top-[35%] left-[18%] lg:left-[35%] xl:left-[32%] 2xl:left-[34%] text-gray font-bold text-4xl xl:text-7xl 2xl:text-8xl'
       >
         About Luminex
       </h2>
       <p
         data-aos='fade-up'
         data-aos-duration='2000'
-        className='absolute top-[49%] xl:top-[53%] left-[5%] lg:left-[8%] xl:left-[17%] 2xl:top-[60%] 2xl:left-[29%] text-gray font-medium text-2xl lg:text-3xl max-w-4xl text-center'
+        className='absolute top-[45%] xl:top-[53%] left-[5%] lg:left-[8%] xl:left-[17%] 2xl:top-[60%] 2xl:left-[29%] text-gray font-medium text-2xl lg:text-3xl max-w-4xl text-center'
       >
         Luminex Jewelry dazzles with timeless elegance, offering radiant gems,
         expert craftsmanship, and personalized adornments—transforming moments
@@ -65,7 +65,7 @@ const AboutPage = () => {
           <div
             data-aos='fade-up'
             data-aos-duration='3000'
-            className='w-full h-[25rem] group rounded-xl overflow-hidden'
+            className='w-full h-[18rem] lg:h-[25rem] group rounded-xl overflow-hidden'
           >
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1702582336/rings-2-1_vgthi2.jpg'
@@ -79,7 +79,7 @@ const AboutPage = () => {
           <div
             data-aos='fade-up'
             data-aos-duration='3000'
-            className='w-full h-[25rem] group rounded-xl overflow-hidden'
+            className='w-full h-[18rem] lg:h-[25rem] group rounded-xl overflow-hidden'
           >
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1702582330/bracelets_kk7n3b.jpg'
@@ -93,7 +93,7 @@ const AboutPage = () => {
           <div
             data-aos='fade-up'
             data-aos-duration='3000'
-            className='w-full h-[25rem] group rounded-xl overflow-hidden'
+            className='w-full h-[18rem] lg:h-[25rem] group rounded-xl overflow-hidden'
           >
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1702582321/product_grid_tpwigt.webp'
@@ -107,7 +107,7 @@ const AboutPage = () => {
           <div
             data-aos='fade-up'
             data-aos-duration='3000'
-            className='w-full h-[25rem] group rounded-xl overflow-hidden'
+            className='w-full h-[18rem] lg:h-[25rem] group rounded-xl overflow-hidden'
           >
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1702582313/insta-4_nd7pym.webp'
@@ -121,7 +121,7 @@ const AboutPage = () => {
           <div
             data-aos='fade-up'
             data-aos-duration='3000'
-            className='w-full h-[25rem] group rounded-xl overflow-hidden'
+            className='w-full h-[18rem] lg:h-[25rem] group rounded-xl overflow-hidden'
           >
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1702584678/Rectangle-4899-1-q1ktbntzlvvi6o6528ln6d1jc6yl7o8wvedzjlzogo_emnnrr.jpg'
@@ -136,7 +136,7 @@ const AboutPage = () => {
           <div
             data-aos='fade-up'
             data-aos-duration='3000'
-            className=' w-full h-[25rem] group overflow-hidden'
+            className=' w-full h-[18rem] lg:h-[25rem] group overflow-hidden'
           >
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1702584672/img3-middle_gmpynf.webp'
@@ -150,7 +150,7 @@ const AboutPage = () => {
           <div
             data-aos='fade-up'
             data-aos-duration='3000'
-            className=' w-full h-[25rem] group overflow-hidden'
+            className=' w-full h-[18rem] lg:h-[25rem] group overflow-hidden'
           >
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1702584651/insta-4_lqepvw.jpg'
@@ -164,7 +164,7 @@ const AboutPage = () => {
           <div
             data-aos='fade-up'
             data-aos-duration='3000'
-            className=' w-full h-[25rem] group overflow-hidden'
+            className=' w-full h-[18rem] lg:h-[25rem] group overflow-hidden'
           >
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1702584656/chain-lg_dzayib.jpg'

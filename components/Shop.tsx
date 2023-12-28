@@ -3,29 +3,33 @@ import Link from "next/link";
 
 const Shop = () => {
   return (
-    <section className='wrapper sp'>
+    <section className='wrapper sp -mb-32 lg:-mb-20'>
       <div className='text-center'>
-        <h2 data-aos='fade-down' data-aos-duration='1000' className='mb-7'>
+        <h2
+          data-aos='fade-down'
+          data-aos-duration='1000'
+          className='mb-8 text-3xl lg:text-5xl'
+        >
           Welcome to Luminex Shop
         </h2>
-        {/* <SectionTitle title='Welcome to Luminex Shop' /> */}
+
         <div
           data-aos='fade-up'
           data-aos-duration='1000'
           className='max-w-4xl mx-auto -mt-5'
         >
-          <p className='text-2xl '>
+          <p className='text-xl lg:text-2xl'>
             Discover timeless elegance at our jewelry shop, where exquisite
             craftsmanship meets unparalleled beauty. Adorn yourself with our
             stunning collection, meticulously designed pieces.
           </p>
         </div>
       </div>
-      <div className='grid grid-cols md:grid-cols-2 mt-20 gap-6'>
+      <div className='grid grid-cols md:grid-cols-2 mt-10 lg:mt-20 gap-6'>
         <div
           data-aos='zoom-in'
           data-aos-duration='3000'
-          className='group relative overflow-hidden w-full h-[59.5rem]'
+          className='group relative overflow-hidden w-full lg:h-[59.5rem]'
         >
           <Image
             src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1702900510/New-Project-3-1_hhazx6.jpg'
@@ -53,7 +57,7 @@ const Shop = () => {
           <div
             data-aos='zoom-in'
             data-aos-duration='3000'
-            className='group relative overflow-hidden w-full h-[29rem]'
+            className='group relative overflow-hidden w-full lg:h-[29rem]'
           >
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1703247846/article_page_stenzhorn-butterly-lovers_suht8i.jpg'
@@ -81,7 +85,7 @@ const Shop = () => {
           <div
             data-aos='zoom-in'
             data-aos-duration='3000'
-            className='group relative overflow-hidden w-full h-[29rem]'
+            className='group relative overflow-hidden w-full lg:h-[29rem]'
           >
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1701508196/slider-3_f8jnpd.jpg'

@@ -44,18 +44,20 @@ const Contact = () => {
   };
 
   return (
-    <main className='wrapper sp'>
+    <main className='wrapper sp -mt-20 lg:-mt-5'>
       <SectionTitle title='Contact' />
 
-      <div className='grid grid-cols md:grid-cols-2 gap-20 mt-20'>
+      <div className='grid grid-cols md:grid-cols-2 gap-20 lg:mt-20'>
         <div data-aos='fade-right' data-aos-duration='3000'>
-          <h2 className='mb-10'>Get In Touch With Us</h2>
-          <p className='text-xl'>
+          <h2 className='mb-5 lg:mb-10 text-2xl lg:text-5xl'>
+            Get In Touch With Us
+          </h2>
+          <p className='text-lg lg:text-xl '>
             We look forward to hearing from you regarding any data-related
             inquiries or concerns. Contact us for prompt assistance.Feel free to
             reach out to us for any data-related issues. We are here to help!
           </p>
-          <div className='mt-16'>
+          <div className=' mt-10 lg:mt-14'>
             <div
               data-aos='fade-right'
               data-aos-duration='3000'
@@ -65,14 +67,14 @@ const Contact = () => {
                 <MdHome />
               </span>
               <div className='flex flex-col gap-5'>
-                <p className='font-semibold text-xl'>Our Location</p>
+                <p className='font-semibold text-lg lg:text-xl'>Our Location</p>
                 <p className='text-dark/70 -mt-5'>99 St. Jambo Park</p>
               </div>
             </div>
             <div
               data-aos='fade-right'
               data-aos-duration='3000'
-              className='flex flex-row gap-5 mt-16'
+              className='flex flex-row gap-5 mt-10 lg:mt-14'
             >
               <span className='bg-orange  px-3 flex items-center text-2xl rounded-xl h-12 text-gray/80'>
                 <MdContactPhone />
@@ -85,7 +87,7 @@ const Contact = () => {
             <div
               data-aos='fade-right'
               data-aos-duration='3000'
-              className='flex flex-row gap-5 mt-16'
+              className='flex flex-row gap-5 mt-10 lg:mt-14'
             >
               <span className='bg-orange px-3 flex items-center text-2xl rounded-xl h-12 text-gray/80'>
                 <MdOutlineMailOutline />
@@ -101,7 +103,7 @@ const Contact = () => {
         <div
           data-aos='fade-left'
           data-aos-duration='3000'
-          className='w-full bg-orange rounded-lg py-7 px-14'
+          className='w-full bg-orange rounded-lg py-3 px-5 lg:py-7 lg:px-14'
         >
           <form
             ref={formRef}

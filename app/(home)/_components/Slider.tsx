@@ -50,9 +50,9 @@ const Slider = () => {
                 </motion.h1>
               </div>
               <motion.p
-                initial={{ y: "200%" }}
+                initial={{ y: "100%" }}
                 whileInView={{ y: 0 }}
-                transition={{ duration: 1.5, ease: "easeInOut" }}
+                transition={{ duration: 1, ease: "easeInOut" }}
                 className='max-w-5xl text-xl md:text-2xl'
               >
                 {slide.subHeading}

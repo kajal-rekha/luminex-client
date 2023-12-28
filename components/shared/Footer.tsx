@@ -7,8 +7,8 @@ const Footer = () => {
     <footer className='footer'>
       <div className='footer-bg'>
         <Overlay />
-        <div className='wrapper sp grid grid-cols-2  lg:grid-cols-3  xl:grid-cols-5 gap-10 md:gap-8 lg:gap-6 xl:mt-12 2xl:mt-24'>
-          <div className='w-full'>
+        <div className='wrapper sp grid grid-cols lg:grid-cols-3 xl:grid-cols-5 gap-3 md:gap-8 lg:gap-6 xl:mt-12 2xl:mt-24 -mt-7'>
+          <div className='w-full '>
             <Link
               href='/'
               className='text-xl lg:text-3xl font-semibold text-orange/70'
@@ -16,15 +16,15 @@ const Footer = () => {
               Luminex
             </Link>
             <p className='text-gray/80 mt-5 w-full leading-8 text-sm lg:text-lg'>
-              Discover Luminex, my <br /> unique jewelry store online. <br />{" "}
+              Discover Luminex, my unique jewelry store online. 
               Luminex is your destination for distinctive, fashionable jewelry.
             </p>
           </div>
           <div className='w-full '>
-            <h2 className='text-xl md:text-2xl font-semibold text-gray/80 '>
+            <h2 className='text-xl md:text-2xl font-semibold text-gray/80 hidden md:block'>
               Quick links
             </h2>
-            <ul className='flex flex-col  space-y-4'>
+            <ul className='flex flex-col  space-y-4 hidden md:block'>
               <li className='mt-3'>
                 <Link
                   href='/'
@@ -54,10 +54,10 @@ const Footer = () => {
             </ul>
           </div>
           <div className='w-full'>
-            <h2 className='text-xl md:text-2xl font-semibold text-gray/80 '>
+            <h2 className='text-xl md:text-2xl font-semibold text-gray/80 hidden md:block'>
               More links
             </h2>
-            <ul className='space-y-4'>
+            <ul className='space-y-4 hidden md:block'>
               <li className='mt-3'>
                 <Link
                   href='/testimonial'
@@ -85,10 +85,10 @@ const Footer = () => {
             </ul>
           </div>
           <div className='w-full '>
-            <h2 className='text-xl md:text-2xl font-semibold text-gray/80 '>
+            <h2 className='text-xl md:text-2xl font-semibold text-gray/80 hidden md:block'>
               Services
             </h2>
-            <ul className=' flex flex-col space-y-4'>
+            <ul className='flex flex-col space-y-4 hidden md:block'>
               <li className='text-gray/80 hover:text-orange/80 eq mt-3'>
                 Shipping Policy
               </li>

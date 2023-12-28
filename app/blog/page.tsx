@@ -1,15 +1,15 @@
 import { buttonVariants } from "@/components/ui/Button";
 import SectionTitle from "@/components/ui/SectionTitle";
-import { data } from "@/data/blogeContent";
+//import { data } from "@/data/blogeContent";
 import Image from "next/image";
 import Link from "next/link";
 
 const Blog = () => {
   return (
-    <main className='wrapper sp'>
+    <main className='wrapper sp -mt-28 lg:-mt-0'>
       <SectionTitle title='blog' />
       <div>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-10'>
           <div
             data-aos='fade-right'
             data-aos-duration='3000'
@@ -28,10 +28,10 @@ const Blog = () => {
             20 Decmber 2023
           </p>
           <div data-aos='fade-left' data-aos-duration='3000'>
-            <h3 className='text-orange text-4xl font-medium text-center'>
+            <h3 className='text-orange text-2xl lg:text-4xl font-medium text-center'>
               Enchanting Vintage Charm,Timeless Elegance Reimagined
             </h3>
-            <p className='mt-4 text-justify'>
+            <p className='mt-4'>
               Indulge in the allure of our vintage-inspired jewelry collection.
               Each piece tells a story of timeless elegance and romantic
               craftsmanship. Discover intricate details and exquisite designs
@@ -50,12 +50,12 @@ const Blog = () => {
           </div>
         </div>
 
-        <div className='content-2 grid grid-cols-1 md:grid-cols-2 gap-10 mt-20'>
+        <div className='content-2 grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-10 gap-10 mt-10 lg:mt-20'>
           <div data-aos='fade-right' data-aos-duration='3000'>
-            <h3 className='text-orange text-4xl font-medium text-center'>
+            <h3 className='text-orange text-2xl lg:text-4xl font-medium text-center'>
               Bands Commitment Eternal Love - Wedding Different
             </h3>
-            <p className='mt-4 text-justify'>
+            <p className='mt-4'>
               Celebrate everlasting love with our exquisite collection of
               wedding bands. Each ring is a symbol of commitment, crafted with
               precision and adorned with timeless elegance. From classic gold
@@ -91,7 +91,7 @@ const Blog = () => {
           </p> */}
         </div>
 
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-10 mt-20'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-10 gap-10 mt-5 lg:mt-20'>
           <div
             data-aos='fade-right'
             data-aos-duration='3000'
@@ -110,7 +110,7 @@ const Blog = () => {
             08 October 2023
           </p>
           <div data-aos='fade-left' data-aos-duration='3000'>
-            <h3 className='text-orange text-4xl font-medium text-center'>
+            <h3 className='text-orange text-2xl lg:text-4xl font-medium text-center -mt-14 lg:-mt-0'>
               Modern Minimalist Elegance, Sleek Contemporary Sophistication
             </h3>
             <p className='mt-4 text-justify'>

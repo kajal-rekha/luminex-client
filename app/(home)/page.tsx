@@ -29,6 +29,7 @@ const HomePage = () => {
       <Testimonial />
       <Blog />
       <Contact />
+      
     </main>
   );
 };

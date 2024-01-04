@@ -18,8 +18,6 @@ const Testimonial = () => {
       <div className=''>
         <>
           <Swiper
-            slidesPerView={1}
-            spaceBetween={30}
             pagination={{
               clickable: true,
             }}
@@ -31,25 +29,38 @@ const Testimonial = () => {
             grabCursor={true}
             speed={500}
             modules={[Pagination, Autoplay, Navigation]}
-            className='mySwiper '
+            className='mySwiper'
+            breakpoints={{
+              1280: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+              },
+              1024: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+
+              350: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+              },
+            }}
           >
             {data.map((testimonial, i) => (
               <SwiperSlide
                 key={i}
-                className='mb-14 grid grid-cols md:grid-cols-2'
+                className='mb-20'
               >
                 <div
                   data-aos='fade-down'
                   data-aos-duration='3000'
-                  className='flex w-full flex-col gap-5 bg-orange/90 text-dark/90 py-10 px-5 rounded-lg'
+                  className='flex w-full flex-col gap-5 bg-orange/90 text-dark/90 py-10 px-5 rounded-bl-2xl rounded-tr-2xl text-gray/90'
                 >
                   <div className='mx-auto text-center max-w-4xl'>
-                    <span className='mt-10'>
-                      <FaQuoteLeft />
-                    </span>
+                   
                     <p className='mt-10 text-lg'>{testimonial.description}</p>
                   </div>
-
+                 
                   <div className='mx-auto mt-5'>
                     <div className='w-20 h-20'>
                       <Image

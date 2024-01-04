@@ -34,23 +34,16 @@ const ProductItem: React.FC<productItemProps> = ({ item }) => {
   return (
     <section className='product-item'>
       <div className='shop-img relative'>
-        <div className='absolute  left-[2%] bottom-[20%] '>
+        <div className='absolute left-[10%] lg:bottom-[20%] bottom-[40%] 2xl:left-[20%]'>
           <p
             data-aos='fade-down'
             data-aos-duration='2000'
-            className='text-xl lg:text-3xl text-white  max-w-2xl mb-10'
+            className='text-2xl lg:text-7xl text-light/90 max-w-5xl mb-10 text-center'
           >
             Lost in the enchanting world of Luminex! Each piece is a
-            masterpiece, a testament to unparalleled craftsmanship.
+            masterpiece.
           </p>
-          <div data-aos='fade-up' data-aos-duration='2000' className='ml-32'>
-            <Link
-              href='/products'
-              className={buttonVariants({ variant: "orange" })}
-            >
-              Shop Now
-            </Link>
-          </div>
+         
         </div>
       </div>
 

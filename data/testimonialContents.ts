@@ -17,14 +17,6 @@ export const data = [
   },
   {
     image:
-      "https://res.cloudinary.com/dh0ado2ir/image/upload/v1702662679/76_j61vik.jpg",
-    description:
-      "The diamond necklace is a true masterpiece, exuding elegance and sophistication. I appreciate the timeless design and quality of the diamonds. It's a symbol of luxury that beautifully complements my personal style.",
-    name: "Emily Rodriguez",
-    designation: "Business Executive",
-  },
-  {
-    image:
       "https://res.cloudinary.com/dh0ado2ir/image/upload/v1702662673/63_budd6n.jpg",
     description:
       "The exquisite pearl bracelet adds a touch of grace to my outfits. The lustrous pearls and top-notch craftsmanship make it stand out. I cherish the symbolism of pearls and appreciate the attention to detail in every piece.",

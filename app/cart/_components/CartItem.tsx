@@ -16,18 +16,6 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
 
-import { loadStripe } from "@stripe/stripe-js";
-import session from "redux-persist/lib/storage/session";
-
-const stripePublicKey: string | undefined =
-  process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY;
-
-if (!stripePublicKey) {
-  throw new Error("Stripe public key is not defined.");
-}
-
-const stripePromise = loadStripe(stripePublicKey);
-
 const CartItem = () => {
   const router = useRouter();
 
@@ -64,33 +52,8 @@ const CartItem = () => {
   };
   const subTotal = calculateSubtotal(cartItems);
 
-  // stripe
   const handleCheckout = async () => {
-    try {
-      router.push("/checkout");
-      const stripe = await stripePromise;
-
-      if (!stripe) {
-        console.error("Stripe is not initialized.");
-        return;
-      }
-
-      const sessionId = await session.getItem("id");
-
-      if (sessionId) {
-        const { error } = await stripe.redirectToCheckout({
-          sessionId,
-        });
-
-        if (error) {
-          console.error("Error redirecting to checkout:", error);
-        }
-      } else {
-        console.error("Session ID is null or undefined.");
-      }
-    } catch (error) {
-      console.error("An unexpected error occurred during checkout:", error);
-    }
+    router.push("/checkout");
   };
 
   return (
@@ -127,8 +90,8 @@ const CartItem = () => {
               key={cartItem._id}
               className='product grid grid-cols-5 gap-10 mt-10 pb-5 border-b border-orange/50'
             >
-              <div className='left flex gap-32 col-span-2'>
-                <div className='w-20 h-20 overflow-hidden '>
+              <div className='left flex gap-5 col-span-2'>
+                <div className='w-20 h-20 lg:w-24 lg:24 overflow-hidden !important'>
                   {" "}
                   <Image
                     src={cartItem.images && cartItem.images[0]}
@@ -140,7 +103,7 @@ const CartItem = () => {
                   />
                 </div>
                 <div className='product-details flex flex-col gap-3 items-start'>
-                  <p>{cartItem.title}</p>
+                  <span>{cartItem.title}</span>
                   <button
                     onClick={() => handleRemove(cartItem._id)}
                     className='uppercase text-dark/80 hover:text-red eq'
@@ -150,7 +113,7 @@ const CartItem = () => {
                 </div>
               </div>
               <div className='unit-price'>
-                <p>{formatCurrency(cartItem.price)}</p>
+                <span>{formatCurrency(cartItem.price)}</span>
               </div>
               <div className='counter flex'>
                 <button
@@ -171,10 +134,10 @@ const CartItem = () => {
                 </button>
               </div>
               <div className='total-price'>
-                <p>
+                <span>
                   {" "}
                   ${calculateTotalPrice(cartItem.price, cartItem.cartQuantity)}
-                </p>
+                </span>
               </div>
             </div>
           ))}
@@ -185,16 +148,16 @@ const CartItem = () => {
         <div className='mt-0 md:mt-20 flex gap-10'>
           <button
             onClick={handleClearCart}
-            className='clear-btn whitespace-nowrap rounded-xl border px-10 py-3 text-center text-lg bg-orange hover:bg-orange/90 text-light eq uppercase'
+            className='clear-btn whitespace-nowrap rounded-xl border px-7 py-3 lg:px-10 text-center lg:text-lg bg-orange hover:bg-orange/90 text-light eq uppercase'
           >
             Clear cart
           </button>
           <Link
             href='/products'
-            className='continue uppercase whitespace-nowrap rounded-xl border px-10 py-3 text-center text-lg bg-orange hover:bg-orange/90 text-light eq'
+            className='continue uppercase whitespace-nowrap rounded-xl border px-7 lg:px-10 py-3 text-center lg:text-lg bg-orange hover:bg-orange/90 text-light eq'
           >
             {" "}
-            ⬅ Continue shopping
+            Continue shopping
           </Link>
         </div>
         <div className='flex flex-col items-start gap-2'>
@@ -206,12 +169,16 @@ const CartItem = () => {
             Taxes and shipping costs will be calculated during checkout.
           </p>
 
-          <button
-            onClick={handleCheckout}
-            className={cn(buttonVariants({ variant: "orange", size: "full" }))}
-          >
-            PROCEED TO CHECKOUT
-          </button>
+          <div className="w-full text-md lg:text-lg">
+            <button
+              onClick={handleCheckout}
+              className={cn(
+                buttonVariants({ variant: "orange", size: "full" })
+              )}
+            >
+              PROCEED TO CHECKOUT
+            </button>
+          </div>
         </div>
       </div>
     </section>

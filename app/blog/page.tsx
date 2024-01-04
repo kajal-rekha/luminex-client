@@ -1,5 +1,6 @@
 import { buttonVariants } from "@/components/ui/Button";
 import SectionTitle from "@/components/ui/SectionTitle";
+import { cn } from "@/lib/utils";
 //import { data } from "@/data/blogeContent";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,7 +14,7 @@ const Blog = () => {
           <div
             data-aos='fade-right'
             data-aos-duration='3000'
-            className='group overflow-hidden w-full h-[20rem] relative'
+            className='group overflow-hidden w-full h-[20rem]'
           >
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1702983977/B6_roqldn.webp'
@@ -24,9 +25,7 @@ const Blog = () => {
               className=' eq w-full group-hover:scale-125'
             />
           </div>
-          <p className='absolute bg-orange text-light  py-3 px-5'>
-            20 Decmber 2023
-          </p>
+
           <div data-aos='fade-left' data-aos-duration='3000'>
             <h3 className='text-orange text-2xl lg:text-4xl font-medium text-center'>
               Enchanting Vintage Charm,Timeless Elegance Reimagined
@@ -42,9 +41,9 @@ const Blog = () => {
             <div className='mt-6 text-center'>
               <Link
                 href='/blogs'
-                className={buttonVariants({ variant: "orange" })}
+                className={cn(buttonVariants({ variant: "orange" }))}
               >
-                Read more
+                Read more ➡
               </Link>
             </div>
           </div>
@@ -68,14 +67,14 @@ const Blog = () => {
                 href='/blogs'
                 className={buttonVariants({ variant: "orange" })}
               >
-                Read more
+                Read more ➡
               </Link>
             </div>
           </div>
           <div
             data-aos='fade-left'
             data-aos-duration='3000'
-            className='group overflow-hidden w-full h-[20rem] relative'
+            className='group overflow-hidden w-full h-[20rem] '
           >
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1703225874/blog1_y6c3tw.jpg'
@@ -86,16 +85,13 @@ const Blog = () => {
               className='eq w-full group-hover:scale-125'
             />
           </div>
-          {/* <p className='absolute bg-orange text-light py-3 px-5 mt-[25.8rem]'>
-            10 November 2023
-          </p> */}
         </div>
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-10 gap-10 mt-5 lg:mt-20'>
           <div
             data-aos='fade-right'
             data-aos-duration='3000'
-            className='group overflow-hidden w-full h-[20rem] relative'
+            className='group overflow-hidden w-full h-[20rem]'
           >
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1703225912/beautiful-girl-set-jewelry-woman-600nw-1482513518_phykfq.webp'
@@ -106,9 +102,7 @@ const Blog = () => {
               className=' eq w-full group-hover:scale-125'
             />
           </div>
-          <p className='absolute bg-orange text-light py-3 px-5'>
-            08 October 2023
-          </p>
+
           <div data-aos='fade-left' data-aos-duration='3000'>
             <h3 className='text-orange text-2xl lg:text-4xl font-medium text-center -mt-14 lg:-mt-0'>
               Modern Minimalist Elegance, Sleek Contemporary Sophistication
@@ -126,7 +120,7 @@ const Blog = () => {
                 href='/blogs'
                 className={buttonVariants({ variant: "orange" })}
               >
-                Read more
+                Read more ➡
               </Link>
             </div>
           </div>

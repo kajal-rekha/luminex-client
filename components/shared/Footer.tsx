@@ -15,20 +15,20 @@ const Footer = () => {
             >
               Luminex
             </Link>
-            <p className='text-gray/80 mt-5 w-full leading-8 text-sm lg:text-lg'>
-              Discover Luminex, my unique jewelry store online. 
-              Luminex is your destination for distinctive, fashionable jewelry.
+            <p className='text-gray/80 mt-5 w-full leading-8 lg:text-lg'>
+              Discover Luminex, my unique jewelry store online. Luminex is your
+              destination for distinctive, fashionable jewelry.
             </p>
           </div>
           <div className='w-full '>
             <h2 className='text-xl md:text-2xl font-semibold text-gray/80 hidden md:block'>
               Quick links
             </h2>
-            <ul className='flex flex-col  space-y-4 hidden md:block'>
+            <ul className='flex flex-col space-y-4 hidden md:block'>
               <li className='mt-3'>
                 <Link
                   href='/'
-                  className='link-item text-gray/80 hover:text-orange/80 eq'
+                  className='link-item text-gray/90 hover:text-orange/80 eq'
                 >
                   Home
                 </Link>
@@ -37,7 +37,7 @@ const Footer = () => {
               <li>
                 <Link
                   href='/products'
-                  className='link-item text-gray/80 hover:text-orange/80 eq'
+                  className='link-item text-gray/90 hover:text-orange/80 eq'
                 >
                   Products
                 </Link>
@@ -46,7 +46,7 @@ const Footer = () => {
               <li>
                 <Link
                   href='/about'
-                  className='link-item text-gray/80 hover:text-orange/80 eq'
+                  className='link-item text-gray/90 hover:text-orange/80 eq'
                 >
                   About
                 </Link>
@@ -61,7 +61,7 @@ const Footer = () => {
               <li className='mt-3'>
                 <Link
                   href='/testimonial'
-                  className='link-item text-gray/80 hover:text-orange/80 eq'
+                  className='link-item text-gray/90 hover:text-orange/80 eq'
                 >
                   Testimonial
                 </Link>
@@ -69,7 +69,7 @@ const Footer = () => {
               <li>
                 <Link
                   href='/blog'
-                  className='link-item text-gray/80 hover:text-orange/80 eq'
+                  className='link-item text-gray/90 hover:text-orange/80 eq'
                 >
                   Blog
                 </Link>
@@ -88,59 +88,59 @@ const Footer = () => {
             <h2 className='text-xl md:text-2xl font-semibold text-gray/80 hidden md:block'>
               Services
             </h2>
-            <ul className='flex flex-col space-y-4 hidden md:block'>
-              <li className='text-gray/80 hover:text-orange/80 eq mt-3'>
+            <ul className='flex flex-col space-y-4 hidden md:block font-medium'>
+              <li className='text-gray/90 hover:text-orange/80 eq mt-3 '>
                 Shipping Policy
               </li>
-              <li className='text-gray/80 hover:text-orange/80 eq'>
+              <li className='text-gray/90 hover:text-orange/80 eq '>
                 Compensation First
               </li>
-              <li className='text-gray/80 hover:text-orange/80 eq'>
+              <li className='text-gray/90 hover:text-orange/80 eq'>
                 Return Policy
               </li>
 
-              <li className='text-gray/80 hover:text-orange/80 eq'>
+              <li className='text-gray/90 hover:text-orange/80 eq'>
                 Shipping Info
               </li>
             </ul>
           </div>
-          <div className='w-full '>
+          <div className='w-full lg:mt-0 -mt-8'>
             <h2 className='text-xl md:text-2xl text-gray/80 font-semibold  '>
               Contact Us
             </h2>
-            <ul className='space-y-4'>
-              <li className='text-gray/80 hover:text-orange/80 eq mt-3'>
+            <ul className='space-y-4 font-medium '>
+              <li className='text-gray/90 hover:text-orange/80 eq mt-3 '>
                 Email: luminex123@gmail.com
               </li>
-              <li className='text-gray/80 hover:text-orange/80 eq'>
+              <li className='text-gray/90 hover:text-orange/80 eq'>
                 Phone: +1 234 567 890
               </li>
-              <li className='text-gray/80 hover:text-orange/80 eq'>
+              <li className='text-gray/90 hover:text-orange/80 eq'>
                 Address: No 40 Baria Sreet 133/2, NewYork, USA
               </li>
             </ul>
-            <div className=' social-icons mt-5 flex gap-10'>
+
+            <div className='social-icons mt-5 flex gap-10'>
               <Link
                 href='https://www.facebook.com/anowar.kajal'
-                className='border border-gray/80 p-2 rounded-full hover:bg-orange/80  eq '
+                className='border border-orange p-2 border-14px-orange rounded-full eq '
               >
-                <FaFacebookF className='text-xl text-gray/80 ' />
+                <FaFacebookF className='text-xl text-gray/80' />
               </Link>
               <Link
                 href='https://www.linkedin.com/in/kajal-rekha-81262b264'
-                className='border border-gray/80 p-2 rounded-full hover:border-orange/80  duration-500'
+                className='border border-orange p-2 border-14px rounded-full eq'
               >
                 <FaLinkedinIn className='text-xl text-gray/80' />
               </Link>
               <Link
                 href='https://twitter.com/KajalRekha14'
-                className='border border-gray/80 p-2 rounded-full hover:border-orange/80  duration-500'
+                className='border border-orange p-2 rounded-full eq'
               >
                 <FaTwitter className='text-xl text-gray/80' />
               </Link>
             </div>
           </div>
-          O
         </div>
       </div>
       <div className='bg-gray/90 p-10'>

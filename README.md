@@ -1,10 +1,10 @@
 # Luminex - An Online Jewelry Shop
 
-Welcome to Luminex, your go-to destination for exquisite jewelry! This is a full-stack project built with Next.js, TypeScript, Redux, and a variety of other powerful tools. Dive into the world of Luminex and explore our stunning collection of jewelry pieces.
+Welcome to Luminex, your go-to destination for exquisite jewelry! Dive into the world of Luminex and explore our stunning collection of jewelry pieces.
 
 ## Project Description
 
-Luminex is an online jewelry shop where users can browse and purchase a wide range of high-quality jewelry items. The platform is designed to provide a seamless and enjoyable shopping experience, allowing users to discover unique pieces that complement their style.
+Explore Elegance at Luminex Jewelry Shop. Elevate your style effortlessly with seamless online shopping. Immerse yourself in exquisite craftsmanship, ensuring a refined and convenient jewelry shopping experience. Each visit to Luminex is a journey into sophistication. Discover, adorn, and indulge in the artistry of Luminex Jewelry Shop. 
 
 ## Project Features
 
@@ -35,13 +35,14 @@ Luminex is an online jewelry shop where users can browse and purchase a wide ran
 
 1. Clone the repository: `git clone https://github.com/kajal-rekha/luminex.git`
 2. Navigate to the project directory: `cd luminex`
-3. Install dependencies: `npm install`
+3. Install dependencies: `npm install` or `npm i`
 4. Start the development server: `npm run dev`
 5. Open your browser and visit `http://localhost:3000` to view the application.
 
 ## Conclusion
 
-Luminex is a testament to the fusion of technology and elegance, providing users with a captivating online shopping experience. Feel free to explore the codebase, contribute, and enhance the Luminex journey. Happy shopping!
+Luminex is a testament to the fusion of technology and elegance, providing users with a captivating online shopping experience. Feel free to explore the codebase, contribute, and enhance the Luminex journey. 
+Happy shopping!
 
 
 

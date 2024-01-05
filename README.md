@@ -33,7 +33,7 @@ Explore Elegance at Luminex Jewelry Shop. Elevate your style effortlessly with s
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/kajal-rekha/luminex.git`
+1. Clone the repository: git clone https://github.com/kajal-rekha/luminex.git
 2. Navigate to the project directory: `cd luminex`
 3. Install dependencies: `npm install` or `npm i`
 4. Start the development server: `npm run dev`

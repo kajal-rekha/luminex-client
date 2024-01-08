@@ -1,7 +1,9 @@
 "use client";
 
+import PayButton from "@/components/PayButton";
 import { buttonVariants } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
+// import authSlice from "@/redux/features/auth/authSlice";
 import {
   clearCart,
   decreaseCart,
@@ -11,6 +13,7 @@ import {
 import { RootState } from "@/redux/store";
 import { productType } from "@/types/productType";
 import { formatCurrency } from "@/utils/formatCurrenct";
+import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -21,7 +24,6 @@ const CartItem = () => {
 
   const dispatch = useDispatch();
   const { cartItems } = useSelector((state: RootState) => state.cart);
-  console.log(cartItems);
 
   const handleRemove = (productId: string) => {
     dispatch(removeFromCart(productId));
@@ -51,10 +53,6 @@ const CartItem = () => {
     }, 0);
   };
   const subTotal = calculateSubtotal(cartItems);
-
-  const handleCheckout = async () => {
-    router.push("/checkout");
-  };
 
   return (
     <section className='cart-section wrapper sp'>
@@ -168,17 +166,7 @@ const CartItem = () => {
           <p className='mb-2'>
             Taxes and shipping costs will be calculated during checkout.
           </p>
-
-          <div className="w-full text-md lg:text-lg">
-            <button
-              onClick={handleCheckout}
-              className={cn(
-                buttonVariants({ variant: "orange", size: "full" })
-              )}
-            >
-              PROCEED TO CHECKOUT
-            </button>
-          </div>
+          <PayButton cartItems={cartItems} />
         </div>
       </div>
     </section>

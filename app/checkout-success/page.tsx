@@ -1,7 +1,7 @@
 import { buttonVariants } from "@/components/ui/Button";
 import Link from "next/link";
 
-const Checkout = () => {
+const CheckoutSuccess = () => {
   return (
     <div className='sp wrapper mt-40 min-h-screen text-center'>
       <p className='text-2xl font-semibold text-dark/75'>
@@ -20,4 +20,4 @@ const Checkout = () => {
   );
 };
 
-export default Checkout;
+export default CheckoutSuccess;

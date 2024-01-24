@@ -104,7 +104,7 @@ const Blog = () => {
           </div>
 
           <div data-aos='fade-left' data-aos-duration='3000'>
-            <h3 className='text-orange text-2xl lg:text-4xl font-medium text-center -mt-14 lg:-mt-0'>
+            <h3 className='text-orange text-2xl lg:text-4xl font-medium text-center '>
               Modern Minimalist Elegance, Sleek Contemporary Sophistication
             </h3>
             <p className='mt-4 text-justify'>

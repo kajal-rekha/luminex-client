@@ -17,11 +17,14 @@ const PayButton: React.FC<payButtonProps> = ({ cartItems: data }) => {
 
   const handleCheckout = () => {
     axios
-      .post(`${url}/api/stripe/create-checkout-session`, {
-        data,
-        userId: user._id,
-      })
-      .then((res) => {
+      .post(
+        `${url}/api/stripe/create-checkout-session`,
+        {
+          data,
+          userId: user._id,
+        }
+      )
+      .then((res: any) => {
         console.log("Server Response:", res.data);
 
         if (res.data.url) {
@@ -32,25 +35,25 @@ const PayButton: React.FC<payButtonProps> = ({ cartItems: data }) => {
           );
         }
       })
-      .catch((err) => {
-        console.log("Error Response:", err.response.data);
+      .catch((err: any) => {
+        console.log(err.message);
       });
 
     console.log(data);
   };
 
-  return (
-    <>
-      <div className='w-full text-md lg:text-lg'>
-        <button
-          onClick={handleCheckout}
-          className={cn(buttonVariants({ variant: "orange", size: "full" }))}
-        >
-          PROCEED TO CHECKOUT
-        </button>
-      </div>
-    </>
-  );
+    return (
+      <>
+        <div className='w-full text-md lg:text-lg'>
+          <button
+            onClick={handleCheckout}
+            className={cn(buttonVariants({ variant: "orange", size: "full" }))}
+          >
+            PROCEED TO CHECKOUT
+          </button>
+        </div>
+      </>
+    );
 };
 
 export default PayButton;

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const SignUpPicture = () => {
   return (
-    <div className='relative h-full w-full overflow-hidden'>
+    <div className='relative h-full w-full overflow-hidden hidden md:block'>
       <Image
         src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1702582336/rings-2-1_vgthi2.jpg'
         alt='sign in picture'

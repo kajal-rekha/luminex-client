@@ -1,9 +1,6 @@
 "use client";
 
 import PayButton from "@/components/PayButton";
-import { buttonVariants } from "@/components/ui/Button";
-import { cn } from "@/lib/utils";
-// import authSlice from "@/redux/features/auth/authSlice";
 import {
   clearCart,
   decreaseCart,
@@ -13,12 +10,11 @@ import {
 import { RootState } from "@/redux/store";
 import { productType } from "@/types/productType";
 import { formatCurrency } from "@/utils/formatCurrenct";
-import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
-
+import { FaArrowLeftLong } from "react-icons/fa6";
 const CartItem = () => {
   const router = useRouter();
 
@@ -143,20 +139,13 @@ const CartItem = () => {
       </div>
 
       <div className='cart-lower flex flex-col-reverse items-center gap-5 md:flex-row md:justify-between md:items-start md:gap-0 py-10 px-5 md:px-0 w-full'>
-        <div className='mt-0 md:mt-20 flex gap-10'>
+        <div className='mt-0 md:mt-20'>
           <button
             onClick={handleClearCart}
             className='clear-btn whitespace-nowrap rounded-xl border px-7 py-3 lg:px-10 text-center lg:text-lg bg-orange hover:bg-orange/90 text-light eq uppercase'
           >
             Clear cart
           </button>
-          <Link
-            href='/products'
-            className='continue uppercase whitespace-nowrap rounded-xl border px-7 lg:px-10 py-3 text-center lg:text-lg bg-orange hover:bg-orange/90 text-light eq'
-          >
-            {" "}
-            Continue shopping
-          </Link>
         </div>
         <div className='flex flex-col items-start gap-2'>
           <div className='top flex justify-between w-full md:text-2xl text-xl font-medium gap-10'>
@@ -167,6 +156,15 @@ const CartItem = () => {
             Taxes and shipping costs will be calculated during checkout.
           </p>
           <PayButton cartItems={cartItems} />
+          <Link
+            href='/products'
+            className='uppercase text-center lg:text-md eq text-dark/90 font-medium mx-auto flex items-center gap-2'
+          >
+            <span>
+              <FaArrowLeftLong />
+            </span>
+            Continue shopping
+          </Link>
         </div>
       </div>
     </section>

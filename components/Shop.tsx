@@ -39,7 +39,7 @@ const Shop = () => {
             priority
             className='w-full object-cover group-hover:scale-125 h-full transition-transform eq'
           />
-          <div className='absolute inset-0 bg-dark bg-opacity-60 opacity-0 flex flex-col group-hover:opacity-100 transition-opacity eq flex justify-center items-center'>
+          <div className='absolute inset-0 bg-dark bg-opacity-60 opacity-0 flex flex-col group-hover:opacity-100 transition-opacity eq  justify-center items-center'>
             <p className='text-gray text-2xl font-bold tracking-widest uppercase'>
               Weading Collection
             </p>
@@ -67,7 +67,7 @@ const Shop = () => {
               priority
               className='w-full object-cover group-hover:scale-125 h-full transition-transform eq'
             />
-            <div className='absolute inset-0 bg-dark bg-opacity-50 opacity-0 flex flex-col group-hover:opacity-100 transition-opacity eq flex justify-center items-center'>
+            <div className='absolute inset-0 bg-dark bg-opacity-50 opacity-0 flex flex-col group-hover:opacity-100 transition-opacity eq  justify-center items-center'>
               <p className='text-gray text-2xl font-bold tracking-widest uppercase'>
                 Winter Collection
               </p>
@@ -95,7 +95,7 @@ const Shop = () => {
               priority
               className='w-full object-cover group-hover:scale-125 h-full transition-transform eq'
             />
-            <div className='absolute inset-0 bg-dark bg-opacity-50 opacity-0 flex flex-col group-hover:opacity-100 transition-opacity eq flex justify-center items-center'>
+            <div className='absolute inset-0 bg-dark bg-opacity-50 opacity-0 flex flex-col group-hover:opacity-100 transition-opacity eq  justify-center items-center'>
               <p className='text-gray text-2xl font-bold tracking-widest uppercase'>
                 Summer Collection
               </p>

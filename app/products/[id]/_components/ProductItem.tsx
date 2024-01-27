@@ -34,7 +34,7 @@ const ProductItem: React.FC<productItemProps> = ({ item }) => {
   return (
     <section className='product-item'>
       <div className='shop-img relative'>
-        <div className='absolute left-[10%] lg:bottom-[20%] bottom-[40%] 2xl:left-[20%]'>
+        <div className='absolute left-[2%] xl:left-[10%] lg:bottom-[20%] bottom-[40%] 2xl:left-[20%]'>
           <p
             data-aos='fade-down'
             data-aos-duration='2000'
@@ -51,7 +51,7 @@ const ProductItem: React.FC<productItemProps> = ({ item }) => {
         <div
           data-aos='fade-right'
           data-aos-duration='2000'
-          className='w-full h-[32rem] group overflow-hidden'
+          className='h-[20rem] lg:h-[32rem] group overflow-hidden w-full'
         >
           <Image
             src={item.images[0]}
@@ -66,7 +66,7 @@ const ProductItem: React.FC<productItemProps> = ({ item }) => {
           <span className='text-sm font-bold uppercase tracking-[0.375em] text-orange '>
             {item.category}
           </span>
-          <h2 className='text-2xl lg:text-4xl tracking-widest mt-3'>
+          <h2 className='text-xl lg:text-4xl tracking-widest mt-3'>
             {item.title}
           </h2>
           <p className='mt-3'>{item.description}</p>

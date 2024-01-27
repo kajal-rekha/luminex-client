@@ -39,13 +39,13 @@ const Slider = () => {
               className='h-full w-full object-cover'
             />
             <Overlay />
-            <div className='sp wrapper absolute bottom-0 left-0 right-0 top-0 h-full w-full space-y-5  z-[5] text-gray/95 mt-20 lg:mt-14'>
+            <div className='sp wrapper absolute bottom-0 left-0 right-0 top-0 h-full w-full space-y-5 z-[5] text-gray/95 mt-10 lg:mt-14'>
               <div>
                 <motion.h1
                   initial={{ y: "-200%" }}
                   whileInView={{ y: 0 }}
                   transition={{ duration: 1.5, ease: "easeInOut" }}
-                  className='text-5xl md:text-6xl xl:text-8xl'
+                  className='text-3xl md:text-6xl xl:text-8xl'
                 >
                   {slide.heading}
                 </motion.h1>
@@ -54,7 +54,7 @@ const Slider = () => {
                 initial={{ y: "100%" }}
                 whileInView={{ y: 0 }}
                 transition={{ duration: 1, ease: "easeInOut" }}
-                className='max-w-5xl text-xl md:text-2xl'
+                className='w-full lg:max-w-5xl text-xl md:text-2xl'
               >
                 {slide.subHeading}
               </motion.p>

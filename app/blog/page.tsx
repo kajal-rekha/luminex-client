@@ -1,7 +1,6 @@
 import { buttonVariants } from "@/components/ui/Button";
 import SectionTitle from "@/components/ui/SectionTitle";
 import { cn } from "@/lib/utils";
-//import { data } from "@/data/blogeContent";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -14,7 +13,7 @@ const Blog = () => {
           <div
             data-aos='fade-right'
             data-aos-duration='3000'
-            className='group overflow-hidden w-full h-[20rem]'
+            className='group overflow-hidden h-[20rem]'
           >
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1702983977/B6_roqldn.webp'
@@ -22,12 +21,12 @@ const Blog = () => {
               width={650}
               height={500}
               priority
-              className=' eq w-full group-hover:scale-125'
+              className='eq w-full group-hover:scale-125'
             />
           </div>
 
           <div data-aos='fade-left' data-aos-duration='3000'>
-            <h3 className='text-orange text-2xl lg:text-4xl font-medium text-center'>
+            <h3 className='text-orange text-xl lg:text-4xl font-medium lg:text-center'>
               Enchanting Vintage Charm,Timeless Elegance Reimagined
             </h3>
             <p className='mt-4'>
@@ -49,9 +48,9 @@ const Blog = () => {
           </div>
         </div>
 
-        <div className='content-2 grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-10 gap-10 mt-10 lg:mt-20'>
+        <div className='content-2 grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-10 mt-10 lg:mt-20'>
           <div data-aos='fade-right' data-aos-duration='3000'>
-            <h3 className='text-orange text-2xl lg:text-4xl font-medium text-center'>
+            <h3 className='text-orange text-2xl lg:text-4xl font-medium lg:text-center'>
               Bands Commitment Eternal Love - Wedding Different
             </h3>
             <p className='mt-4'>
@@ -74,10 +73,10 @@ const Blog = () => {
           <div
             data-aos='fade-left'
             data-aos-duration='3000'
-            className='group overflow-hidden w-full h-[20rem] '
+            className='group overflow-hidden h-[20rem]'
           >
             <Image
-              src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1703225874/blog1_y6c3tw.jpg'
+              src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1703242611/blog_001_ew5vjz.webp'
               alt='shop-image'
               width={650}
               height={500}
@@ -87,11 +86,11 @@ const Blog = () => {
           </div>
         </div>
 
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-10 gap-10 mt-5 lg:mt-20'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-10  mt-5 lg:mt-20'>
           <div
             data-aos='fade-right'
             data-aos-duration='3000'
-            className='group overflow-hidden w-full h-[20rem]'
+            className='group overflow-hidden h-[20rem]'
           >
             <Image
               src='https://res.cloudinary.com/dh0ado2ir/image/upload/v1703225912/beautiful-girl-set-jewelry-woman-600nw-1482513518_phykfq.webp'
@@ -104,7 +103,7 @@ const Blog = () => {
           </div>
 
           <div data-aos='fade-left' data-aos-duration='3000'>
-            <h3 className='text-orange text-2xl lg:text-4xl font-medium text-center '>
+            <h3 className='text-orange text-xl lg:text-4xl font-medium lg:text-center '>
               Modern Minimalist Elegance, Sleek Contemporary Sophistication
             </h3>
             <p className='mt-4 text-justify'>

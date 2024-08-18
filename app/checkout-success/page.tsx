@@ -12,19 +12,10 @@ const CheckoutSuccess = () => {
         <h2 className='mb-5 text-3xl lg:text-4xl max-w-2xl'>
           Congratulations on a Seamless Checkout!
         </h2>
-        <p className='text-xl lg:text-2xl font-semibold text-dark/75 max-w-2xl mx-auto'>
-          {`We're excited to inform you that your order has been successfully received and is now in the processing stage!`}
-        </p>
-        <p className='text-xl lg:text-2xl  font-semibold text-dark/75 max-w-xl mx-auto mt-3'>
-          {`Thank you for choosing us – we appreciate your trust in our service!`}
-        </p>
 
         <div className='mt-7'>
-          <Link
-            href='/products'
-            className={buttonVariants({ variant: "orange" })}
-          >
-            Continue Shopping
+          <Link href='/order' className={buttonVariants({ variant: "orange" })}>
+            Go to order page
           </Link>
         </div>
       </div>
